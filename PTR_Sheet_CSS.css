@@ -19,7 +19,8 @@
     --ghost: #735797;
     --dragon: #6f35fc;
     --dark: #705746;
-    --steel: 
+    --steel: #B7B7CE;
+    --fairy: #D685AD;
     --primary-Color: #d6d5c9;
     --secondary-Color: #d6d5c9;
 }
@@ -80,20 +81,122 @@
 }
 /* #endregion*/
 /* #region Ice*/
+.charsheet:has([name="attr_type1"] > option[value="Ice"]:checked) {
+    --primary-Color: var(--ice);
+}
 
+.charsheet:has([name="attr_type2"] > option[value="Ice"]:checked) {
+    --secondary-Color: var(--ice);
+}
 /* #endregion*/
 /* #region Fighting */
+.charsheet:has([name="attr_type1"] > option[value="Fighting"]:checked) {
+    --primary-Color: var(--fighting);
+}
 
+.charsheet:has([name="attr_type2"] > option[value="Fighting"]:checked) {
+    --secondary-Color: var(--fighting);
+}
 /* #endregion*/
 /* #region Poison*/
+.charsheet:has([name="attr_type1"] > option[value="Poison"]:checked) {
+    --primary-Color: var(--poison);
+}
 
+.charsheet:has([name="attr_type2"] > option[value="Poison"]:checked) {
+    --secondary-Color: var(--poison);
+}
 /* #endregion*/
 /* #region Ground*/
+.charsheet:has([name="attr_type1"] > option[value="Ground"]:checked) {
+    --primary-Color: var(--ground);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Ground"]:checked) {
+    --secondary-Color: var(--ground);
+}
 /* #endregion*/
 /* #region Flying*/
+.charsheet:has([name="attr_type1"] > option[value="Flying"]:checked) {
+    --primary-Color: var(--flying);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Flying"]:checked) {
+    --secondary-Color: var(--flying);
+}
 /* #endregion*/
+/* #region Psychic */
+.charsheet:has([name="attr_type1"] > option[value="Psychic"]:checked) {
+    --primary-Color: var(--psychic);
+}
 
+.charsheet:has([name="attr_type2"] > option[value="Psychic"]:checked) {
+    --secondary-Color: var(--psychic);
+}
+/* #endregion*/
+/* #region Bug */
+.charsheet:has([name="attr_type1"] > option[value="Bug"]:checked) {
+    --primary-Color: var(--bug);
+}
 
+.charsheet:has([name="attr_type2"] > option[value="Bug"]:checked) {
+    --secondary-Color: var(--bug);
+}
+/* #endregion*/
+/* #region Rock */
+.charsheet:has([name="attr_type1"] > option[value="Rock"]:checked) {
+    --primary-Color: var(--rock);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Rock"]:checked) {
+    --secondary-Color: var(--rock);
+}
+/* #endregion*/
+/* #region Ghost */
+.charsheet:has([name="attr_type1"] > option[value="Ghost"]:checked) {
+    --primary-Color: var(--ghost);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Ghost"]:checked) {
+    --secondary-Color: var(--ghost);
+}
+/* #endregion*/
+/* #region Dragon */
+.charsheet:has([name="attr_type1"] > option[value="Dragon"]:checked) {
+    --primary-Color: var(--dragon);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Dragon"]:checked) {
+    --secondary-Color: var(--dragon);
+}
+/* #endregion*/
+/* #region Dark */
+.charsheet:has([name="attr_type1"] > option[value="Dark"]:checked) {
+    --primary-Color: var(--dark);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Dark"]:checked) {
+    --secondary-Color: var(--dark);
+}
+/* #endregion*/
+/* #region Steel */
+.charsheet:has([name="attr_type1"] > option[value="Steel"]:checked) {
+    --primary-Color: var(--steel);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Steel"]:checked) {
+    --secondary-Color: var(--steel);
+}
+/* #endregion*/
+/* #region Fairy */
+.charsheet:has([name="attr_type1"] > option[value="Fairy"]:checked) {
+    --primary-Color: var(--fairy);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Fairy"]:checked) {
+    --secondary-Color: var(--fairy);
+}
+/* #endregion*/
 /* #endregion*/
 
 
