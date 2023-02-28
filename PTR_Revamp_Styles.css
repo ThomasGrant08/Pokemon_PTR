@@ -6,6 +6,27 @@
     --button-color: #808080;
     --button-hover: #a8a8a8;
     --button-active: #565656;
+    --animation-timing: 0.2s;
+    --normal: #A8A77A;
+    --fire: #EE8130;
+    --water: #6390F0;
+    --electric: #F7D02C;
+    --grass: #7AC74C;
+    --ice: #96D9D6;
+    --fighting: #C22E28;
+    --poison: #A33EA1;
+    --ground: #E2BF65;
+    --flying: #A98FF3;
+    --psychic: #F95587;
+    --bug: #A6B91A;
+    --rock: #b6a136;
+    --ghost: #735797;
+    --dragon: #6f35fc;
+    --dark: #705746;
+    --steel: #B7B7CE;
+    --fairy: #D685AD;
+    --primary-Color: #d6d5c9;
+    --secondary-Color: #d6d5c9;
 }
 
 * {
@@ -13,6 +34,187 @@
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+/* #region Backgrounds */
+/* #region Null*/
+.charsheet:has([name="attr_type2"] > option[value="-"]:checked) {
+    --secondary-Color: var(--primary-Color);
+}
+/* #endregion*/
+/* #region Normal*/
+.charsheet:has([name="attr_type1"] > option[value="Normal"]:checked) {
+    --primary-Color: var(--normal);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Normal"]:checked) {
+    --secondary-Color: var(--normal);
+}
+/* #endregion */
+/* #region Fire */
+.charsheet:has([name="attr_type1"] > option[value="Fire"]:checked) {
+    --primary-Color: var(--fire);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Fire"]:checked) {
+    --secondary-Color: var(--fire);
+}
+/* #endregion*/
+/* #region Water*/
+.charsheet:has([name="attr_type1"] > option[value="Water"]:checked) {
+    --primary-Color: var(--water);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Water"]:checked) {
+    --secondary-Color: var(--water);
+}
+/* #endregion*/
+/* #region Electric*/
+.charsheet:has([name="attr_type1"] > option[value="Electric"]:checked) {
+    --primary-Color: var(--electric);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Electric"]:checked) {
+    --secondary-Color: var(--electric);
+}
+/* #endregion*/
+/* #region Grass*/
+.charsheet:has([name="attr_type1"] > option[value="Grass"]:checked) {
+    --primary-Color: var(--grass);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Grass"]:checked) {
+    --secondary-Color: var(--grass);
+}
+/* #endregion*/
+/* #region Ice*/
+.charsheet:has([name="attr_type1"] > option[value="Ice"]:checked) {
+    --primary-Color: var(--ice);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Ice"]:checked) {
+    --secondary-Color: var(--ice);
+}
+/* #endregion*/
+/* #region Fighting */
+.charsheet:has([name="attr_type1"] > option[value="Fighting"]:checked) {
+    --primary-Color: var(--fighting);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Fighting"]:checked) {
+    --secondary-Color: var(--fighting);
+}
+/* #endregion*/
+/* #region Poison*/
+.charsheet:has([name="attr_type1"] > option[value="Poison"]:checked) {
+    --primary-Color: var(--poison);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Poison"]:checked) {
+    --secondary-Color: var(--poison);
+}
+/* #endregion*/
+/* #region Ground*/
+.charsheet:has([name="attr_type1"] > option[value="Ground"]:checked) {
+    --primary-Color: var(--ground);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Ground"]:checked) {
+    --secondary-Color: var(--ground);
+}
+/* #endregion*/
+/* #region Flying*/
+.charsheet:has([name="attr_type1"] > option[value="Flying"]:checked) {
+    --primary-Color: var(--flying);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Flying"]:checked) {
+    --secondary-Color: var(--flying);
+}
+/* #endregion*/
+/* #region Psychic */
+.charsheet:has([name="attr_type1"] > option[value="Psychic"]:checked) {
+    --primary-Color: var(--psychic);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Psychic"]:checked) {
+    --secondary-Color: var(--psychic);
+}
+/* #endregion*/
+/* #region Bug */
+.charsheet:has([name="attr_type1"] > option[value="Bug"]:checked) {
+    --primary-Color: var(--bug);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Bug"]:checked) {
+    --secondary-Color: var(--bug);
+}
+/* #endregion*/
+/* #region Rock */
+.charsheet:has([name="attr_type1"] > option[value="Rock"]:checked) {
+    --primary-Color: var(--rock);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Rock"]:checked) {
+    --secondary-Color: var(--rock);
+}
+/* #endregion*/
+/* #region Ghost */
+.charsheet:has([name="attr_type1"] > option[value="Ghost"]:checked) {
+    --primary-Color: var(--ghost);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Ghost"]:checked) {
+    --secondary-Color: var(--ghost);
+}
+/* #endregion*/
+/* #region Dragon */
+.charsheet:has([name="attr_type1"] > option[value="Dragon"]:checked) {
+    --primary-Color: var(--dragon);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Dragon"]:checked) {
+    --secondary-Color: var(--dragon);
+}
+/* #endregion*/
+/* #region Dark */
+.charsheet:has([name="attr_type1"] > option[value="Dark"]:checked) {
+    --primary-Color: var(--dark);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Dark"]:checked) {
+    --secondary-Color: var(--dark);
+}
+/* #endregion*/
+/* #region Steel */
+.charsheet:has([name="attr_type1"] > option[value="Steel"]:checked) {
+    --primary-Color: var(--steel);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Steel"]:checked) {
+    --secondary-Color: var(--steel);
+}
+/* #endregion*/
+/* #region Fairy */
+.charsheet:has([name="attr_type1"] > option[value="Fairy"]:checked) {
+    --primary-Color: var(--fairy);
+}
+
+.charsheet:has([name="attr_type2"] > option[value="Fairy"]:checked) {
+    --secondary-Color: var(--fairy);
+}
+/* #endregion*/
+/* #endregion*/
+
+.charsheet {
+    min-width: 840px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg,var(--primary-Color),var(--secondary-Color));
+    transition: background 0.5s ease;
+    --field-color: lightgrey;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 .Radio-Wrap {
@@ -25,14 +227,17 @@
     padding: 8px 16px;
     text-align: center;
     background-color: var(--button-color);
+    transition: all var(--animation-timing) ease;
 }
 .Radio-Wrap label p {
     margin-bottom: 0;
+    user-select: none;
 }
-
 
 .Radio-Wrap input[type="radio"]:checked + label {
     background-color: var(--button-active);
+    color: white;
+    text-decoration: underline;
 }
 
 .Radio-Wrap {
