@@ -1,0 +1,42 @@
+﻿body
+{
+}
+
+:root {
+    --button-color: #808080;
+    --button-hover: #a8a8a8;
+    --button-active: #565656;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.Radio-Wrap {
+    display: flex;
+}
+
+.Radio-Wrap label {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 8px 16px;
+    text-align: center;
+    background-color: var(--button-color);
+}
+.Radio-Wrap label p {
+    margin-bottom: 0;
+}
+
+
+.Radio-Wrap input[type="radio"]:checked + label {
+    background-color: var(--button-active);
+}
+
+.Radio-Wrap {
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
