@@ -31,60 +31,60 @@
             <h2>Basic Info</h2>
         </div>
         <dic class="Row">
-            <span><p>Name:</p></span><span><input type="text" name="attr_character_name"\></span>
+            <span><p>Name:</p></span><span><input type="text" name="attr_character_name" \></span>
         </dic>
         <div class="Row">
-            <span><p>Species:</p></span><span><input type="text" name="attr_species"\></span>
+            <span><p>Species:</p></span><span><input type="text" name="attr_species" \></span>
         </div>
         <div class="Row">
             <span><p>Type:</p></span><div class="Double-Input">
-    <select name='attr_type1' style="text-align:center">
-        <option value="-">-</option>
-        <option value="Normal">Normal</option>
-        <option value="Fire">Fire</option>
-        <option value="Water">Water</option>
-        <option value="Grass">Grass</option>
-        <option value="Electric">Electric</option>
-        <option value="Ice">Ice</option>
-        <option value="Fighting">Fighting</option>
-        <option value="Poison">Poision</option>
-        <option value="Ground">Ground</option>
-        <option value="Flying">Flying</option>
-        <option value="Psychic">Psychic</option>
-        <option value="Bug">Bug</option>
-        <option value="Rock">Rock</option>
-        <option value="Ghost">Ghost</option>
-        <option value="Dragon">Dragon</option>
-        <option value="Dark">Dark</option>
-        <option value="Steel">Steel</option>
-        <option value="Fairy">Fairy</option>
-    </select>
-            /
-    <select name='attr_type2' style="text-align:center">
-        <option value="-">-</option>
-        <option value="Normal">Normal</option>
-        <option value="Fire">Fire</option>
-        <option value="Water">Water</option>
-        <option value="Grass">Grass</option>
-        <option value="Electric">Electric</option>
-        <option value="Ice">Ice</option>
-        <option value="Fighting">Fighting</option>
-        <option value="Poison">Poision</option>
-        <option value="Ground">Ground</option>
-        <option value="Flying">Flying</option>
-        <option value="Psychic">Psychic</option>
-        <option value="Bug">Bug</option>
-        <option value="Rock">Rock</option>
-        <option value="Ghost">Ghost</option>
-        <option value="Dragon">Dragon</option>
-        <option value="Dark">Dark</option>
-        <option value="Steel">Steel</option>
-        <option value="Fairy">Fairy</option>
-    </select>
-</div>
+                <select name='attr_type1' style="text-align:center">
+                    <option value="-">-</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Water">Water</option>
+                    <option value="Grass">Grass</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Ice">Ice</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Poison">Poision</option>
+                    <option value="Ground">Ground</option>
+                    <option value="Flying">Flying</option>
+                    <option value="Psychic">Psychic</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Ghost">Ghost</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Steel">Steel</option>
+                    <option value="Fairy">Fairy</option>
+                </select>
+                /
+                <select name='attr_type2' style="text-align:center">
+                    <option value="-">-</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Water">Water</option>
+                    <option value="Grass">Grass</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Ice">Ice</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Poison">Poision</option>
+                    <option value="Ground">Ground</option>
+                    <option value="Flying">Flying</option>
+                    <option value="Psychic">Psychic</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Ghost">Ghost</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Steel">Steel</option>
+                    <option value="Fairy">Fairy</option>
+                </select>
+            </div>
         </div>
         <div class="Row">
-            <span><p>Gender:</p></span><span><input type="text" name="attr_gender"\></span>
+            <span><p>Gender:</p></span><span><input type="text" name="attr_gender" \></span>
         </div>
         <div class="Row">
             <div class="Two-Col">
@@ -92,12 +92,12 @@
                     <span><p>Level:</p></span><span><input type="number" name="attr_level" value="1" min='1' \></span>
                 </div>
                 <div class="Col">
-                    <span><p>Held Item:</p></span><span><input type="text" name="attr_heldItem"/></span>
+                    <span><p>Held Item:</p></span><span><input type="text" name="attr_heldItem" /></span>
                 </div>
             </div>
         </div>
         <div class="Row">
-            <span><p>Height:</p></span><span><input type="text" name="attr_height"/></span>
+            <span><p>Height:</p></span><span><input type="text" name="attr_height" /></span>
         </div>
         <div class="Row">
             <div class="Three-Col">
@@ -105,10 +105,1791 @@
                     <span><p>Weight:</p></span><span><input type="text" name="attr_weight" /></span>
                 </div>
                 <div class="Col">
-                    <span><p>Weight Class</p></span><span><input type="number" name="attr_weightClass" min='0' \></span>
+                    <span><p>Weight Class</p></span><span><input type="number" name="attr_weightClass" min='0' /></span>
                 </div>
             </div>
         </div>
     </div>
 
 </div>
+
+<!-- Scripts -->
+
+<script type="text/worker">
+
+    let moveAttrs = [
+        "repeating_moves_mlKnown","repeating_moves_mlName","repeating_moves_mlType","repeating_moves_mlFrequency",
+        "repeating_moves_mlCat","repeating_moves_mlRange","repeating_moves_mlAC_total","repeating_moves_mlCrit_total",
+        "repeating_moves_mldb_total","repeating_moves_mlDB_roll","repeating_moves_mlDamageBonus","repeating_moves_mlUses",
+        "repeating_moves_mlContestType","repeating_moves_mlContestEffect","repeating_moves_mlEffects",
+        "repeating_moves_mlID", "repeating_moves_ml_multistrike"
+    ];
+
+    let weights=[
+        "0 – 25 lbs; 0 – 11 kg; ---","25 – 55 lbs; 11 – 25 kg; ---",
+        "55 – 110 lbs; 25 – 50 kg; ---","110 – 220 lbs; 50 – 100 kg; ---","220 – 440 lbs; 100 – 200 kg; ---",
+        " > 440lbs ; > 200kg; ---", " > 440lbs ; > 200kg; Heavy Metal"
+    ];
+
+    let oldStruggleAttrs = [
+        `Struggle_AC`, `Struggle_critsOn`, `Struggle_Type`, `Struggle_DB`, `Struggle_Amount`,
+        `Struggle_Dice`, `Struggle_Bonus`, `Struggle_DType`, `Struggle_Range`,
+        `Struggle_Effects`, `Struggle_pmod`, `Struggle_smod`, `Struggle_dam_B_t`
+    ];
+
+    var getOldMoveAttrs = function (n) {
+        return [
+            `Move${n}_Name`,`Move${n}_Freq`, `Move${n}_AC`,`Move${n}_critsOn`,`Move${n}_Type`,
+            `Move${n}_DB`, `Move${n}_Amount`, `Move${n}_Dice`, `Move${n}_Bonus`, `Move${n}_DType`, `Move${n}_Range`,
+            `Move${n}_Effects`, `Move${n}_pmod`, `Move${n}_smod`, `Move${n}_dam_B_t`, `Move${n}_diebonus`
+        ];
+    };
+
+    var getOldMoveAttrsRepeating = function (section) {
+        return [
+            `repeating_moves_${section}_Move_Name`,`repeating_moves_${section}_Move_Freq`, `repeating_moves_${section}_Move_AC`,`repeating_moves_${section}_Move_critsOn`,`repeating_moves_${section}_Move_Type`,
+            `repeating_moves_${section}_Move_DB`, `repeating_moves_${section}_Move_Amount`, `repeating_moves_${section}_Move_Dice`, `repeating_moves_${section}_Move_Bonus`, `repeating_moves_${section}_Move_DType`, `repeating_moves_${section}_Move_Range`,
+            `repeating_moves_${section}_Move_Effects`, `repeating_moves_${section}_Move_pmod`, `repeating_moves_${section}_Move_smod`, `repeating_moves_${section}_Move_dam_B_t`, `repeating_moves_${section}_Move_diebonus`
+        ];
+    };
+
+    var oldFeatureAttrs = function (sectionid) {
+        return [
+            `repeating_abilities_${sectionid}_Ability_Hide`,
+            `repeating_abilities_${sectionid}_Ability_Name`,
+            `repeating_abilities_${sectionid}_Ability_Freq`,
+            `repeating_abilities_${sectionid}_Ability_Target`,
+            `repeating_abilities_${sectionid}_Ability_Trigger`,
+            `repeating_abilities_${sectionid}_Ability_Info`
+        ];
+    };
+
+
+    var tryUpdateRepeatingMoves = function () {
+        getSectionIDs("repeating_moves", function (idarray) {
+            for(i = 0 ; i < idarray.length ; i++ )
+            {
+                getAttrs( getOldMoveAttrsRepeating(idarray[i]), function (values) {
+                    var section = idarray[i];
+                    var autoupdate = {};
+                    var update={};
+
+                    autoupdate[`repeating_moves_${section}_mlAC`]    = parseInt(values[`repeating_moves_${section}_Move_AC`], 10)||0;
+                    autoupdate[`repeating_moves_${section}_mlCrit`]  = parseInt(values[`repeating_moves_${section}_Move_critsOn`], 10)||20;
+                    autoupdate[`repeating_moves_${section}_mlDB`]    = parseInt(values[`repeating_moves_${section}_Move_DB`], 10)||0;
+
+                    update[`repeating_moves_${section}_mlID`] = "";
+                    update[`repeating_moves_${section}_mlKnown`]         = 0 ;
+                    update[`repeating_moves_${section}_mlName`]          = values[`repeating_moves_${section}_Move_Name`]||"";
+                    update[`repeating_moves_${section}_mlType`]          = values[`repeating_moves_${section}_Move_Type`]||"Untyped";
+                    update[`repeating_moves_${section}_mlFrequency`]     = values[`repeating_moves_${section}_Move_Freq`]||"At-Will"
+                    update[`repeating_moves_${section}_mlUses`]          = 0;
+                    update[`repeating_moves_${section}_mlCat`]           = values[`repeating_moves_${section}_Move_DType`]||"Physical";
+                    update[`repeating_moves_${section}_mlContestType`]   = "Standard";
+                    update[`repeating_moves_${section}_mlContestEffect`] = "";
+                    update[`repeating_moves_${section}_mlRange`]         = values[`repeating_moves_${section}_Move_Range`]||"";
+                    update[`repeating_moves_${section}_mlAC_bonus`]      = 0;
+                    update[`repeating_moves_${section}_mlCrit_mod`]      = 0;
+                    update[`repeating_moves_${section}_mlDB_bonus`]      = 0;
+                    update[`repeating_moves_${section}_mlDB_total`]      = 0;
+                    update[`repeating_moves_${section}_mlStab`]          = 0;
+                    update[`repeating_moves_${section}_mlEffects`]       = values[`repeating_moves_${section}_Move_Effects`]||"";
+
+                    setAttrs(update, {silent:true}, function () {
+                        setAttrs(autoupdate);
+                    });
+                });
+            }
+        });
+    };
+
+    var tryUpdateStruggle = function () {
+        getAttrs(oldStruggleAttrs, function (values) {
+            var update = {};
+
+            update["struggleFreq"]          = "At-Will";
+            update["struggleType"]          = values["Struggle_Type"] || "Normal";
+            update["struggleContestType"]   = "Standard";
+            update["struggleCat"]           = values["Struggle_DType"] || "Physical";
+            update["struggleContestEffect"] = "";
+            update["struggleRange"]         = values["Struggle_Range"] || "Melee, 1 Target";
+
+            update["struggleAC"]            = parseInt( values["Struggle_AC"], 10) || 6;
+            update["struggleAC_bonus"]      = 0;
+            update["struggleAC_total"]      = update["struggleAC"];
+            update["struggleCrit"]          = parseInt( values["Struggle_critsOn"], 10) || 20;
+            update["struggleCrit_mod"]      = 0;
+            update["struggleCrit_total"]    = update["struggleCrit"];
+            update["struggle_db_bonus"]     = 0;
+            update["struggleStab"]          = 0;
+
+            update["struggleEffects"]       = values["Struggle_Effects"] || "" ;
+
+            setAttrs(update, {silent:true}, function () {
+                setAttrs({
+                    "struggle_db" : ( parseInt( values["Struggle_DB"], 10) || 4 )
+                });
+            });
+        });
+    };
+
+    function tryUpdateMove(n){
+        if(n > 6){return;}
+        getAttrs(getOldMoveAttrs(n), function (values) {
+            var newrowid = generateRowID();
+            var update = {};
+            var autoFields = {};
+
+            if(values[`Move${n}_Name`] != undefined){
+
+                update[`repeating_moves_${newrowid}_mlID`]              = "";
+                update[`repeating_moves_${newrowid}_mlKnown`]           = 0;
+                update[`repeating_moves_${newrowid}_mlName`]            = values[`Move${n}_Name`] || "";
+                update[`repeating_moves_${newrowid}_mlFrequency`]       = values[`Move${n}_Freq`] || "At-Will";
+                update[`repeating_moves_${newrowid}_mlUses`]            = 0;
+                update[`repeating_moves_${newrowid}_mlType`]            = values[`Move${n}_Type`] || "Untyped";
+                update[`repeating_moves_${newrowid}_mlCat`]             = values[`Move${n}_DType`] || "Physical";
+                update[`repeating_moves_${newrowid}_mlContestType`]     = "Standard";
+                update[`repeating_moves_${newrowid}_mlContestEffect`]   = "";
+                update[`repeating_moves_${newrowid}_mlRange`]           = values[`Move${n}_Range`] || "";
+                update[`repeating_moves_${newrowid}_mlAC_bonus`]        = 0;
+                update[`repeating_moves_${newrowid}_mlAC_total`]        = "";
+                update[`repeating_moves_${newrowid}_mlCrit_mod`]        = 0;
+                update[`repeating_moves_${newrowid}_mlCrit_total`]      = "";
+                update[`repeating_moves_${newrowid}_mlDB_bonus`]        = 0;
+                update[`repeating_moves_${newrowid}_mlDB_roll`]         = "";
+                update[`repeating_moves_${newrowid}_mlStab`]            = 0;
+                update[`repeating_moves_${newrowid}_mlEffects`]         = values[`Move${n}_Effects`] || "";
+
+                autoFields[`repeating_moves_${newrowid}_mlAC`]          = parseInt(values[`Move${n}_AC`],10)||0;
+                autoFields[`repeating_moves_${newrowid}_mlDB`]          = parseInt(values[`Move${n}_DB`],10)||0;
+                autoFields[`repeating_moves_${newrowid}_mlCrit`]        = parseInt(values[`Move${n}_critsOn`],10)||20;
+            }
+
+            setAttrs(update, {silent: true}, function () {
+                setAttrs(autoFields);
+            });
+        });
+    };
+
+    function tryUpdateRepeatingConditions(){
+        getSectionIDs("statuses", function (idarray) {
+            for(i = 0 ; i < idarray.length ; i++ )
+            {
+                getAttrs(
+                [
+                    `repeating_statuses_${idarray[i]}_status_name1`,
+                    `repeating_statuses_${idarray[i]}_status_name2`,
+                    `repeating_statuses_${idarray[i]}_status_state1`,
+                    `repeating_statuses_${idarray[i]}_status_state2`
+                ], function (values) {
+                    var update = {};
+                    var id1 = generateRowID();
+
+                    if(values[`repeating_statuses_${idarray[i]}_status_name1`] != undefined){
+                        update[`repeating_custom-status_${id1}_status_name`]    = values[`repeating_statuses_${idarray[i]}_status_name1`];
+                        update[`repeating_custom-status_${id1}_status_state`]   = parseInt(values[`repeating_statuses_${idarray[i]}_status_state1`],10)||0;
+                    }
+
+                    var id2 = generateRowID();
+                    if(values[`repeating_statuses_${idarray[i]}_status_name2`] != undefined){
+                        update[`repeating_custom-status_${id2}_status_name`]    = values[`repeating_statuses_${idarray[i]}_status_name2`];
+                        update[`repeating_custom-status_${id2}_status_state`]   = parseInt(values[`repeating_statuses_${idarray[i]}_status_state2`],10)||0;
+                    }
+                    setAttrs(update, {"silent": true});
+                    removeRepeatingRow(`repeating_statuses_${idarray[i]}`);
+                });
+            }
+        });
+    };
+
+    function tryUpdateStaticFeature(){
+        getAttrs(["FeatureHide","FeatureName", "FeatureFreq", "FeatureTarget", "FeatureInfo"], function (values){
+            if(values["FeatureName"] != undefined){
+                var update = {};
+                var id = generateRowID();
+
+                update[`repeating_features_${id}_Feature_Hide`]     = values["FeatureHide"]     || "";
+                update[`repeating_features_${id}_Feature_Name`]     = values["FeatureName"]     || "";
+                update[`repeating_features_${id}_Feature_Freq`]     = values["FeatureFreq"]     || "";
+                update[`repeating_features_${id}_Feature_Target`]   = values["FeatureTarget"]   || "";
+                update[`repeating_features_${id}_Feature_Info`]     = values["FeatureInfo"]     || "";
+
+                setAttrs(update,{"silent": true});
+            }
+        });
+    };
+
+    function tryUpdateStaticAbility(){
+        getAttrs(["AbilityHide","AbilityName", "AbilityFreq", "AbilityTarget", "AbilityInfo"], function (values){
+            if(values["AbilityName"] != undefined){
+                var update = {};
+                var id = generateRowID();
+
+                update[`repeating_abilities_${id}_Ability_Hide`]     = values["AbilityHide"]    || "";
+                update[`repeating_abilities_${id}_Ability_Name`]     = values["AbilityName"]    || "";
+                update[`repeating_abilities_${id}_Ability_Freq`]     = values["AbilityFreq"]    || "";
+                update[`repeating_abilities_${id}_Ability_Target`]   = values["AbilityTarget"]  || "";
+                update[`repeating_abilities_${id}_Ability_Info`]     = values["AbilityInfo"]    || "";
+
+                setAttrs(update,{"silent": true});
+            }
+        });
+    };
+
+    var versioning = function (version) {
+        if (version == undefined || version < 2.0){
+            var update = {};
+
+            // RepeatingMoves
+            tryUpdateRepeatingMoves();
+            // Repeating Conditions
+            tryUpdateRepeatingConditions();
+            // Struggle
+            tryUpdateStruggle();
+            // Static Moves
+            tryUpdateMove(1);
+            tryUpdateMove(2);
+            tryUpdateMove(3);
+            tryUpdateMove(4);
+            tryUpdateMove(5);
+            tryUpdateMove(6);
+            // Static Feature
+            tryUpdateStaticFeature();
+            // Static Ability
+            tryUpdateStaticAbility();
+
+            update["version"] = 2.0;
+
+            setAttrs(update,{silent: true}, function () {
+                versioning(2.0);
+            });
+        }
+    };
+
+    on("sheet:opened", function () {
+        getAttrs(["character_name","version", "character_sheet"], function (values) {
+            var version = parseFloat(values["version"], 10) || 0;
+            console.log(`Running update for v${version} sheet '${values["character_name"]}'`);
+
+            if(version < 2.0){
+                versioning(1);
+            }else if(version > 2.0){
+                versioning(version);
+            }
+        });
+    });
+
+
+    /*
+        Auto-fill Weight based on weight class.
+        If a non generic value has been set to the weight field
+        this event does nothing.
+    */
+    on("change:weightClass" , function(e){
+
+        getAttrs(["weightClass","weight"],function(v){
+
+            var wc = parseInt(v["weightClass"])||0;
+            var text = v["weight"] || "";
+            var w = "--- ; --- ; ---";
+
+            if(wc > 0 && wc < 8){
+                w = weights[wc-1];
+            }
+
+            if(text.length <= 0 || weights.find( (el,i,arr) => {return el === text;}) != undefined ) {
+                setAttrs({
+                    "weight": w
+                });
+            }
+        });
+    });
+
+    /*
+        Auto-fill Nature stats if the nature matches an existing nature
+    */
+    on("change:nature",function(){
+        var update = {};
+        getAttrs(["nature"],function(v){
+            var nat = v["nature"] + "";
+
+            nat = ('' + nat).toLowerCase().trim();
+            if(natures[nat] != null){
+                update["nature_high"] = natures[nat]["up"];
+                update["nature_low"]  = natures[nat]["down"];
+            }
+
+            // Silent to avoid infinite callbacks
+            setAttrs(update, {silent: true});
+        });
+    });
+
+    /*
+        Auto-fill Nature name based on stat combination
+    */
+    on("change:nature_high change:nature_low",function(){
+        var update = {};
+        getAttrs(["nature_high","nature_low"],function(v){
+            var high = v["nature_high"];
+            var low  = v["nature_low"];
+
+            for (var property in natures) {
+                if(natures[property]["up"] == high && natures[property]["down"] == low){
+
+                    update["nature"] = property.charAt(0).toUpperCase() + property.slice(1);
+
+                    // Silent to avoid infinite callbacks
+                    setAttrs(update,{silent:true});
+                    break;
+                }
+            }
+        });
+
+    });
+
+    /*
+        Auto-fill max exp field based on current level
+    */
+    on("change:level change:CharType", function(){
+        var update = {};
+        getAttrs(["level", "CharType"],function(v){
+
+            var level = parseInt( v["level"]) || 0;
+            var char = parseInt( v["CharType"]) || 0;
+
+            if(char == 0){
+                // Pokemon
+                var exp = expCalc(level+1);
+            }else{
+                // Trainer
+                var exp = 10;
+            }
+            update["exp_max"] = exp;
+
+            setAttrs(update);
+        });
+
+    });
+
+
+    /*
+        Auto-calculates capability totals from base and bonuses
+        This sheet does not automate base value calculation for capabilities, this leaves room for custom formulea
+    */
+    on("sheet:opened change:Overland change:Overland_bonus change:Swim change:Swim_bonus change:Throw change:Throw_bonus change:Power change:Power_bonus change:HJ change:HJ_bonus change:LJ change:LJ_bonus change:speed_movement_bonus",function(){
+        var update = {};
+        getAttrs([ "Overland", "Overland_bonus", "Swim", "Swim_bonus", "Throw", "Throw_bonus", "Power", "Power_bonus", "HJ", "HJ_bonus" ,"LJ", "LJ_bonus","speed_movement_bonus"],function(v){
+
+            var overland = parseInt(v["Overland"])||0;
+            var swim     = parseInt(v["Swim"])||0;
+            var hj       = parseInt(v["HJ"])||0;
+            var lj       = parseInt(v["LJ"])||0;
+            var power    = parseInt(v["Power"])||0;
+            var thrown   = parseInt(v["Throw"])||0;
+
+            var movement_mod = parseInt(v["speed_movement_bonus"])||0;
+
+            var bonus_o = parseInt(v["Overland_bonus"])||0;
+            var bonus_s = parseInt(v["Swim_bonus"])||0;
+            var bonus_t = parseInt(v["Throw_bonus"])||0;
+            var bonus_p = parseInt(v["Power_bonus"])||0;
+            var bonus_h = parseInt(v["HJ_bonus"]) || 0;
+            var bonus_l = parseInt(v["LJ_bonus"]) || 0;
+
+            if(movement_mod < 0)
+            {
+
+                update["Overland_calc"]  = Math.min(Math.max( (overland + bonus_o) + movement_mod, 2), (overland + bonus_o));
+                update["Swim_calc"]      = Math.min(Math.max( (swim + bonus_s) + movement_mod, 2), (swim + bonus_s));
+            }else
+            {
+                update["Overland_calc"]  = (overland + bonus_o) + movement_mod;
+                update["Swim_calc"]      = (swim + bonus_s) + movement_mod;
+
+            }
+
+            update["HJ_calc"]        = (hj + bonus_h);
+            update["LJ_calc"]        = (lj + bonus_l);
+            update["Power_calc"]     = (power + bonus_p);
+            update["Throw_calc"]     = (thrown + bonus_t);
+
+            setAttrs(update, {silent: true});
+
+        });
+    });
+
+    /*
+        Unlocks/Locks controls for the known moves repeating section
+    */
+    on("clicked:lockMoves",function(){
+        var update = {};
+        getAttrs(["lockMovesKnown"], function(values){
+            var lock = parseInt(values["lockMovesKnown"]) || 0;
+            lock+=1;
+
+            if(lock == 0){
+                update["lockMovesKnown"] = lock % 2;
+            }else{
+                update["lockMovesKnown"] = lock % 2;
+            }
+
+            setAttrs(update);
+        });
+    });
+
+    /*
+    on("clicked:hideMoveList", function(){
+        var update = {};
+        getAttrs(["hideMoveList"], function(values){
+            var lock = parseInt(values["hideMoveList"]) || 0;
+            lock+=1;
+
+            update["hideMoveList"] = lock % 2;
+
+            setAttrs(update);
+        });
+    });
+    */
+
+    /*
+        Auto-calculate total tutor points
+    */
+    on("change:TutorPoints_bonus change:Level", function(eventinfo){
+
+        getAttrs(["TutorPoints_bonus", "Level"], function(values){
+
+            bonus  = parseInt(values["TutorPoints_bonus"]) || 0;
+            level  = parseInt(values["Level"]) || 0;
+
+            sum =  Math.floor( (level > 1 ? level:1) / 5 ) + 1  + bonus;
+
+
+            setAttrs({
+                'TutorPoints_max': sum
+            });
+        });
+
+    });
+
+    /*
+        Auto-calculate remaining tutor
+        Find the sum of all edge costs
+    */
+    on("remove:repeating_edges change:repeating_edges:EdgeCost change:TutorPoints_max sheet:opened", function(eventinfo){
+        update = {};
+        attrs = [];
+        sum = 0;
+
+        getSectionIDs("edges", function(idArray){
+            for(i = 0; i < idArray.length; i++){
+               attrs.push(`repeating_edges_${idArray[i]}_EdgeCost`);
+            }
+
+            getAttrs(attrs.concat(["TutorPoints_max"]), function(values){
+                sum = parseInt(values["TutorPoints_max"])||0;
+
+                for(i = 0; i < attrs.length; i++){
+                    sum -= parseInt(values[attrs[i]])||0;
+                }
+
+                setAttrs({
+                    'TutorPoints': sum
+                });
+            });
+        });
+    });
+
+    /*
+        Auto-calculate AP used
+        Sum all uses in the repeating list
+    */
+    on("change:ap_max change:repeating_apcost:ap_cost remove:repeating_apcost sheet:opened", function(eventinfo){
+
+        update = {};
+        attrs = [];
+        sum = 0;
+
+
+        getSectionIDs("apcost", function(idArray){
+            for(i = 0; i < idArray.length; i++){
+               attrs.push(`repeating_apcost_${idArray[i]}_ap_cost`);
+            }
+
+            getAttrs(attrs.concat(["ap_max"]), function(values){
+                sum = parseInt(values["ap_max"])||0;
+                for(i = 0; i < attrs.length; i++){
+                    sum -= parseInt(values[attrs[i]])||0;
+                }
+                setAttrs({
+                    "ap": sum
+                });
+            });
+        });
+
+    });
+
+    /*
+        Button event
+        Imports data from user given JSON
+    */
+    on("clicked:import", function() {
+        infoImport();
+    });
+
+    /*
+        Auto-updates Known Move shortcut
+        when a change is made to the move auto update the corresponding shortcut
+    */
+    on("change:repeating_moves", function(eventinfo){
+
+        var source = eventinfo.sourceAttribute.substring(39);
+        var v ="";
+        var update = {};
+
+        if(source === "known"){ return;}
+        if(source === "ac" || source === "ac_bonus" ){ return;}
+        if(source === "db" || source === "db_bonus" || source === "stab"){ return;}
+        if(source === "crit" || source === "crit_mod" ){ return;}
+
+        getAttrs([`repeating_moves_ml${source}`, `repeating_moves_ml${source}_max` , "repeating_moves_mlID"], function(values){
+            var id = values["repeating_moves_mlID"] || "";
+            if(id != ""){
+                v = values[`repeating_moves_ml${source}`];
+                if(id != "" && values["repeating_moves_mlID"] != null){
+                    if(source === "ac_total"){
+                        update["repeating_movesKnown_" + id + "_mkac"] = v;
+                    }else if(source === "crit_total"){
+                        update["repeating_movesKnown_" + id + "_mkcrit"] = v;
+                    }else if(source === "db_total"){
+                        update["repeating_movesKnown_" + id + "_mkdb"] = v;
+                    }else if(source === "uses"){
+                        update["repeating_movesKnown_" + id + "_mkUses_max"] = eventinfo.newValue;
+                    }else{
+                        update["repeating_movesKnown_" + id + "_mk" + source] = v;
+                    }
+                }
+
+                // Silent to avoid infinite callbacks
+                setAttrs(update,{silent: true});
+            }
+        });
+    });
+
+    /*
+        Add/Remove a move from the known moves list
+    */
+    on("change:repeating_moves:mlKnown", function(eventinfo) {
+        var update = {};
+        if(eventinfo.newValue == "1"){
+
+            var newID = generateRowID();
+
+            getAttrs(moveAttrs, function(values){
+
+                update["repeating_moves_mlID"]                             = newID;
+                update["repeating_movesKnown_"+ newID +"_mkName"]          = values["repeating_moves_mlName"];
+                update["repeating_movesKnown_"+ newID +"_mkType"]          = values["repeating_moves_mlType"];
+                update["repeating_movesKnown_"+ newID +"_mkCat"]           = values["repeating_moves_mlCat"];
+                update["repeating_movesKnown_"+ newID +"_mkFrequency"]     = values["repeating_moves_mlFrequency"];
+                update["repeating_movesKnown_"+ newID +"_mkRange"]         = values["repeating_moves_mlRange"];
+                update["repeating_movesKnown_"+ newID +"_mkAC"]            = values["repeating_moves_mlAC_total"];
+                update["repeating_movesKnown_"+ newID +"_mkCrit"]          = values["repeating_moves_mlCrit_total"];
+                update["repeating_movesKnown_"+ newID +"_mkDB"]            = values["repeating_moves_mldb_total"];
+                update["repeating_movesKnown_"+ newID +"_mkDB_roll"]       = values["repeating_moves_mlDB_roll"];
+                update["repeating_movesKnown_"+ newID +"_mkContestType"]   = values["repeating_moves_mlContestType"];
+                update["repeating_movesKnown_"+ newID +"_mkContestEffect"] = values["repeating_moves_mlContestEffect"];
+                update["repeating_movesKnown_"+ newID +"_mkEffects"]       = values["repeating_moves_mlEffects"];
+                update["repeating_movesKnown_"+ newID +"_mkUses"]          = values["repeating_moves_mlUses"];
+                update["repeating_movesKnown_"+ newID +"_mkUses_max"]      = values["repeating_moves_mlUses"];
+
+                update["repeating_movesKnown_"+ newID +"_mk_multistrike"]  = values["repeating_moves_ml_multistrike"];
+
+                setAttrs(update,{silent: true});
+            });
+        }else{
+
+            getAttrs(["repeating_moves_mlID"], function(values){
+                update["repeating_moves_mlID"] = "";
+                removeRepeatingRow("repeating_movesKnown_" + values["repeating_moves_mlID"]);
+                setAttrs(update,{silent: true});
+            });
+        }
+
+    });
+
+    /*
+        Auto-remove known moves shortcut when the original is deleted
+    */
+    on("remove:repeating_moves", function(eventinfo) {
+
+        for (var property in eventinfo.removedInfo) {
+            if (eventinfo.removedInfo.hasOwnProperty(property)) {
+                if (property.match(/.*mlID/g)!=null) {
+                    removeRepeatingRow("repeating_movesKnown_" + eventinfo.removedInfo[property]);
+                }
+            }
+        }
+
+    });
+
+    /*
+        Auto-calculate AC of a move given the base and a bonus
+    */
+    on("change:repeating_moves:mlAC change:repeating_moves:mlAC_bonus", function(){
+        update={};
+        getAttrs(["repeating_moves_mlAC", "repeating_moves_mlAC_bonus"], function(values){
+            var ac   = parseInt(values["repeating_moves_mlAC"], 10) || 0;
+            var ac_b = parseInt(values["repeating_moves_mlAC_bonus"], 10) || 0;
+            update["repeating_moves_mlAC_total"] = ac + ac_b;
+            setAttrs(update);
+        });
+    });
+
+    /*
+        Auto-calculate DB of a move given the base and a bonus
+        will not update if the new DB is <= 0
+    */
+    on("change:repeating_moves:mlDB change:repeating_moves:mlDB_bonus change:repeating_moves:mlStab", function(){
+        update = {};
+        getAttrs(["repeating_moves_mlDB", "repeating_moves_mlDB_bonus", "repeating_moves_mlStab","repeating_moves_mlID"], function(values){
+            var id = values["repeating_moves_mlID"];
+            var db = parseInt(values["repeating_moves_mlDB"]) || 0;
+            var db_b = parseInt(values["repeating_moves_mlDB_bonus"]) || 0;
+            var stab = parseInt(values["repeating_moves_mlStab"]) || 0;
+            var db_total =db + db_b + (stab * 2);
+            var x = dbCalc(db + db_b + (stab * 2));
+
+            var roll = "";
+            setAttrs({"repeating_moves_mldb_total" : db_total });
+
+            if( (db + db_b + (stab * 2)) > 0){
+                roll = "" + x.amount + "" + x.dice + " + " + x.bonus ;
+                update["repeating_moves_mlDB_roll"] = roll;
+
+                if(id != ""){
+                    update[`repeating_movesKnown_${id}_mkDB_roll`] = roll;
+                }
+
+                // Silent to avoid infinite callbacks
+                setAttrs(update, {silent: true});
+            }
+        });
+    });
+
+    /*
+        Auto-calculate the Crit range of a move given the base and a modifier
+    */
+    on("change:repeating_moves:mlCrit change:repeating_moves:mlCrit_mod", function(){
+        update={};
+        getAttrs(["repeating_moves_mlCrit", "repeating_moves_mlCrit_mod"], function(values){
+            var crit   = parseInt(values["repeating_moves_mlCrit"], 10) || 0;
+            var crit_m = parseInt(values["repeating_moves_mlCrit_mod"], 10) || 0;
+            update["repeating_moves_mlCrit_total"] = crit - crit_m;
+            setAttrs(update);
+        });
+    });
+
+
+    /*
+        Auto-update Combat Stats
+        this generates an event for each stat
+    */
+    const stats = ['HP','ATK','DEF','SPATK','SPDEF','SPEED'];
+    stats.forEach(function (stat) {
+        on(`change:base_${stat} change:${stat} change:${stat}_Stage change:${stat}_bonus sheet:opened`, function () {
+
+            getAttrs([`base_${stat}`,`${stat}`, `${stat}_Stage`, `${stat}_bonus`], function (values) {
+                const base  = parseInt(values[`base_${stat}`], 10)||0;
+                const alloc = parseInt(values[`${stat}`], 10)||0;
+                const stage = parseFloat(values[`${stat}_Stage`], 10)||1;
+                const bonus = parseInt(values[`${stat}_bonus`], 10)||0;
+                const calc = Math.floor( (base + alloc + bonus) * stage  );
+
+                setAttrs({
+                    [stat + '_total']:  calc
+                });
+            });
+
+        });
+    });
+
+    /*
+        Auto-update movement capabilities using Speed CS
+    */
+    on("change:SPEED_Stage",function(){
+        update={};
+        getAttrs(["SPEED_Stage"], function(values){
+            var stage_mul = parseFloat( values["SPEED_Stage"], 10)||1;
+            var stage = 0;
+
+            if(stage_mul != 1){
+                stage_mul *= 10;
+
+                stage =  (stage_mul < 10) ? 0-(10 - stage_mul) : Math.trunc((stage_mul - 10)/2);
+
+            }
+
+            update["speed_movement_bonus"] = Math.floor(stage/2);
+
+            setAttrs(update);
+
+        });
+    });
+
+    /*
+        Auto-calculate global Accuracy modifier
+    */
+    on("change:Acc change:Acc_bonus",function(){
+        update={};
+        getAttrs(["Acc","Acc_bonus"],function(values){
+            var stage = parseInt(values["Acc"],10)||0;
+            var bonus = parseInt(values["Acc_bonus"],10)||0;
+            update["Acc_total"] = stage + bonus;
+            setAttrs(update);
+        });
+    });
+
+    /*
+        Auto-calculate global Evasion modifier
+    */
+    on("change:Eva change:Eva_bonus",function(){
+        update={};
+        getAttrs(["Eva","Eva_bonus"],function(values){
+            var stage = parseInt(values["Eva"],10)||0;
+            var bonus = parseInt(values["Eva_bonus"],10)||0;
+            update["Eva_total"] = stage + bonus;
+            setAttrs(update);
+        });
+    });
+
+    /*
+        Auto-calculate  Evasions
+    */
+    on("sheet:opened change:def_total change:spdef_total change:speed_total change:Eva_total change:PEB change:ScEB change:SpEB", function() {
+        evaUp();
+    });
+
+
+    /*
+        Auto-calculate current max hitpoints
+    */
+    on("sheet:opened change:level change:chartype change:hp_total change:injuries", function() {
+        hpCalc();
+    });
+
+
+    /*
+        Auto-calculate AP max
+    */
+    on("sheet:opened change:level", function() {
+        apCalc();
+    });
+
+    /*
+        Auto-calculate damage dice roll for generic rolls
+    */
+    on("change:generic_db", function(){
+        update = {};
+
+        getAttrs(["generic_db"],function(values){
+            db = parseInt(values["generic_db"]) || 0;
+            x = dbCalc(db);
+
+
+            update["generic_db_roll"] = "" + x.amount + "" + x.dice + " + " + x.bonus;
+
+
+            setAttrs(update);
+        });
+
+    });
+
+    /*
+        Auto-calculate AC for Struggle
+    */
+    on("change:struggleAC change:struggleAC_bonus", function(){
+        update={};
+        getAttrs(["struggleAC", "struggleAC_bonus"],function(values){
+            var ac = parseInt(values["struggleAC"]) || 0;
+            var ac_b = parseInt(values["struggleAC_bonus"]) || 0;
+            update["struggleAC_total"] = ac + ac_b;
+            setAttrs(update);
+        });
+    });
+
+    /*
+        Auto-calculate Crit range for Struggle
+    */
+    on("change:struggleCrit change:struggleCrit_mod", function(){
+        update={};
+        getAttrs(["struggleCrit", "struggleCrit_mod"], function(values){
+            var crit    = parseInt(values["struggleCrit"]) || 20;
+            var crit_m  = parseInt(values["struggleCrit_mod"]) || 0;
+            update["struggleCrit_total"] = crit - crit_m;
+            setAttrs(update);
+        });
+    });
+
+    /*
+        Auto-calculate DB for Struggle
+    */
+    on("change:struggle_db change:struggle_db_bonus change:struggleStab", function(){
+        update = {};
+        getAttrs(["struggle_db", "struggle_db_bonus", "struggleStab"],function(values){
+
+            var db = parseInt(values["struggle_db"]) || 0;
+            var db_b = parseInt(values["struggle_db_bonus"]) || 0;
+            var stab = parseInt(values["struggleStab"]) || 0;
+            var x = dbCalc(db + db_b + (stab * 2));
+            var roll = "";
+            update["struggle_db_total"] = db + db_b + (stab * 2);
+            if(db > 0){
+                roll = "" + x.amount + "" + x.dice + " + " + x.bonus ;
+                update["struggle_db_roll"] = roll;
+                setAttrs(update, {silent:true});
+            }
+        });
+
+    });
+
+    /*
+        Set DB to 0 if DB is modified
+    */
+    on("change:struggle_db_roll", function(){
+        update = {};
+        update["struggle_db_total"] = "" ;
+        setAttrs(update,{silent: true});
+    });
+
+    /*
+        Import character from JSON data
+    */
+    var infoImport = function() {
+        getAttrs(["input"], function (v) {
+
+            var char = JSON.parse(v["input"]);
+
+            var x; var t; var rmoves; var rcaps; var redges; var rabils; var rfeats; var i;
+            t = {};
+
+            getSectionIDs("repeating_moves", function(idarray) {
+                rmoves = idarray;
+
+                getSectionIDs("repeating_capabilities", function(idarray) {
+                    rcaps = idarray;
+
+                    getSectionIDs("repeating_edges", function(idarray) {
+                        redges = idarray;
+
+                        getSectionIDs("repeating_features", function(idarray) {
+                            rfeats = idarray;
+
+                            getSectionIDs("repeating_abilities", function(idarray) {
+                                rabils = idarray;
+
+                                if (rmoves==undefined){rmoves=[];}
+                                if (rcaps ==undefined){rcaps=[];}
+                                if (redges==undefined){redges=[];}
+                                if (rfeats==undefined){rfeats=[];}
+                                if (rabils==undefined){rabils=[];}
+
+                                for (var property in char) {
+                                    if (char.hasOwnProperty(property)) {
+                                        if(char[property] == undefined || char[property] === ""){
+                                            continue;
+                                        }
+                                        if (property.match(/Move\s*\d*/gi) != null) {
+                                        // Import Moves
+
+                                            i = generateRowID();
+
+                                            for (var prop in char[property]){
+                                                if (char[property].hasOwnProperty(prop)){
+
+                                                    if(char[property][prop] == undefined || char[property][prop] === ""){
+                                                        continue;
+                                                    }
+
+                                                    x = "repeating_moves_" + i + "_ml";
+
+                                                    switch(prop){
+                                                        case "Name":
+                                                            t[x + "Name"] = char[property][prop];
+                                                            break;
+                                                        case "Type":
+                                                            t[x + "Type"] = char[property][prop];
+                                                            break;
+                                                        case "Freq":
+                                                            list = char[property][prop].match(/([a-wyz\-]+)(\s*[x]\s*)?(\d+)?/i);
+                                                            if(list != undefined){
+
+                                                                if(list.length <= 2){
+                                                                    // has no use count
+                                                                    t[x + "Frequency"] = list[1];
+                                                                    t[x + "Uses_max"] = 1;
+                                                                }else if(list.length < 4){
+                                                                    //number missing
+                                                                    t[x + "Frequency"] = list[1];
+                                                                    t[x + "Uses_max"] = 1;
+                                                                }else{
+                                                                    // frequesncy and uses
+                                                                    t[x + "Frequency"] = list[1];
+                                                                    t[x + "Uses_max"] = parseInt(list[3])||1;
+                                                                }
+                                                            }
+
+                                                            break;
+                                                        case "AC":
+                                                            t[x + "AC"] = parseInt(char[property][prop])||0;
+                                                            break;
+                                                        case "DB":
+                                                            t[x + "DB"] = char[property][prop];
+                                                            break;
+                                                        case "DType":
+                                                            t[x + "Cat"] = char[property][prop];
+                                                            break;
+                                                        case "Range":
+                                                            t[x + "Range"] = char[property][prop];
+                                                            break;
+                                                        case "Effects":
+                                                            t[x + "Effects"] = char[property][prop];
+                                                            break;
+                                                        case "Contest Type":
+                                                            t[x + "ContestEffect"] = char[property][prop];
+                                                            break;
+                                                        case "Contest Effect":
+                                                            t[x + "ContestType"] = char[property][prop];
+                                                            break;
+                                                        default:
+                                                            break;
+                                                    }
+
+                                                }
+                                            }
+
+                                        } else if (property.match(/Feature\s*\d*/gi)!=null) {
+                                            // Import Features
+
+                                            //i = Number(property.substring(7));
+
+                                            i=generateRowID();
+
+                                            for (var prop in char[property]){
+                                                if (char[property].hasOwnProperty(prop)){
+                                                    if(char[property][prop] == undefined || char[property][prop] === ""){
+                                                        continue;
+                                                    }
+                                                    x = "repeating_features_".concat(i).concat("_Feature_").concat(prop);
+                                                    t[x] = char[property][prop];
+                                                }
+                                            }
+
+                                        } else if (property.match(/Ability\s*\d*/gi)!=null) {
+
+                                            i=generateRowID();
+                                            for (var prop in char[property]){
+                                                if (char[property].hasOwnProperty(prop)){
+                                                    if(char[property][prop] == undefined || char[property][prop] === ""){
+                                                        continue;
+                                                    }
+                                                    x = "repeating_abilities_".concat(i).concat("_Ability_").concat(prop);
+                                                    t[x] = char[property][prop];
+                                                }
+                                            }
+
+                                        } else if (property.match(/Edge\s*\d*/gi)!=null) {
+
+                                            i=generateRowID();
+                                            for (var prop in char[property]){
+                                                if (char[property].hasOwnProperty(prop)){
+                                                    if(char[property][prop] == undefined || char[property][prop] === ""){
+                                                        continue;
+                                                    }
+                                                    x = "repeating_edges_".concat(i).concat("_Edge").concat(prop);
+                                                    t[x] = char[property][prop];
+                                                }
+                                            }
+
+                                        }
+                                        else if (property.match(/Capabilities/i)){
+                                            x = 0;
+                                            for (var prop in char[property]) {
+                                                if (char[property].hasOwnProperty(prop)) {
+                                                    if(char[property][prop] == undefined || char[property][prop] === ""){
+                                                        continue;
+                                                    }
+
+                                                    if (prop=="Overland"||prop=="Swim"||prop=="HJ"||prop=="LJ"||prop=="Power") {
+                                                        t[prop]=char[property][prop];
+                                                    }else if (prop=="Throwing Range") {
+                                                        t["Throw"]= char[property][prop];
+                                                    }else if (Number.isInteger(char[property][prop])){
+                                                        if (x<rcaps.length-1) {
+                                                            t["repeating_capabilities_".concat(rcaps[x]).concat("_Capability")]=prop;
+                                                            t["repeating_capabilities_".concat(rcaps[x]).concat("_Capability_Rank")]=char[property][prop];
+
+                                                        } else {
+                                                            i=generateRowID();
+                                                            t["repeating_capabilities_".concat(i).concat("_Capability")]=prop;
+                                                            t["repeating_capabilities_".concat(i).concat("_Capability_Rank")]=char[property][prop];
+
+                                                        }
+                                                        x++;
+                                                    } else {
+                                                        if (x<rcaps.length-1) {
+                                                            t["repeating_capabilities_".concat(rcaps[x]).concat("_Capability")]=prop;
+
+                                                        } else {
+                                                            i=generateRowID();
+                                                            t["repeating_capabilities_".concat(i).concat("_Capability")]=prop;
+
+                                                        }
+                                                        x++;
+                                                    }
+                                                }
+                                            }
+                                        } else if(property.match(/nickname/i)){
+                                            if(char[property] == undefined || char[property] === ""){
+                                                continue;
+                                            }
+                                            t["character_name"] = char[property];
+
+                                        } else if(property.match(/struggle_type/i)){
+                                            if(char[property] == undefined || char[property] === ""){
+                                                continue;
+                                            }
+                                            t["struggleType"] = char[property];
+
+                                        } else if(property.match(/struggle_dtype/i)){
+                                            if(char[property] == undefined || char[property] === ""){
+                                                continue;
+                                            }
+                                            t["struggleCat"] = char[property];
+
+                                        } else if(property.match(/struggle_db/i)){
+                                            if(char[property] == undefined || char[property] === ""){
+                                                continue;
+                                            }
+                                            t["struggle_db"] = parseInt(char[property],10)||0;
+
+                                        } else if(property.match(/struggle_ac/i)){
+                                            if(char[property] == undefined || char[property] === ""){
+                                                continue;
+                                            }
+                                            t["struggleAC"] = parseInt(char[property],10)||0;
+
+                                        } else if(property.match(/struggle_range/i)){
+                                            if(char[property] == undefined || char[property] === ""){
+                                                continue;
+                                            }
+                                            t["struggleRange"] = char[property];
+
+                                        }else {
+                                            if(char[property] == undefined || char[property] === ""){
+                                                continue;
+                                            }
+                                            t[property]= char[property] ;
+                                        }
+                                    }
+
+
+                                }
+
+                                setAttrs(t);
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    };
+
+    /*
+        Calculate evasions from stats
+    */
+    var evaUp = function () {
+        var update = {};
+        getAttrs(["DEF_total","SPDEF_total","SPEED_total", "Eva_total", "PEB","ScEB", "SpEB"], function(v) {
+
+            var def   = parseInt(v["DEF_total"])   || 0;
+            var sdef  = parseInt(v["SPDEF_total"]) || 0;
+            var speed = parseInt(v["SPEED_total"]) || 0;
+
+            var eva   = parseInt(v["Eva_total"]) || 0;
+
+            var peb  = parseInt(v["PEB"]) ||0;
+            var sceb = parseInt(v["ScEB"])||0;
+            var speb = parseInt(v["SpEB"])||0;
+
+            def   = Math.min(Math.floor(  def/5),6);
+            sdef  = Math.min(Math.floor( sdef/5),6);
+            speed = Math.min(Math.floor(speed/5),6);
+
+            update["PhysEvade"] = def;
+            update["SpecEvade"] = sdef;
+            update["SpeedEvade"] = speed;
+
+            update["PhysEvade_calc"]  = 10+Math.min( eva + peb  + def,  10);
+            update["SpecEvade_calc"]  = 10+Math.min( eva + sceb + sdef, 10);
+            update["SpeedEvade_calc"] = 10+Math.min( eva + speb + speed, 10);
+
+            setAttrs(update);
+        });
+    };
+
+    /*
+        Calculate Max Hit Points and current max
+    */
+    var hpCalc = function (){
+        getAttrs(["Level","CharType","HP_Total", "Injuries"], function(v) {
+
+            var level = parseInt(v["Level"]) || 0;
+            var char  = parseInt(v["CharType"]) || 0;
+            var hp    = parseInt(v["HP_Total"]) || 0;
+            var injuries = parseInt(v["Injuries"]) || 0;
+
+            var x = Math.floor(level * (char + 1) + hp * 3 + 10);
+
+            setAttrs({
+                HitPoints_max: Math.floor(x * (1 - (injuries/10) ) ),
+                HitPoints_permmax: x,
+                a75_hp: Math.floor(x*0.75),
+                a50_hp: Math.floor(x*0.5),
+                a25_hp: Math.floor(x*0.25),
+                a13_hp: Math.floor(x*(1/3)),
+                a16_hp: Math.floor(x*(1/6)),
+                a18_hp: Math.floor(x*(1/8)),
+                a110_hp:Math.floor(x*(1/10)),
+                a116_hp:Math.floor(x*(1/16))
+            });
+
+        });
+    };
+
+    /*
+        Calculate max AP
+    */
+    var apCalc = function (){
+        getAttrs(["Level"], function(v) {
+            x = Math.floor(v.Level/5)+5;
+            setAttrs({
+                AP_max:x
+            });
+        });
+    };
+
+    /*
+        Return damage roll from a given DB
+        returns object eg {amount:8, dice:"d12", bonus:70}
+    */
+    var dbCalc = function (v){
+        if (isNaN(v) || v == 0){
+            return {amount:"0",dice:"d0",bonus:"0"};
+        }else if (v>14){
+            if (v>21){
+                if (v>24){
+                    if (v>26){
+                        if (v==27) {
+                            return {amount:8,dice:"d12",bonus:70};
+                        } else {
+                            return {amount:8,dice:"d12",bonus:80};
+                        }
+                    } else {
+                        if (v==25) {
+                            return {amount:6,dice:"d12",bonus:60};
+                        } else {
+                            return {amount:7,dice:"d12",bonus:65};
+                        }
+                    }
+                } else {
+                    if (v==22){
+                        return {amount:6,dice:"d12",bonus:45};
+                    } else if (v==23) {
+                        return {amount:6,dice:"d12",bonus:50};
+                    } else {
+                        return {amount:6,dice:"d12",bonus:55};
+                    }
+                }
+            } else {
+                if (v>17){
+                    if (v>19){
+                        if (v==20) {
+                            return {amount:6,dice:"d12",bonus:35};
+                        } else {
+                            return {amount:6,dice:"d12",bonus:40};
+                        }
+                    } else {
+                        if (v==18) {
+                            return {amount:6,dice:"d12",bonus:25};
+                        } else {
+                            return {amount:6,dice:"d12",bonus:30};
+                        }
+                    }
+                } else {
+                    if (v==15) {
+                        return {amount:4,dice:"d10",bonus:20};
+                    } else if (v==16) {
+                        return {amount:5,dice:"d10",bonus:20};
+                    } else {
+                        return {amount:5,dice:"d12",bonus:25};
+                    }
+                }
+            }
+        } else {
+            if (v>7){
+                if (v>10){
+                    if (v>12){
+                        if (v==13) {
+                            return {amount:4,dice:"d10",bonus:10};
+                        } else {
+                            return {amount:4,dice:"d10",bonus:15};
+                        }
+                    } else {
+                        if (v==11) {
+                            return {amount:3,dice:"d10",bonus:10};
+                        } else {
+                            return {amount:3,dice:"d12",bonus:10};
+                        }
+                    }
+                } else {
+                    if (v==8) {
+                        return {amount:2,dice:"d8",bonus:10};
+                    } else if (v==9) {
+                        return {amount:2,dice:"d10",bonus:10};
+                    } else {
+                        return {amount:3,dice:"d8",bonus:10};
+                    }
+                }
+            } else {
+                if (v>3){
+                    if (v>5){
+                        if (v==6) {
+                            return {amount:2,dice:"d6",bonus:8};
+                        } else {
+                            return {amount:2,dice:"d6",bonus:10};
+                        }
+                    } else {
+                        if (v==4){
+                            return {amount:1,dice:"d8",bonus:6};
+                        } else {
+                            return {amount:1,dice:"d8",bonus:8};
+                        }
+                    }
+                } else {
+                    if (v==1) {
+                        return {amount:1,dice:"d6",bonus:1};
+                    } else if (v==2) {
+                        return {amount:1,dice:"d6",bonus:3};
+                    } else {
+                        return {amount:1,dice:"d6",bonus:5};
+                    }
+                }
+            }
+        }
+    };
+
+    /*
+        return max exp given a level
+    */
+    var expCalc = function(v){
+        let exp = 0;
+        switch(v){
+            case 1:  exp = 0; break;
+            case 2:  exp = 10; break;
+            case 3:  exp = 20; break;
+            case 4:  exp = 30; break;
+            case 5:  exp = 40; break;
+            case 6:  exp = 50; break;
+            case 7:  exp = 60; break;
+            case 8:  exp = 70; break;
+            case 9:  exp = 80; break;
+            case 10: exp = 90; break;
+            case 11: exp = 110; break;
+            case 12: exp = 135; break;
+            case 13: exp = 160; break;
+            case 14: exp = 190; break;
+            case 15: exp = 220; break;
+            case 16: exp = 250; break;
+            case 17: exp = 285; break;
+            case 18: exp = 320; break;
+            case 19: exp = 360; break;
+            case 20: exp = 400; break;
+            case 21: exp = 460; break;
+            case 22: exp = 530; break;
+            case 23: exp = 600; break;
+            case 24: exp = 670; break;
+            case 25: exp = 745; break;
+            case 26: exp = 820; break;
+            case 27: exp = 900; break;
+            case 28: exp = 990; break;
+            case 29: exp = 1075; break;
+            case 30: exp = 1165; break;
+            case 31: exp = 1260; break;
+            case 32: exp = 1355; break;
+            case 33: exp = 1455; break;
+            case 34: exp = 1555; break;
+            case 35: exp = 1660; break;
+            case 36: exp = 1770; break;
+            case 37: exp = 1880; break;
+            case 38: exp = 1995; break;
+            case 39: exp = 2110; break;
+            case 40: exp = 2230; break;
+            case 41: exp = 2355; break;
+            case 42: exp = 2480; break;
+            case 43: exp = 2610; break;
+            case 44: exp = 2740; break;
+            case 45: exp = 2875; break;
+            case 46: exp = 3015; break;
+            case 47: exp = 3155; break;
+            case 48: exp = 3300; break;
+            case 49: exp = 3445; break;
+            case 50: exp = 3645; break;
+            case 51: exp = 3850; break;
+            case 52: exp = 4060; break;
+            case 53: exp = 4270; break;
+            case 54: exp = 4485; break;
+            case 55: exp = 4705; break;
+            case 56: exp = 4930; break;
+            case 57: exp = 5160; break;
+            case 58: exp = 5390; break;
+            case 59: exp = 5625; break;
+            case 60: exp = 5865; break;
+            case 61: exp = 6110; break;
+            case 62: exp = 6360; break;
+            case 63: exp = 6610; break;
+            case 64: exp = 6865; break;
+            case 65: exp = 7125; break;
+            case 66: exp = 7390; break;
+            case 67: exp = 7660; break;
+            case 68: exp = 7925; break;
+            case 69: exp = 8205; break;
+            case 70: exp = 8485; break;
+            case 71: exp = 8770; break;
+            case 72: exp = 9060; break;
+            case 73: exp = 9350; break;
+            case 74: exp = 9645; break;
+            case 75: exp = 9945; break;
+            case 76: exp = 10250; break;
+            case 77: exp = 10560; break;
+            case 78: exp = 10870; break;
+            case 79: exp = 11185; break;
+            case 80: exp = 11505; break;
+            case 81: exp = 11910; break;
+            case 82: exp = 12320; break;
+            case 83: exp = 12735; break;
+            case 84: exp = 13155; break;
+            case 85: exp = 13580; break;
+            case 86: exp = 14010; break;
+            case 87: exp = 14445; break;
+            case 88: exp = 14885; break;
+            case 89: exp = 15330; break;
+            case 90: exp = 15780; break;
+            case 91: exp = 16235; break;
+            case 92: exp = 16695; break;
+            case 93: exp = 17160; break;
+            case 94: exp = 17630; break;
+            case 95: exp = 18105; break;
+            case 96: exp = 18585; break;
+            case 97: exp = 19070; break;
+            case 98: exp = 19560; break;
+            case 99: exp = 20055; break;
+            case 100: exp = 20555; break;
+            default: exp = 0; break;
+        }
+
+        return exp;
+    }
+
+</script>
+
+<rolltemplate class="sheet-rolltemplate-PTU">
+    <table class='sheet-template-table'>
+        {{^title}}
+        {{^skill}}
+        {{#nick}}
+        <tr>
+            <th colspan="2">
+                <span class="sheet-owner">{{nick}}</span>
+                <br />
+                <span>{{name}}</span>
+            </th>
+        </tr>
+        {{/nick}}
+        {{^nick}}
+        <tr>
+            <th colspan="2">{{name}}</th>
+        </tr>
+        {{/nick}}
+
+        {{#ac}}
+        {{#rollGreater() ac -1}}
+        <tr>
+            <td colspan="2">
+                <span class="tcat">AC: </span>{{ar}} ≥ Target Evasion
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <span class="tcat">Crits On: {{critsOn}}+</span>
+            </td>
+        </tr>
+        {{/rollGreater() ac -1}}
+        {{/ac}}
+
+        {{^ac}}
+        <!-- <tr><td colspan="2"><span class="tcat">AC: </span>No Check</td></tr> -->
+        {{/ac}}
+
+        {{#type}}
+        <tr>
+            <td colspan="2"><span class="tcat">Type: </span>{{type}}</td>
+        </tr>
+        {{/type}}
+
+        {{#frequency}}
+        <tr>
+            <td colspan="2"><span class="tcat">Frequency: </span>{{frequency}}</td>
+        </tr>
+        {{/frequency}}
+
+        {{#range}}
+        <tr>
+            <td colspan="2"><span class="tcat">Range: </span>{{range}}</td>
+        </tr>
+        {{/range}}
+
+        {{#damage}}
+        <tr>
+            <td>
+                <span class="tcat">Damage: </span>{{damage}}
+            </td>
+            {{#ac}}
+            {{#rollWasCrit() ar}}
+            <td>
+                <span class="tcat">Crit: </span>{{db_roll}}
+            </td>
+            {{/rollWasCrit() ar}}
+            {{/ac}}
+        </tr>
+        {{#dmgcat}}
+        <tr>
+            <td colspan="2"><span class="tcat">Damage Category: </span>{{dmgcat}}</td>
+        </tr>
+        {{/dmgcat}}
+        {{/damage}}
+
+
+        {{#multistrike}}
+        {{#rollTotal() multistrike 2}}
+        <tr>
+            <td colspan="2">
+                [Double Strike](!&#13;&quest;{Whisper GM|Yes,/w gm &nbsp|No,&nbsp}&amp;{template:PTU}&lcub;&lcub;title=Double Strike&rcub;&rcub;&lcub;&lcub;message=Make two Attack Rolls. If one Attack Roll hits, the Move does damage as indicated by its Damage Base value; if both Attack Rolls hit however, the Damage Base value is doubled. Each hit may Critically Hit separately; when adding damage from Critical Hit, add the Damage Base before it’s doubled.&rcub;&rcub; )
+            </td>
+        </tr>
+        {{/rollTotal() multistrike 2}}
+
+        {{#rollTotal() multistrike 5}}
+        <tr>
+            <td colspan="2">
+                [Five Strike](!&#13;&quest;{Whisper GM|Yes,/w gm &nbsp|No,&nbsp}&amp;{template:PTU_FiveStrike}&lcub;&lcub;roll=&#91;&#91;1d8&#93;&#93;&rcub;&rcub; )
+            </td>
+        </tr>
+        {{/rollTotal() multistrike 5}}
+        {{/multistrike}}
+        {{#effect}}
+        <tr>
+            <td colspan="2">{{effect}}</td>
+        </tr>
+        {{/effect}}
+
+        {{/skill}}
+
+        {{#skill}}
+        <tr>
+            <th colspan="2">
+                {{#nick}}
+                <span class="sheet-owner">{{nick}}</span>
+                <br />
+                {{/nick}}
+                <span>Rolling&NewLine;{{skill}}</span>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <span class="tcat">Result: </span>
+                <span>{{SL}}</span>
+            </td>
+        </tr>
+        {{/skill}}
+
+        {{/title}}
+
+        {{#title}}
+        <tr>
+            <th colspan="2">
+                {{#nick}}
+                <span class="sheet-owner">{{nick}}</span>
+                <br />
+                {{/nick}}
+                <span>{{title}}</span>
+            </th>
+        </tr>
+        {{#allprops() nick title message}}
+        <tr><td class='sheet-table-header'>{{key}}</td><td>{{value}}</td></tr>
+        {{/allprops() nick title message}}
+        {{#message}}
+        <tr><td colspan="2">{{message}}</td></tr>
+        {{/message}}
+        {{/title}}
+
+    </table>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-PTU_Move">
+    <table class='sheet-template-table'>
+        <tr>
+            <th colspan="2"><div>{{name}}</div></th>
+        </tr>
+
+        {{#range}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Range</div></td>
+            <td colspan="1"><div>{{range}}</div></td>
+        </tr>
+        {{/range}}
+
+        {{#frequency}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Frequency</div></td>
+            <td colspan="1"><div>{{frequency}}</div></td>
+        </tr>
+        {{/frequency}}
+
+        {{#type}}
+        <tr class='sheet-roll-type'>
+            <td colspan="1"><div class="sheet-label">Type</div></td>
+            <td colspan="1"><div>{{type}}</div></td>
+        </tr>
+        {{/type}}
+
+        {{#cat}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Category</div></td>
+            <td colspan="1"><div>{{cat}}</div></td>
+        </tr>
+        {{/cat}}
+
+        {{^ac}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">AC</div></td>
+            <td colspan="1"><div>No Check</div></td>
+        </tr>
+        {{/ac}}
+
+        {{#ac}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">AC</div></td>
+            <td colspan="1"><div>{{ar}} {{#rollGreater() ac 0}} &ge; {{^evasion}} Target Evasion {{/evasion}}{{#evasion}} {{evasion}} {{/evasion}} {{/rollGreater() ac 0}}</div></td>
+        </tr>
+        <tr>
+            <td colspan="1"><div class="sheet-label">Crit On</div></td>
+            <td colspan="1"><div>{{critsOn}}+ </div></td>
+        </tr>
+        {{/ac}}
+
+        {{#rollGreater() db 0}}
+        {{#db}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">DB {{db}}</div></td>
+            <td colspan="1"><div>{{db_roll}} {{#roll}}= {{roll}} {{/roll}}</div></td>
+        </tr>
+        {{/db}}
+        {{/rollGreater() db 0}}
+
+        {{^db}}
+        {{#damage}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Damage</div></td>
+            <td colspan="1"><div>{{damage}} </div></td>
+        </tr>
+        {{/damage}}
+        {{/db}}
+
+
+        {{#contest_type}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Contest Type</div></td>
+            <td colspan="1"><div>{{contest_type}} </div></td>
+        </tr>
+        {{/contest_type}}
+
+        {{#contest_effect}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Contest Effect</div></td>
+            <td colspan="1"><div>{{contest_effect}} </div></td>
+        </tr>
+        {{/contest_effect}}
+
+        {{#effects}}
+        <tr>
+            <td colspan="2"><div class="sheet-label sheet-block" style="text-align:center;font-weight:bold">Effects</div></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div class="sheet-spacing ">{{effects}} </div></td>
+        </tr>
+        {{/effects}}
+
+    </table>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-PTU_Skill">
+    <table class='sheet-template-table'>
+        <tr>
+            <th colspan="2"><div>{{name}}</div></th>
+        </tr>
+
+        {{#range}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Range</div></td>
+            <td colspan="1"><div>{{range}}</div></td>
+        </tr>
+        {{/range}}
+
+        {{#frequency}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Frequency</div></td>
+            <td colspan="1"><div>{{frequency}}</div></td>
+        </tr>
+        {{/frequency}}
+
+        {{#type}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Type</div></td>
+            <td colspan="1"><div>{{type}}</div></td>
+        </tr>
+        {{/type}}
+
+        {{#cat}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Category</div></td>
+            <td colspan="1"><div>{{cat}}</div></td>
+        </tr>
+        {{/cat}}
+
+        {{^ac}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">AC</div></td>
+            <td colspan="1"><div>No Check</div></td>
+        </tr>
+        {{/ac}}
+
+        {{#ac}}
+        {{#rollGreater() ac 0}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">AC</div></td>
+            <td colspan="1"><div>{{ac}}</div></td>
+        </tr>
+        <tr>
+            <td colspan="1"><div class="sheet-label">Crit On</div></td>
+            <td colspan="1"><div>{{critsOn}}+ </div></td>
+        </tr>
+        {{/rollGreater() ac 0}}
+        {{/ac}}
+
+        {{#rollGreater() db 0}}
+        {{#db}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">DB {{db}}</div></td>
+            <td colspan="1"><div>{{db_roll}} </div></td>
+        </tr>
+        {{/db}}
+        {{/rollGreater() db 0}}
+
+        {{^db}}
+        {{#damage}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Damage</div></td>
+            <td colspan="1"><div>{{damage}} </div></td>
+        </tr>
+        {{/damage}}
+        {{/db}}
+
+        {{#contest_type}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Contest Type</div></td>
+            <td colspan="1"><div>{{contest_type}} </div></td>
+        </tr>
+        {{/contest_type}}
+
+        {{#contest_effect}}
+        <tr>
+            <td colspan="1"><div class="sheet-label">Contest Effect</div></td>
+            <td colspan="1"><div>{{contest_effect}} </div></td>
+        </tr>
+        {{/contest_effect}}
+
+        {{#effects}}
+        <tr>
+            <td colspan="2"><div class="sheet-label sheet-block">Effects</div></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div class="sheet-spacing ">{{effects}} </div></td>
+        </tr>
+        {{/effects}}
+
+    </table>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-PTU_FiveStrike">
+    <table class='sheet-template-table'>
+        <tr>
+            <th colspan="2">Five Strike</th>
+        </tr>
+        <tr>
+            {{#rollLess() roll 2}}
+            <td colspan="2"><b>One Hit!</b></td>
+            {{/rollLess() roll 2}}
+
+            {{#rollBetween() roll 2 3}}
+            <td colspan="2"><b>Two Hits!</b></td>
+            {{/rollBetween() roll 2 3}}
+
+            {{#rollBetween() roll 4 6}}
+            <td colspan="2"><b>Three Hits!</b></td>
+            {{/rollBetween() roll 4 6}}
+
+            {{#rollBetween() roll 7 7}}
+            <td colspan="2"><b>Four Hits!</b></td>
+            {{/rollBetween() roll 7 7}}
+
+            {{#rollGreater() roll 7}}
+            <td colspan="2"><b>Five Hits!</b></td>
+            {{/rollGreater() roll 7}}
+        </tr>
+        <tr>
+            <td colspan="2">
+                Multiply the Move’s Damage Base by the number of times hit; that becomes its new Damage Base. You may always apply Technician to Moves withFive Strike. Apply STAB and all other effects that raise Damage Base only after the Move’s final Damage Base has been calculated.
+            </td>
+        </tr>
+    </table>
+</rolltemplate>
+
+<!--
+    Jakob's Default RollTemplate
+ -->
+<rolltemplate class="sheet-rolltemplate-custom">
+    <div class="sheet-container sheet-color-{{color}}">
+        <div class="sheet-header">
+            {{#title}}<div class="sheet-title">{{title}}</div>{{/title}}
+            {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+        </div>
+        <div class="sheet-content">
+            {{#allprops() title subtitle desc color}}
+            <div class="sheet-key">{{key}}</div>
+            <div class="sheet-value">{{value}}</div>
+            {{/allprops() title subtitle desc color}}
+            {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+        </div>
+    </div>
+</rolltemplate>
