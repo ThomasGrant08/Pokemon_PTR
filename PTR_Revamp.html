@@ -112,14 +112,14 @@
     </div>
     <div class="Stats-Table">
         <table>
-            <thead>
-            <th>Stat</th>
-            <th>Base</th>
-            <th>Allocated</th>
-            <th>Bonus</th>
-            <th>Stage</th>
-            <th>Current</th>
-            </thead>
+            <tr>
+                <th>Stat</th>
+                <th>Base</th>
+                <th>Allocated</th>
+                <th>Bonus</th>
+                <th>Stage</th>
+                <th>Current</th>
+            </tr>
             <tr>
                 <td>HP</td>
                 <td><input type='number' name='attr_base_HP' value='10'></td>
@@ -248,12 +248,35 @@
                 </td>
                 <td><span class="sheet-field" name="attr_SPEED_total" style="width:100%">0</span></td>
             </tr>
+            <tr>
+                <td colspan="1">Damage Bonus</td>
+                <td colspan="4"></td>
+                <td><input type='number' value='0' name='attr_dmg_bonus' /></td>
+            </tr>
+            <tr>
+                <td colspan="1">Damage Resistance</td>
+                <td colspan="4"></td>
+                <td><input type='number' value='0' name='attr_dam_R' /></td>
+            </tr>
+            <tr>
+                <td colspan="1">Critical Range Bonus</td>
+                <td colspan="4"></td>
+                <td><input type='number' value='0' name='attr_crit_mod' /></td>
+            </tr>
+            <tr>
+                <td colspan="1">Initiative</td>
+                <td colspan="2"></td>
+                <td colspan="1"><input type='number' value='0' name='attr_init_bonus'></td>
+                <td colspan="1"></td>
+                <td colspan="1"><button type='roll' style="width: 45px;" value="@{whisper} &{template:PTU}{{title= @{character_name}'s Initiative }}{{message= [[@{SPEED_total} + @{init_bonus} + ([[1d20 ]] / 100) &{tracker}]] }}" name='roll_init' /></td>
+            </tr>
+
         </table>
     </div>
 
 </div>
 
-<!-- Scripts -->
+<!-- #region Scripts-->
 
 <script type="text/worker">
 
@@ -2033,3 +2056,5 @@
         </div>
     </div>
 </rolltemplate>
+
+<!-- #endregion -->
