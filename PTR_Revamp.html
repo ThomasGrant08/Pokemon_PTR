@@ -110,6 +110,146 @@
             </div>
         </div>
     </div>
+    <div class="Stats-Table">
+        <table>
+            <thead>
+            <th>Stat</th>
+            <th>Base</th>
+            <th>Allocated</th>
+            <th>Bonus</th>
+            <th>Stage</th>
+            <th>Current</th>
+            </thead>
+            <tr>
+                <td>HP</td>
+                <td><input type='number' name='attr_base_HP' value='10'></td>
+                <td><input type='number' name='attr_HP' value=0></td>
+                <td><input type='number' name='attr_HP_bonus' value=0></td>
+                <td></td>
+                <td><span class="sheet-field" name="attr_HP_total" style="width:100%">0</span></td>
+            </tr>
+            <tr>
+                <td>Attack</td>
+                <td><input type='number' name='attr_base_ATK' value='5'></td>
+                <td><input type='number' name='attr_ATK' value=0></td>
+                <td><input type='number' name='attr_ATK_bonus' value=0></td>
+                <td>
+                    <select name='attr_ATK_Stage'>
+                        <option value='0.4'>-6</option>
+                        <option value='0.5'>-5</option>
+                        <option value='0.6'>-4</option>
+                        <option value='0.7'>-3</option>
+                        <option value='0.8'>-2</option>
+                        <option value='0.9'>-1</option>
+                        <option value='1' selected>0</option>
+                        <option value='1.2'>1</option>
+                        <option value='1.4'>2</option>
+                        <option value='1.6'>3</option>
+                        <option value='1.8'>4</option>
+                        <option value='2'>5</option>
+                        <option value='2.2'>6</option>
+                    </select>
+                </td>
+                <td><span class="sheet-field" name="attr_ATK_total" style="width:100%">0</span></td>
+            </tr>
+            <tr>
+                <td>Defense</td>
+                <td><input type='number' name='attr_base_DEF' value='5'></td>
+                <td><input type='number' name='attr_DEF' value=0></td>
+                <td><input type='number' name='attr_DEF_bonus' value=0></td>
+                <td>
+                    <select name='attr_DEF_Stage'>
+                        <option value='0.4'>-6</option>
+                        <option value='0.5'>-5</option>
+                        <option value='0.6'>-4</option>
+                        <option value='0.7'>-3</option>
+                        <option value='0.8'>-2</option>
+                        <option value='0.9'>-1</option>
+                        <option value='1' selected>0</option>
+                        <option value='1.2'>1</option>
+                        <option value='1.4'>2</option>
+                        <option value='1.6'>3</option>
+                        <option value='1.8'>4</option>
+                        <option value='2'>5</option>
+                        <option value='2.2'>6</option>
+                    </select>
+                </td>
+                <td><span class="sheet-field" name="attr_DEF_total" style="width:100%">0</span></td>
+            </tr>
+            <tr>
+                <td>Special Attack</td>
+                <td><input type='number' name='attr_base_SPATK' value='5'></td>
+                <td><input type='number' name='attr_SPATK' value=0></td>
+                <td><input type='number' name='attr_SPATK_bonus' value=0></td>
+                <td>
+                    <select name='attr_SPATK_Stage'>
+                        <option value='0.4'>-6</option>
+                        <option value='0.5'>-5</option>
+                        <option value='0.6'>-4</option>
+                        <option value='0.7'>-3</option>
+                        <option value='0.8'>-2</option>
+                        <option value='0.9'>-1</option>
+                        <option value='1' selected>0</option>
+                        <option value='1.2'>1</option>
+                        <option value='1.4'>2</option>
+                        <option value='1.6'>3</option>
+                        <option value='1.8'>4</option>
+                        <option value='2'>5</option>
+                        <option value='2.2'>6</option>
+                    </select>
+                </td>
+                <td><span class="sheet-field" name="attr_SPATK_total" style="width:100%">0</span></td>
+            </tr>
+            <tr>
+                <td>Special Defense</td>
+                <td><input type='number' name='attr_base_SPDEF' value='5'></td>
+                <td><input type='number' name='attr_SPDEF' value=0></td>
+                <td><input type='number' name='attr_SPDEF_bonus' value=0></td>
+                <td>
+                    <select name='attr_SPDEF_Stage'>
+                        <option value='0.4'>-6</option>
+                        <option value='0.5'>-5</option>
+                        <option value='0.6'>-4</option>
+                        <option value='0.7'>-3</option>
+                        <option value='0.8'>-2</option>
+                        <option value='0.9'>-1</option>
+                        <option value='1' selected>0</option>
+                        <option value='1.2'>1</option>
+                        <option value='1.4'>2</option>
+                        <option value='1.6'>3</option>
+                        <option value='1.8'>4</option>
+                        <option value='2'>5</option>
+                        <option value='2.2'>6</option>
+                    </select>
+                </td>
+                <td><span class="sheet-field" name="attr_SPDEF_total" style="width:100%">0</span></td>
+            </tr>
+            <tr>
+                <td>Attack</td>
+                <td><input type='number' name='attr_base_SPEED' value='10'></td>
+                <td><input type='number' name='attr_SPEED' value=0></td>
+                <td><input type='number' name='attr_SPEED_bonus' value=0></td>
+                <td>
+                    <select name='attr_SPEED_Stage'>
+                        <option value='0.4'>-6</option>
+                        <option value='0.5'>-5</option>
+                        <option value='0.6'>-4</option>
+                        <option value='0.7'>-3</option>
+                        <option value='0.8'>-2</option>
+                        <option value='0.9'>-1</option>
+                        <option value='1' selected>0</option>
+                        <option value='1.2'>1</option>
+                        <option value='1.4'>2</option>
+                        <option value='1.6'>3</option>
+                        <option value='1.8'>4</option>
+                        <option value='2'>5</option>
+                        <option value='2.2'>6</option>
+                    </select>
+                </td>
+                <td><span class="sheet-field" name="attr_SPEED_total" style="width:100%">0</span></td>
+            </tr>
+        </table>
+    </div>
 
 </div>
 
