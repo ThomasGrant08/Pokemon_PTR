@@ -27,6 +27,8 @@
     --fairy: #D685AD;
     --primary-Color: #d6d5c9;
     --secondary-Color: #d6d5c9;
+    --black: #2b2b2b;
+    --white: #ffffff;
 }
 
 * {
@@ -210,7 +212,7 @@
     min-width: 840px;
     max-width: 900px;
     margin: 0 auto;
-    background: linear-gradient(135deg,var(--primary-Color),var(--secondary-Color));
+    background: linear-gradient(90deg,var(--primary-Color),var(--secondary-Color));
     transition: background 0.5s ease;
     --field-color: lightgrey;
     border-radius: 20px;
@@ -229,6 +231,10 @@
     background-color: var(--button-color);
     transition: all var(--animation-timing) ease;
 }
+
+.Radio-Wrap label:hover {
+    background-color: var(--button-hover);
+}
 .Radio-Wrap label p {
     margin-bottom: 0;
     user-select: none;
@@ -244,4 +250,236 @@
     width: 200px;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.Section {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Section-Head {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: var(--black);
+}
+
+.Section-Head h2 {
+    color: white;
+}
+
+.Stats-Table th h3 {
+    color: white;
+}
+
+.Stats-Table th {
+    padding: 5px;
+    background-color: var(--black);
+}
+
+table{
+    width: 100%;
+}
+
+.Notes textarea {
+    resize: vertical;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.Sheet {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-auto-flow: dense;
+}
+
+.Hero img {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.Hero {
+    grid-column: span 2;
+    position: relative;
+}
+
+.Column-1 {
+    grid-column: 1;
+    display: grid;
+    row-gap: 10px;
+}
+
+.Column-2 {
+    grid-column: 2;
+    display: grid;
+    row-gap: 10px;
+    height: fit-content;
+}
+
+.Section {
+    height: fit-content;
+}
+
+.Row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding-left: 5px;
+    padding-right: 50px;
+    padding-bottom: 5px;
+}
+
+.Row input {
+    width: 100%;
+    text-align: center;
+}
+
+.Two-Col {
+    display: grid;
+    grid-template-columns: 3fr 5.4fr;
+    grid-gap: 20px;
+    grid-column: span 5;
+}
+
+.Three-Col {
+    display: grid;
+    grid-column: span 5;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 20px;
+}
+
+.Two-Col .Col, .Three-Col .Col {
+    display: flex;
+    gap: 5px;
+}
+
+.Two-Col .Col, .Three-Col .Col{
+    justify-content: space-between;
+}
+
+input {
+    text-align: center;
+}
+
+select {
+    width: fit-content;
+    margin: unset;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.Info-Table input, .Info-Table select, input[type="number"], input[type="text"]{
+    border-radius: 5px;
+    border: unset;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+}
+
+.Info-Table select {
+    width: 101.5px;
+}
+
+.Tab-Header {
+    width: fit-content;
+    position: absolute;
+}
+
+.Marker {
+    font-weight: 600;
+    width: 100%;
+    display: inline-block;
+}
+
+.Health-Markers td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Initative {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: grid;
+    width: fit-content;
+    background-color: var(--button-color);
+    border-radius: 10px;
+}
+
+.Initative:hover {
+    background-color: var(--button-hover);
+}
+
+.Initative button {
+    height: 100%;
+    color: black !important;
+    background: transparent !important;
+    border: unset;
+    padding: 8px 16px !important;
+    text-shadow: unset;
+    box-shadow: unset;
+}
+
+.Capabilities th{
+    background-color: var(--black);
+    padding: 5px;
+}
+
+.Capabilities th h4 {
+    color: white;
+}
+
+.Capability {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 5px;
+    grid-gap: 5px;
+}
+
+.Capabilities .repitem:nth-child(even) {
+    background-color:rgba(0,0,0,0.1);
+}
+
+.Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    padding: 5px;
+}
+
+.Section-Head h3, .Section-Head h4 {
+    color: white;
+}
+
+.Grid > label {
+    background-color: var(--button-color);
+    color: white;
+}
+
+.Grid > label {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Grid > label input[type="checkbox"] {
+    display: none;
+}
+
+.Grid > label:hover {
+    background-color: var(--button-hover);
+}
+
+.Grid > label:has("input[type='checkbox']:checked") {
+    background-color: var(--button-active);
 }
