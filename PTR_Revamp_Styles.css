@@ -500,3 +500,28 @@ input::-webkit-inner-spin-button {
 .Section table tr td:nth-last-child(1){
     text-align: center;
 }
+
+.Blocks {
+    grid-column: span 2;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.Moves .Section-Head input[type="checkbox"]:checked + label > img{
+    transform: rotate(180deg);
+}
+
+.Moves .Section-Head {
+    position: relative;
+}
+
+.Moves .Section-Head label {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: fit-content;
+}
+
+.Moves .Section-Head label img {
+    transition: transform 0.5s ease;
+}
