@@ -3,8 +3,8 @@
 }
 
 :root {
-    --button-color: #808080;
-    --button-hover: #a8a8a8;
+    --button-color: #a8a8a8;
+    --button-hover: #808080;
     --button-active: #565656;
     --animation-timing: 0.2s;
     --normal: #A8A77A;
@@ -250,6 +250,7 @@
     width: 200px;
     border-radius: 10px;
     overflow: hidden;
+    border: 2px solid var(--button-active);
 }
 
 .Section {
@@ -313,6 +314,7 @@ tr:nth-child(even) {
 .Column-1 {
     grid-column: 1;
     display: grid;
+    height: fit-content;
     row-gap: 10px;
 }
 
@@ -413,6 +415,7 @@ input::-webkit-inner-spin-button {
     width: fit-content;
     background-color: var(--button-color);
     border-radius: 10px;
+    border: 2px solid var(--button-active);
 }
 
 .Initative:hover {
@@ -427,6 +430,8 @@ input::-webkit-inner-spin-button {
     padding: 8px 16px !important;
     text-shadow: unset;
     box-shadow: unset;
+    display: flex;
+    gap: 5px;
 }
 
 .Capabilities th{
@@ -462,7 +467,7 @@ input::-webkit-inner-spin-button {
 
 .Grid > label {
     background-color: var(--button-color);
-    color: white;
+    color: black;
 }
 
 .Grid > label {
@@ -480,6 +485,18 @@ input::-webkit-inner-spin-button {
     background-color: var(--button-hover);
 }
 
-.Grid > label:has("input[type='checkbox']:checked") {
+.Grid > label:has(input[type='checkbox']:checked) {
     background-color: var(--button-active);
+    color: white;
+    text-decoration: underline;
+}
+
+.Section table input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Section table tr td:nth-last-child(1){
+    text-align: center;
 }

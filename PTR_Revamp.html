@@ -539,20 +539,28 @@
                     <h4>Persistent</h4>
                 </div>
                 <div class="Grid">
-                    <label for="Burn">
-                        <input type='checkbox' id="Burn"value='1' name='attr_st_burn' title="Defense -2 CS. 1 Tick per Standard Action" />
+                    <label for="Burn" title="Defense -2 CS. 1 Tick per Standard Action" style="--button-active: #CC5500;">
+                        <input type='checkbox' id="Burn"value='1' name='attr_st_burn'  />
                         <span>Burned</span>
                     </label>
-                    <label for="Frozen">
-                        <input type='checkbox' id="Frozen" value='1' name='attr_st_froz' title="No Actions. DC 16 Save Check. Vulnerable" />
+                    <label for="Frozen" title="No Actions. DC 16 Save Check. Vulnerable" style="--button-active: #368BC1;">
+                        <input type='checkbox' id="Frozen" value='1' name='attr_st_froz' />
                         <span>Frozen</span>
                     </label>
-                    <label for="Par">
-                        <input type='checkbox' id="Par" value='1' name='attr_st_para' title="Half Initiative. DC 11 Save or:
+                    <label for="Par" title="Half Initiative. DC 11 Save or:
 - Standard OR Shift Action
 - Vulnerable
-- No AoO" />
+- No AoO" style="--button-active: #ffb81c;">
+                        <input type='checkbox' id="Par" value='1' name='attr_st_para' />
                         <span>Paralysis</span>
+                    </label>
+                    <label for="Poison" title="SpDef -2 CS. 1 Tick Per Standard Taken/Skipped" style="--button-active: #7f01fe;">
+                        <input type="checkbox" id="Poison" value="1" name="attr_st_pois" />
+                        <span>Poisoned</span>
+                     </label>
+                    <label for="BP" title="SpDef -2 CS. HP Loss 5,10,20,40... per Standard Taken/Skipped" style="grid-column: span 2; --button-active: #340069;">
+                        <input type="checkbox" id="BP" value="2" name="attr_st_pois" />
+                        <span>Badly Poisoned</span>
                     </label>
                 </div>
             </div>
@@ -561,7 +569,38 @@
                     <h4>Volatile</h4>
                 </div>
                 <div class="Grid">
-
+                    <label for="Bad-Sleep" style="--button-active: #301934;">
+                        <input type="checkbox" id="Bad-Sleep" value="1" name="attr_st_bads" />
+                        <span>Bad Sleep</span>
+                    </label>
+                    <label for="Confused" style="--button-active: #DBA800;">
+                        <input type="checkbox" id="Confused" value="1" name="attr_st_conf" />
+                        <span>Confused</span>
+                    </label>
+                    <label for="Cursed" style="--button-active: #301934;">
+                        <input type="checkbox" id="Cursed" value="1" name="attr_st_curs" />
+                        <span>Cursed</span>
+                    </label>
+                    <label for="Disabled" style="--button-active: black;">
+                        <input type="checkbox" id="Disabled" value="1" name="attr_st_disa" />
+                        <span>Disabled</span>
+                    </label>
+                    <label for="Rage" style="--button-active: #850101;">
+                        <input type="checkbox" id="Rage" value="1" name="attr_st_rage" />
+                        <span>Rage</span>
+                    </label>
+                    <label for="Flinched" style="--button-active: black;">
+                        <input type="checkbox" id="Flinched" value="1" name="attr_st_flin" />
+                        <span>Flinched</span>
+                    </label>
+                    <label for="Infa" style="--button-active: #AA336A;">
+                        <input type="checkbox" id="Infa" value="1" name="attr_st_infa" />
+                        <span>Infatuation</span>
+                    </label>
+                    <label for="Sleep">
+                        <input type="checkbox" id="Sleep" value="1" name="attr_st_sleep" />
+                        <span>Sleep</span>
+                    </label>
                 </div>
             </div>
             <div class="Sub-Section">
@@ -569,7 +608,38 @@
                     <h4>Other</h4>
                 </div>
                 <div class="Grid">
-
+                    <label for="Fainted">
+                        <input type="checkbox" id="Fainted" value="1" name="attr_st_fain" />
+                        <span>Fainted</span>
+                    </label>
+                    <label for="Blindness">
+                        <input type="checkbox" id="Blindness" value="1" name="attr_st_blin" />
+                        <span>Blindness</span>
+                    </label>
+                    <label for="TBlind">
+                        <input type="checkbox" id="TBlind" value="1" name="attr_st_tota" />
+                        <span>Total Blindness</span>
+                    </label>
+                    <label for="Slow">
+                        <input type="checkbox" id="Slow" value="1" name="attr_st_slow" />
+                        <span>Slowed</span>
+                    </label>
+                    <label for="Stuck">
+                        <input type="checkbox" id="Stuck" value="1" name="attr_st_stuc" />
+                        <span>Stuck</span>
+                    </label>
+                    <label for="Trapped">
+                        <input type="checkbox" id="Trapped" value="1" name="attr_st_trap" />
+                        <span>Trapped</span>
+                    </label>
+                    <label for="Tripped">
+                        <input type="checkbox" id="Tripped" value="1" name="attr_st_trip" />
+                        <span>Tripped</span>
+                    </label>
+                    <label for="Vuln">
+                        <input type="checkbox" id="Vuln" value="1" name="attr_st_vuln" />
+                        <span>Vulnerable</span>
+                    </label>
                 </div>
             </div>
         </div>
