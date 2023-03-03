@@ -1296,7 +1296,7 @@ The user is cured with a DC 16 Save." />
                                 
                                 <button type="roll" name="roll_struggleShow_physical" class="sheet-move-button sheet-move-physical" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + @{ATK_total}   + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
                                 <button type="roll" name="roll_struggleShow_special"  class="sheet-move-button sheet-move-special"  title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + @{SPATK_total} + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
-                                <button type="roll" name="roll_struggleShow_status"   class="sheet-move-button sheet-move-status"   title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + 0              + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
+                                <button type="roll" name="roll_struggleShow_status"   class="sheet-move-button sheet-move-status"   title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
                             </div>
                             <div>
                                 <input type="hidden" name="attr_struggleCrit_total" value='20' />
@@ -1336,7 +1336,7 @@ The user is cured with a DC 16 Save." />
                                 
                                 <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="sheet-move-button sheet-move-physical" value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will }} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + @{ATK_total} + @{dmg_bonus} ]] }}"></button>
                                 <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="sheet-move-button sheet-move-special"  value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will }} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + @{SPATK_total} + @{dmg_bonus} ]] }}"></button>
-                                <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="sheet-move-button sheet-move-status"   value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will }} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + 0 + @{dmg_bonus} ]] }}"></button>
+                                <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="sheet-move-button sheet-move-status"   value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will }} {{db= [[@{struggle_db_total}]] }} "></button>
                             </div>
                         </div>
                     </div>
@@ -2306,7 +2306,7 @@ The user is cured with a DC 16 Save." />
                                 
                                 <button type="roll" name="roll_struggleShow_physical" class="sheet-move-button sheet-move-physical" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} - @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + @{ATK_total}   + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
                                 <button type="roll" name="roll_struggleShow_special"  class="sheet-move-button sheet-move-special"  title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} - @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + @{SPATK_total} + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
-                                <button type="roll" name="roll_struggleShow_status"   class="sheet-move-button sheet-move-status"   title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} - @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + 0              + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
+                                <button type="roll" name="roll_struggleShow_status"   class="sheet-move-button sheet-move-status"   title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} - @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= 0 }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
                             </div>
                             <div>
                                 <input type="hidden" name="attr_struggleCrit_total" value='20' />
@@ -2438,7 +2438,7 @@ The user is cured with a DC 16 Save." />
                                 
                                 <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-physical" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} - @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{multistrike=[[@{ml_multistrike}]]}} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]]}} {{damage= [[@{mlDB_roll} + @{ATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
                                 <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-special"  title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} - @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{multistrike=[[@{ml_multistrike}]]}} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]]}} {{damage= [[@{mlDB_roll} + @{SPATK_total} + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
-                                <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-status"   title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} - @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{multistrike=[[@{ml_multistrike}]]}} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]]}} {{damage= [[@{mlDB_roll} + 0              + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
+                                <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-status"   title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} - @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{multistrike=[[@{ml_multistrike}]]}} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]]}} {{damage= 0 }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
                             </div>
                             <div>
                                 <input type="hidden" name="attr_mlAC_total" value='0' />
@@ -2481,7 +2481,7 @@ The user is cured with a DC 16 Save." />
                                 
                                 <button type="roll" name="roll_mlDB" class="sheet-move-button sheet-move-physical" title="Roll Damage" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick= @{character_name} }} {{name= @{mlName}}} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{db= [[@{mldb_total}]] }} {{damage= [[@{mlDB_roll} + @{ATK_total} + @{dmg_bonus} ]] }}"></button>
                                 <button type="roll" name="roll_mlDB" class="sheet-move-button sheet-move-special"  title="Roll Damage" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick= @{character_name} }} {{name= @{mlName}}} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{db= [[@{mldb_total}]] }} {{damage= [[@{mlDB_roll} + @{SPATK_total} + @{dmg_bonus} ]] }}"></button>
-                                <button type="roll" name="roll_mlDB" class="sheet-move-button sheet-move-status"   title="Roll Damage" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick= @{character_name} }} {{name= @{mlName}}} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{db= [[@{mldb_total}]] }} {{damage= [[@{mlDB_roll} + 0 + @{dmg_bonus} ]] }}"></button>
+                                <button type="roll" name="roll_mlDB" class="sheet-move-button sheet-move-status"   title="Roll Damage" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick= @{character_name} }} {{name= @{mlName}}} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{db= [[@{mldb_total}]] }} {{damage= 0 }}"></button>
                             </div>
                         </div>
                     </div>
@@ -2505,14 +2505,14 @@ The user is cured with a DC 16 Save." />
 
 <script type="text/worker">
 
-    let moveAttrs = [ 
+    let moveAttrs = [
         "repeating_moves_mlKnown","repeating_moves_mlName","repeating_moves_mlType","repeating_moves_mlFrequency",
         "repeating_moves_mlCat","repeating_moves_mlRange","repeating_moves_mlAC_total","repeating_moves_mlCrit_total",
         "repeating_moves_mldb_total","repeating_moves_mlDB_roll","repeating_moves_mlDamageBonus","repeating_moves_mlUses",
         "repeating_moves_mlContestType","repeating_moves_mlContestEffect","repeating_moves_mlEffects",
         "repeating_moves_mlID", "repeating_moves_ml_multistrike"
     ];
-    
+
     let natures={
         "composed":{"up":"HP","down":"HP"},"cuddly":{"up":"HP","down":"ATK"},"distracted":{"up":"HP","down":"DEF"},
         "proud":{"up":"HP","down":"SPATK"},"decisive":{"up":"HP","down":"SPDEF"},"patient":{"up":"HP","down":"SPEED"},
@@ -2527,16 +2527,16 @@ The user is cured with a DC 16 Save." />
         "timid":{"up":"SPEED","down":"ATK"},"hasty":{"up":"SPEED","down":"DEF"},"jolly":{"up":"SPEED","down":"SPATK"},
         "naive":{"up":"SPEED","down":"SPDEF"},"serious":{"up":"SPEED","down":"SPEED"}
     };
-    
+
     let weights=[
         "0 – 25 lbs; 0 – 11 kg; ---","25 – 55 lbs; 11 – 25 kg; ---",
         "55 – 110 lbs; 25 – 50 kg; ---","110 – 220 lbs; 50 – 100 kg; ---","220 – 440 lbs; 100 – 200 kg; ---",
         " > 440lbs ; > 200kg; ---", " > 440lbs ; > 200kg; Heavy Metal"
-    ];    
-    
+    ];
+
     let oldStruggleAttrs = [
         `Struggle_AC`, `Struggle_critsOn`, `Struggle_Type`, `Struggle_DB`, `Struggle_Amount`,
-        `Struggle_Dice`, `Struggle_Bonus`, `Struggle_DType`, `Struggle_Range`, 
+        `Struggle_Dice`, `Struggle_Bonus`, `Struggle_DType`, `Struggle_Range`,
         `Struggle_Effects`, `Struggle_pmod`, `Struggle_smod`, `Struggle_dam_B_t`
     ];
 
@@ -2556,22 +2556,22 @@ The user is cured with a DC 16 Save." />
         ];
     };
 
-    var oldFeatureAttrs = function (sectionid) { 
+    var oldFeatureAttrs = function (sectionid) {
         return [
-            `repeating_abilities_${sectionid}_Ability_Hide`, 
-            `repeating_abilities_${sectionid}_Ability_Name`, 
-            `repeating_abilities_${sectionid}_Ability_Freq`, 
+            `repeating_abilities_${sectionid}_Ability_Hide`,
+            `repeating_abilities_${sectionid}_Ability_Name`,
+            `repeating_abilities_${sectionid}_Ability_Freq`,
             `repeating_abilities_${sectionid}_Ability_Target`,
-            `repeating_abilities_${sectionid}_Ability_Trigger`, 
+            `repeating_abilities_${sectionid}_Ability_Trigger`,
             `repeating_abilities_${sectionid}_Ability_Info`
         ];
     };
-    
-    
+
+
     var tryUpdateRepeatingMoves = function () {
         getSectionIDs("repeating_moves", function (idarray) {
             for(i = 0 ; i < idarray.length ; i++ )
-            {   
+            {
                 getAttrs( getOldMoveAttrsRepeating(idarray[i]), function (values) {
                     var section = idarray[i];
                     var autoupdate = {};
@@ -2597,26 +2597,26 @@ The user is cured with a DC 16 Save." />
                     update[`repeating_moves_${section}_mlDB_total`]      = 0;
                     update[`repeating_moves_${section}_mlStab`]          = 0;
                     update[`repeating_moves_${section}_mlEffects`]       = values[`repeating_moves_${section}_Move_Effects`]||"";
-                    
-                    setAttrs(update, {silent:true}, function () { 
-                        setAttrs(autoupdate); 
+
+                    setAttrs(update, {silent:true}, function () {
+                        setAttrs(autoupdate);
                     });
                 });
             }
         });
     };
-        
+
     var tryUpdateStruggle = function () {
         getAttrs(oldStruggleAttrs, function (values) {
             var update = {};
-            
+
             update["struggleFreq"]          = "At-Will";
             update["struggleType"]          = values["Struggle_Type"] || "Normal";
             update["struggleContestType"]   = "Standard";
             update["struggleCat"]           = values["Struggle_DType"] || "Physical";
             update["struggleContestEffect"] = "";
             update["struggleRange"]         = values["Struggle_Range"] || "Melee, 1 Target";
-            
+
             update["struggleAC"]            = parseInt( values["Struggle_AC"], 10) || 6;
             update["struggleAC_bonus"]      = 0;
             update["struggleAC_total"]      = update["struggleAC"];
@@ -2629,13 +2629,13 @@ The user is cured with a DC 16 Save." />
             update["struggleEffects"]       = values["Struggle_Effects"] || "" ;
 
             setAttrs(update, {silent:true}, function () {
-                setAttrs({ 
-                    "struggle_db" : ( parseInt( values["Struggle_DB"], 10) || 4 ) 
+                setAttrs({
+                    "struggle_db" : ( parseInt( values["Struggle_DB"], 10) || 4 )
                 });
             });
         });
     };
-    
+
     function tryUpdateMove(n){
         if(n > 6){return;}
         getAttrs(getOldMoveAttrs(n), function (values) {
@@ -2663,12 +2663,12 @@ The user is cured with a DC 16 Save." />
                 update[`repeating_moves_${newrowid}_mlDB_roll`]         = "";
                 update[`repeating_moves_${newrowid}_mlStab`]            = 0;
                 update[`repeating_moves_${newrowid}_mlEffects`]         = values[`Move${n}_Effects`] || "";
-                
+
                 autoFields[`repeating_moves_${newrowid}_mlAC`]          = parseInt(values[`Move${n}_AC`],10)||0;
                 autoFields[`repeating_moves_${newrowid}_mlDB`]          = parseInt(values[`Move${n}_DB`],10)||0;
                 autoFields[`repeating_moves_${newrowid}_mlCrit`]        = parseInt(values[`Move${n}_critsOn`],10)||20;
-            }              
-                
+            }
+
             setAttrs(update, {silent: true}, function () {
                 setAttrs(autoFields);
             });
@@ -2676,10 +2676,10 @@ The user is cured with a DC 16 Save." />
     };
 
     function tryUpdateRepeatingConditions(){
-        getSectionIDs("statuses", function (idarray) {                 
+        getSectionIDs("statuses", function (idarray) {
             for(i = 0 ; i < idarray.length ; i++ )
-            { 
-                getAttrs( 
+            {
+                getAttrs(
                 [
                     `repeating_statuses_${idarray[i]}_status_name1`,
                     `repeating_statuses_${idarray[i]}_status_name2`,
@@ -2688,12 +2688,12 @@ The user is cured with a DC 16 Save." />
                 ], function (values) {
                     var update = {};
                     var id1 = generateRowID();
-                    
-                    if(values[`repeating_statuses_${idarray[i]}_status_name1`] != undefined){  
+
+                    if(values[`repeating_statuses_${idarray[i]}_status_name1`] != undefined){
                         update[`repeating_custom-status_${id1}_status_name`]    = values[`repeating_statuses_${idarray[i]}_status_name1`];
                         update[`repeating_custom-status_${id1}_status_state`]   = parseInt(values[`repeating_statuses_${idarray[i]}_status_state1`],10)||0;
                     }
-                    
+
                     var id2 = generateRowID();
                     if(values[`repeating_statuses_${idarray[i]}_status_name2`] != undefined){
                         update[`repeating_custom-status_${id2}_status_name`]    = values[`repeating_statuses_${idarray[i]}_status_name2`];
@@ -2705,7 +2705,7 @@ The user is cured with a DC 16 Save." />
             }
         });
     };
-    
+
     function tryUpdateStaticFeature(){
         getAttrs(["FeatureHide","FeatureName", "FeatureFreq", "FeatureTarget", "FeatureInfo"], function (values){
             if(values["FeatureName"] != undefined){
@@ -2717,8 +2717,8 @@ The user is cured with a DC 16 Save." />
                 update[`repeating_features_${id}_Feature_Freq`]     = values["FeatureFreq"]     || "";
                 update[`repeating_features_${id}_Feature_Target`]   = values["FeatureTarget"]   || "";
                 update[`repeating_features_${id}_Feature_Info`]     = values["FeatureInfo"]     || "";
-                
-                setAttrs(update,{"silent": true});            
+
+                setAttrs(update,{"silent": true});
             }
         });
     };
@@ -2728,22 +2728,22 @@ The user is cured with a DC 16 Save." />
             if(values["AbilityName"] != undefined){
                 var update = {};
                 var id = generateRowID();
-                
+
                 update[`repeating_abilities_${id}_Ability_Hide`]     = values["AbilityHide"]    || "";
                 update[`repeating_abilities_${id}_Ability_Name`]     = values["AbilityName"]    || "";
                 update[`repeating_abilities_${id}_Ability_Freq`]     = values["AbilityFreq"]    || "";
                 update[`repeating_abilities_${id}_Ability_Target`]   = values["AbilityTarget"]  || "";
                 update[`repeating_abilities_${id}_Ability_Info`]     = values["AbilityInfo"]    || "";
-                
-                setAttrs(update,{"silent": true});            
+
+                setAttrs(update,{"silent": true});
             }
         });
     };
-    
-    var versioning = function (version) {        
+
+    var versioning = function (version) {
         if (version == undefined || version < 2.0){
             var update = {};
-            
+
             // RepeatingMoves
             tryUpdateRepeatingMoves();
             // Repeating Conditions
@@ -2756,18 +2756,18 @@ The user is cured with a DC 16 Save." />
             tryUpdateMove(3);
             tryUpdateMove(4);
             tryUpdateMove(5);
-            tryUpdateMove(6);            
+            tryUpdateMove(6);
             // Static Feature
             tryUpdateStaticFeature();
             // Static Ability
             tryUpdateStaticAbility();
-            
+
             update["version"] = 2.0;
 
-            setAttrs(update,{silent: true}, function () { 
-                versioning(2.0); 
+            setAttrs(update,{silent: true}, function () {
+                versioning(2.0);
             });
-        }       
+        }
     };
 
     on("sheet:opened", function () {
@@ -2776,27 +2776,27 @@ The user is cured with a DC 16 Save." />
             console.log(`Running update for v${version} sheet '${values["character_name"]}'`);
 
             if(version < 2.0){
-                versioning(1); 
+                versioning(1);
             }else if(version > 2.0){
                 versioning(version);
             }
         });
     });
-    
-    
+
+
     /*
         Auto-fill Weight based on weight class.
         If a non generic value has been set to the weight field
         this event does nothing.
     */
     on("change:weightClass" , function(e){
-        
+
         getAttrs(["weightClass","weight"],function(v){
-            
+
             var wc = parseInt(v["weightClass"])||0;
             var text = v["weight"] || "";
             var w = "--- ; --- ; ---";
-            
+
             if(wc > 0 && wc < 8){
                 w = weights[wc-1];
             }
@@ -2808,59 +2808,59 @@ The user is cured with a DC 16 Save." />
             }
         });
     });
-    
-    /* 
+
+    /*
         Auto-fill Nature stats if the nature matches an existing nature
     */
     on("change:nature",function(){
         var update = {};
         getAttrs(["nature"],function(v){
             var nat = v["nature"] + "";
-            
+
             nat = ('' + nat).toLowerCase().trim();
             if(natures[nat] != null){
                 update["nature_high"] = natures[nat]["up"];
                 update["nature_low"]  = natures[nat]["down"];
             }
-            
+
             // Silent to avoid infinite callbacks
             setAttrs(update, {silent: true});
         });
     });
-    
+
     /*
         Auto-fill Nature name based on stat combination
     */
     on("change:nature_high change:nature_low",function(){
-        var update = {};        
+        var update = {};
         getAttrs(["nature_high","nature_low"],function(v){
             var high = v["nature_high"];
             var low  = v["nature_low"];
-            
+
             for (var property in natures) {
                 if(natures[property]["up"] == high && natures[property]["down"] == low){
-                    
+
                     update["nature"] = property.charAt(0).toUpperCase() + property.slice(1);
-                    
+
                     // Silent to avoid infinite callbacks
                     setAttrs(update,{silent:true});
                     break;
                 }
             }
         });
-        
+
     });
-    
+
     /*
         Auto-fill max exp field based on current level
     */
     on("change:level change:CharType", function(){
-        var update = {};        
+        var update = {};
         getAttrs(["level", "CharType"],function(v){
-            
+
             var level = parseInt( v["level"]) || 0;
             var char = parseInt( v["CharType"]) || 0;
-            
+
             if(char == 0){
                 // Pokemon
                 var exp = expCalc(level+1);
@@ -2869,56 +2869,56 @@ The user is cured with a DC 16 Save." />
                 var exp = 10;
             }
             update["exp_max"] = exp;
-            
+
             setAttrs(update);
         });
-        
+
     });
-    
-    
+
+
     /*
         Auto-calculates capability totals from base and bonuses
         This sheet does not automate base value calculation for capabilities, this leaves room for custom formulea
     */
     on("sheet:opened change:Overland change:Overland_bonus change:Swim change:Swim_bonus change:Throw change:Throw_bonus change:Power change:Power_bonus change:HJ change:HJ_bonus change:LJ change:LJ_bonus change:speed_movement_bonus",function(){
-        var update = {};        
+        var update = {};
         getAttrs([ "Overland", "Overland_bonus", "Swim", "Swim_bonus", "Throw", "Throw_bonus", "Power", "Power_bonus", "HJ", "HJ_bonus" ,"LJ", "LJ_bonus","speed_movement_bonus"],function(v){
-            
+
             var overland = parseInt(v["Overland"])||0;
             var swim     = parseInt(v["Swim"])||0;
             var hj       = parseInt(v["HJ"])||0;
             var lj       = parseInt(v["LJ"])||0;
             var power    = parseInt(v["Power"])||0;
             var thrown   = parseInt(v["Throw"])||0;
-            
+
             var movement_mod = parseInt(v["speed_movement_bonus"])||0;
-            
+
             var bonus_o = parseInt(v["Overland_bonus"])||0;
             var bonus_s = parseInt(v["Swim_bonus"])||0;
             var bonus_t = parseInt(v["Throw_bonus"])||0;
             var bonus_p = parseInt(v["Power_bonus"])||0;
             var bonus_h = parseInt(v["HJ_bonus"]) || 0;
-            var bonus_l = parseInt(v["LJ_bonus"]) || 0;            
+            var bonus_l = parseInt(v["LJ_bonus"]) || 0;
 
             if(movement_mod < 0)
             {
-                
+
                 update["Overland_calc"]  = Math.min(Math.max( (overland + bonus_o) + movement_mod, 2), (overland + bonus_o));
                 update["Swim_calc"]      = Math.min(Math.max( (swim + bonus_s) + movement_mod, 2), (swim + bonus_s));
             }else
             {
                 update["Overland_calc"]  = (overland + bonus_o) + movement_mod;
                 update["Swim_calc"]      = (swim + bonus_s) + movement_mod;
-                
+
             }
-            
+
             update["HJ_calc"]        = (hj + bonus_h);
             update["LJ_calc"]        = (lj + bonus_l);
             update["Power_calc"]     = (power + bonus_p);
             update["Throw_calc"]     = (thrown + bonus_t);
 
             setAttrs(update, {silent: true});
-                
+
         });
     });
 
@@ -2940,39 +2940,39 @@ The user is cured with a DC 16 Save." />
             setAttrs(update);
         });
     });
-    
+
     /*
     on("clicked:hideMoveList", function(){
         var update = {};
         getAttrs(["hideMoveList"], function(values){
             var lock = parseInt(values["hideMoveList"]) || 0;
             lock+=1;
-           
+
             update["hideMoveList"] = lock % 2;
-            
+
             setAttrs(update);
         });
     });
     */
-    
+
     /*
         Auto-calculate total tutor points
     */
     on("change:TutorPoints_bonus change:Level", function(eventinfo){
-        
+
         getAttrs(["TutorPoints_bonus", "Level"], function(values){
-            
+
             bonus  = parseInt(values["TutorPoints_bonus"]) || 0;
             level  = parseInt(values["Level"]) || 0;
-            
-            sum =  Math.floor( (level > 1 ? level:1) / 5 ) + 1  + bonus;   
-            
-            
+
+            sum =  Math.floor( (level > 1 ? level:1) / 5 ) + 1  + bonus;
+
+
             setAttrs({
                 'TutorPoints_max': sum
             });
         });
-        
+
     });
 
     /*
@@ -2983,63 +2983,63 @@ The user is cured with a DC 16 Save." />
         update = {};
         attrs = [];
         sum = 0;
-        
+
         getSectionIDs("edges", function(idArray){
             for(i = 0; i < idArray.length; i++){
                attrs.push(`repeating_edges_${idArray[i]}_EdgeCost`);
             }
-            
+
             getAttrs(attrs.concat(["TutorPoints_max"]), function(values){
                 sum = parseInt(values["TutorPoints_max"])||0;
-                
+
                 for(i = 0; i < attrs.length; i++){
                     sum -= parseInt(values[attrs[i]])||0;
                 }
-                
+
                 setAttrs({
                     'TutorPoints': sum
                 });
             });
-        });        
+        });
     });
-    
+
     /*
         Auto-calculate AP used
         Sum all uses in the repeating list
     */
     on("change:ap_max change:repeating_apcost:ap_cost remove:repeating_apcost sheet:opened", function(eventinfo){
-        
+
         update = {};
         attrs = [];
         sum = 0;
 
-        
+
         getSectionIDs("apcost", function(idArray){
             for(i = 0; i < idArray.length; i++){
                attrs.push(`repeating_apcost_${idArray[i]}_ap_cost`);
             }
-            
+
             getAttrs(attrs.concat(["ap_max"]), function(values){
                 sum = parseInt(values["ap_max"])||0;
                 for(i = 0; i < attrs.length; i++){
                     sum -= parseInt(values[attrs[i]])||0;
-                }   
+                }
                 setAttrs({
                     "ap": sum
                 });
             });
         });
-        
+
     });
-    
+
     /*
-        Button event 
+        Button event
         Imports data from user given JSON
     */
     on("clicked:import", function() {
         infoImport();
     });
-    
+
     /*
         Auto-updates Known Move shortcut
         when a change is made to the move auto update the corresponding shortcut
@@ -3049,17 +3049,17 @@ The user is cured with a DC 16 Save." />
         var source = eventinfo.sourceAttribute.substring(39);
         var v ="";
         var update = {};
-        
+
         if(source === "known"){ return;}
         if(source === "ac" || source === "ac_bonus" ){ return;}
         if(source === "db" || source === "db_bonus" || source === "stab"){ return;}
         if(source === "crit" || source === "crit_mod" ){ return;}
-        
+
         getAttrs([`repeating_moves_ml${source}`, `repeating_moves_ml${source}_max` , "repeating_moves_mlID"], function(values){
-            var id = values["repeating_moves_mlID"] || "";  
+            var id = values["repeating_moves_mlID"] || "";
             if(id != ""){
                 v = values[`repeating_moves_ml${source}`];
-                if(id != "" && values["repeating_moves_mlID"] != null){                
+                if(id != "" && values["repeating_moves_mlID"] != null){
                     if(source === "ac_total"){
                         update["repeating_movesKnown_" + id + "_mkac"] = v;
                     }else if(source === "crit_total"){
@@ -3072,24 +3072,24 @@ The user is cured with a DC 16 Save." />
                         update["repeating_movesKnown_" + id + "_mk" + source] = v;
                     }
                 }
-                
+
                 // Silent to avoid infinite callbacks
-                setAttrs(update,{silent: true});            
-            }      
+                setAttrs(update,{silent: true});
+            }
         });
     });
-    
+
     /*
         Add/Remove a move from the known moves list
     */
     on("change:repeating_moves:mlKnown", function(eventinfo) {
         var update = {};
         if(eventinfo.newValue == "1"){
-            
+
             var newID = generateRowID();
-            
+
             getAttrs(moveAttrs, function(values){
-                
+
                 update["repeating_moves_mlID"]                             = newID;
                 update["repeating_movesKnown_"+ newID +"_mkName"]          = values["repeating_moves_mlName"];
                 update["repeating_movesKnown_"+ newID +"_mkType"]          = values["repeating_moves_mlType"];
@@ -3109,31 +3109,31 @@ The user is cured with a DC 16 Save." />
                 update["repeating_movesKnown_"+ newID +"_mk_multistrike"]  = values["repeating_moves_ml_multistrike"];
 
                 setAttrs(update,{silent: true});
-            });            
+            });
         }else{
-            
+
             getAttrs(["repeating_moves_mlID"], function(values){
                 update["repeating_moves_mlID"] = "";
                 removeRepeatingRow("repeating_movesKnown_" + values["repeating_moves_mlID"]);
                 setAttrs(update,{silent: true});
-            });             
+            });
         }
-                        
+
     });
-    
+
     /*
         Auto-remove known moves shortcut when the original is deleted
     */
     on("remove:repeating_moves", function(eventinfo) {
-       
+
         for (var property in eventinfo.removedInfo) {
             if (eventinfo.removedInfo.hasOwnProperty(property)) {
-                if (property.match(/.*mlID/g)!=null) {                    
-                    removeRepeatingRow("repeating_movesKnown_" + eventinfo.removedInfo[property]);                    
-                }                
+                if (property.match(/.*mlID/g)!=null) {
+                    removeRepeatingRow("repeating_movesKnown_" + eventinfo.removedInfo[property]);
+                }
             }
         }
-        
+
     });
 
     /*
@@ -3154,7 +3154,7 @@ The user is cured with a DC 16 Save." />
         will not update if the new DB is <= 0
     */
     on("change:repeating_moves:mlDB change:repeating_moves:mlDB_bonus change:repeating_moves:mlStab", function(){
-        update = {};        
+        update = {};
         getAttrs(["repeating_moves_mlDB", "repeating_moves_mlDB_bonus", "repeating_moves_mlStab","repeating_moves_mlID"], function(values){
             var id = values["repeating_moves_mlID"];
             var db = parseInt(values["repeating_moves_mlDB"]) || 0;
@@ -3165,11 +3165,11 @@ The user is cured with a DC 16 Save." />
 
             var roll = "";
             setAttrs({"repeating_moves_mldb_total" : db_total });
-            
+
             if( (db + db_b + (stab * 2)) > 0){
                 roll = "" + x.amount + "" + x.dice + " + " + x.bonus ;
                 update["repeating_moves_mlDB_roll"] = roll;
-                
+
                 if(id != ""){
                     update[`repeating_movesKnown_${id}_mkDB_roll`] = roll;
                 }
@@ -3177,7 +3177,7 @@ The user is cured with a DC 16 Save." />
                 // Silent to avoid infinite callbacks
                 setAttrs(update, {silent: true});
             }
-        });        
+        });
     });
 
     /*
@@ -3192,28 +3192,28 @@ The user is cured with a DC 16 Save." />
             setAttrs(update);
         });
     });
-    
-    
-    /* 
-        Auto-update Combat Stats 
+
+
+    /*
+        Auto-update Combat Stats
         this generates an event for each stat
     */
     const stats = ['HP','ATK','DEF','SPATK','SPDEF','SPEED'];
     stats.forEach(function (stat) {
         on(`change:base_${stat} change:${stat} change:${stat}_Stage change:${stat}_bonus sheet:opened`, function () {
-            
+
             getAttrs([`base_${stat}`,`${stat}`, `${stat}_Stage`, `${stat}_bonus`], function (values) {
-                const base  = parseInt(values[`base_${stat}`], 10)||0; 
+                const base  = parseInt(values[`base_${stat}`], 10)||0;
                 const alloc = parseInt(values[`${stat}`], 10)||0;
                 const stage = parseFloat(values[`${stat}_Stage`], 10)||1;
                 const bonus = parseInt(values[`${stat}_bonus`], 10)||0;
                 const calc = Math.floor( (base + alloc + bonus) * stage  );
-                
+
                 setAttrs({
                     [stat + '_total']:  calc
                 });
             });
-            
+
         });
     });
 
@@ -3228,7 +3228,7 @@ The user is cured with a DC 16 Save." />
 
             if(stage_mul != 1){
                 stage_mul *= 10;
-                
+
                 stage =  (stage_mul < 10) ? 0-(10 - stage_mul) : Math.trunc((stage_mul - 10)/2);
 
             }
@@ -3255,7 +3255,7 @@ The user is cured with a DC 16 Save." />
 
     /*
         Auto-calculate global Evasion modifier
-    */   
+    */
     on("change:Eva change:Eva_bonus",function(){
         update={};
         getAttrs(["Eva","Eva_bonus"],function(values){
@@ -3265,47 +3265,47 @@ The user is cured with a DC 16 Save." />
             setAttrs(update);
         });
     });
-    
-    /* 
+
+    /*
         Auto-calculate  Evasions
     */
     on("sheet:opened change:def_total change:spdef_total change:speed_total change:Eva_total change:PEB change:ScEB change:SpEB", function() {
         evaUp();
     });
-    
-    
-    /* 
+
+
+    /*
         Auto-calculate current max hitpoints
     */
     on("sheet:opened change:level change:chartype change:hp_total change:injuries", function() {
         hpCalc();
     });
-    
 
-    /* 
+
+    /*
         Auto-calculate AP max
     */
     on("sheet:opened change:level", function() {
         apCalc();
     });
- 
+
     /*
         Auto-calculate damage dice roll for generic rolls
     */
     on("change:generic_db", function(){
         update = {};
-        
+
         getAttrs(["generic_db"],function(values){
             db = parseInt(values["generic_db"]) || 0;
             x = dbCalc(db);
-            
-            
+
+
             update["generic_db_roll"] = "" + x.amount + "" + x.dice + " + " + x.bonus;
-            
-            
+
+
             setAttrs(update);
         });
-        
+
     });
 
     /*
@@ -3313,7 +3313,7 @@ The user is cured with a DC 16 Save." />
     */
     on("change:struggleAC change:struggleAC_bonus", function(){
         update={};
-        getAttrs(["struggleAC", "struggleAC_bonus"],function(values){
+        getAttrs(["struggleAC", "struggleAC_bonus",],function(values){
             var ac = parseInt(values["struggleAC"]) || 0;
             var ac_b = parseInt(values["struggleAC_bonus"]) || 0;
             update["struggleAC_total"] = ac + ac_b;
@@ -3333,14 +3333,14 @@ The user is cured with a DC 16 Save." />
             setAttrs(update);
         });
     });
-    
+
     /*
         Auto-calculate DB for Struggle
     */
     on("change:struggle_db change:struggle_db_bonus change:struggleStab", function(){
-        update = {};        
+        update = {};
         getAttrs(["struggle_db", "struggle_db_bonus", "struggleStab"],function(values){
-           
+
             var db = parseInt(values["struggle_db"]) || 0;
             var db_b = parseInt(values["struggle_db_bonus"]) || 0;
             var stab = parseInt(values["struggleStab"]) || 0;
@@ -3351,34 +3351,38 @@ The user is cured with a DC 16 Save." />
                 roll = "" + x.amount + "" + x.dice + " + " + x.bonus ;
                 update["struggle_db_roll"] = roll;
                 setAttrs(update, {silent:true});
+            } else {
+                roll = "0d6 + 0";
+                update["struggle_db_roll"] = roll;
+                setAttrs(update, {silent:true});
             }
         });
-        
+
     });
-    
+
     /*
         Set DB to 0 if DB is modified
     */
     on("change:struggle_db_roll", function(){
         update = {};
         update["struggle_db_total"] = "" ;
-        setAttrs(update,{silent: true});        
+        setAttrs(update,{silent: true});
     });
-    
+
     /*
-        Import character from JSON data 
+        Import character from JSON data
     */
     var infoImport = function() {
         getAttrs(["input"], function (v) {
-            
+
             var char = JSON.parse(v["input"]);
-            
+
             var x; var t; var rmoves; var rcaps; var redges; var rabils; var rfeats; var i;
             t = {};
-            
+
             getSectionIDs("repeating_moves", function(idarray) {
                 rmoves = idarray;
-            
+
                 getSectionIDs("repeating_capabilities", function(idarray) {
                     rcaps = idarray;
 
@@ -3396,7 +3400,7 @@ The user is cured with a DC 16 Save." />
                                 if (redges==undefined){redges=[];}
                                 if (rfeats==undefined){rfeats=[];}
                                 if (rabils==undefined){rabils=[];}
-                                
+
                                 for (var property in char) {
                                     if (char.hasOwnProperty(property)) {
                                         if(char[property] == undefined || char[property] === ""){
@@ -3404,9 +3408,9 @@ The user is cured with a DC 16 Save." />
                                         }
                                         if (property.match(/Move\s*\d*/gi) != null) {
                                         // Import Moves
-                                            
+
                                             i = generateRowID();
-                                            
+
                                             for (var prop in char[property]){
                                                 if (char[property].hasOwnProperty(prop)){
 
@@ -3415,7 +3419,7 @@ The user is cured with a DC 16 Save." />
                                                     }
 
                                                     x = "repeating_moves_" + i + "_ml";
-                    
+
                                                     switch(prop){
                                                         case "Name":
                                                             t[x + "Name"] = char[property][prop];
@@ -3441,7 +3445,7 @@ The user is cured with a DC 16 Save." />
                                                                     t[x + "Uses_max"] = parseInt(list[3])||1;
                                                                 }
                                                             }
-                                                            
+
                                                             break;
                                                         case "AC":
                                                             t[x + "AC"] = parseInt(char[property][prop])||0;
@@ -3467,13 +3471,13 @@ The user is cured with a DC 16 Save." />
                                                         default:
                                                             break;
                                                     }
-                                                    
+
                                                 }
                                             }
-                                            
+
                                         } else if (property.match(/Feature\s*\d*/gi)!=null) {
                                             // Import Features
-                                            
+
                                             //i = Number(property.substring(7));
 
                                             i=generateRowID();
@@ -3487,9 +3491,9 @@ The user is cured with a DC 16 Save." />
                                                     t[x] = char[property][prop];
                                                 }
                                             }
-                                            
+
                                         } else if (property.match(/Ability\s*\d*/gi)!=null) {
-                                            
+
                                             i=generateRowID();
                                             for (var prop in char[property]){
                                                 if (char[property].hasOwnProperty(prop)){
@@ -3500,9 +3504,9 @@ The user is cured with a DC 16 Save." />
                                                     t[x] = char[property][prop];
                                                 }
                                             }
-                                            
+
                                         } else if (property.match(/Edge\s*\d*/gi)!=null) {
-                                            
+
                                             i=generateRowID();
                                             for (var prop in char[property]){
                                                 if (char[property].hasOwnProperty(prop)){
@@ -3513,8 +3517,8 @@ The user is cured with a DC 16 Save." />
                                                     t[x] = char[property][prop];
                                                 }
                                             }
-                                             
-                                        } 
+
+                                        }
                                         else if (property.match(/Capabilities/i)){
                                             x = 0;
                                             for (var prop in char[property]) {
@@ -3531,22 +3535,22 @@ The user is cured with a DC 16 Save." />
                                                         if (x<rcaps.length-1) {
                                                             t["repeating_capabilities_".concat(rcaps[x]).concat("_Capability")]=prop;
                                                             t["repeating_capabilities_".concat(rcaps[x]).concat("_Capability_Rank")]=char[property][prop];
-                                                            
+
                                                         } else {
                                                             i=generateRowID();
                                                             t["repeating_capabilities_".concat(i).concat("_Capability")]=prop;
                                                             t["repeating_capabilities_".concat(i).concat("_Capability_Rank")]=char[property][prop];
-                                                            
+
                                                         }
                                                         x++;
                                                     } else {
                                                         if (x<rcaps.length-1) {
                                                             t["repeating_capabilities_".concat(rcaps[x]).concat("_Capability")]=prop;
-                                                            
+
                                                         } else {
                                                             i=generateRowID();
                                                             t["repeating_capabilities_".concat(i).concat("_Capability")]=prop;
-                                                            
+
                                                         }
                                                         x++;
                                                     }
@@ -3557,37 +3561,37 @@ The user is cured with a DC 16 Save." />
                                                 continue;
                                             }
                                             t["character_name"] = char[property];
-                                            
+
                                         } else if(property.match(/struggle_type/i)){
                                             if(char[property] == undefined || char[property] === ""){
                                                 continue;
                                             }
                                             t["struggleType"] = char[property];
-                                            
+
                                         } else if(property.match(/struggle_dtype/i)){
                                             if(char[property] == undefined || char[property] === ""){
                                                 continue;
                                             }
                                             t["struggleCat"] = char[property];
-                                            
+
                                         } else if(property.match(/struggle_db/i)){
                                             if(char[property] == undefined || char[property] === ""){
                                                 continue;
                                             }
                                             t["struggle_db"] = parseInt(char[property],10)||0;
-                                            
+
                                         } else if(property.match(/struggle_ac/i)){
                                             if(char[property] == undefined || char[property] === ""){
                                                 continue;
                                             }
                                             t["struggleAC"] = parseInt(char[property],10)||0;
-                                            
+
                                         } else if(property.match(/struggle_range/i)){
                                             if(char[property] == undefined || char[property] === ""){
                                                 continue;
                                             }
                                             t["struggleRange"] = char[property];
-                                            
+
                                         }else {
                                             if(char[property] == undefined || char[property] === ""){
                                                 continue;
@@ -3595,10 +3599,10 @@ The user is cured with a DC 16 Save." />
                                             t[property]= char[property] ;
                                         }
                                     }
-                                    
-                                    
+
+
                                 }
-                                
+
                                 setAttrs(t);
                             });
                         });
@@ -3607,24 +3611,24 @@ The user is cured with a DC 16 Save." />
             });
         });
     };
-  
+
     /*
         Calculate evasions from stats
     */
     var evaUp = function () {
         var update = {};
         getAttrs(["DEF_total","SPDEF_total","SPEED_total", "Eva_total", "PEB","ScEB", "SpEB"], function(v) {
-            
+
             var def   = parseInt(v["DEF_total"])   || 0;
             var sdef  = parseInt(v["SPDEF_total"]) || 0;
             var speed = parseInt(v["SPEED_total"]) || 0;
-            
+
             var eva   = parseInt(v["Eva_total"]) || 0;
-            
+
             var peb  = parseInt(v["PEB"]) ||0;
             var sceb = parseInt(v["ScEB"])||0;
             var speb = parseInt(v["SpEB"])||0;
-            
+
             def   = Math.min(Math.floor(  def/5),6);
             sdef  = Math.min(Math.floor( sdef/5),6);
             speed = Math.min(Math.floor(speed/5),6);
@@ -3636,24 +3640,24 @@ The user is cured with a DC 16 Save." />
             update["PhysEvade_calc"]  = 10+Math.min( eva + peb  + def,  10);
             update["SpecEvade_calc"]  = 10+Math.min( eva + sceb + sdef, 10);
             update["SpeedEvade_calc"] = 10+Math.min( eva + speb + speed, 10);
-            
+
             setAttrs(update);
         });
-    }; 
-    
+    };
+
     /*
         Calculate Max Hit Points and current max
     */
     var hpCalc = function (){
         getAttrs(["Level","CharType","HP_Total", "Injuries"], function(v) {
-            
+
             var level = parseInt(v["Level"]) || 0;
             var char  = parseInt(v["CharType"]) || 0;
             var hp    = parseInt(v["HP_Total"]) || 0;
             var injuries = parseInt(v["Injuries"]) || 0;
-            
+
             var x = Math.floor(level * (char + 1) + hp * 3 + 10);
-            
+
             setAttrs({
                 HitPoints_max: Math.floor(x * (1 - (injuries/10) ) ),
                 HitPoints_permmax: x,
@@ -3666,10 +3670,10 @@ The user is cured with a DC 16 Save." />
                 a110_hp:Math.floor(x*(1/10)),
                 a116_hp:Math.floor(x*(1/16))
             });
-            
+
         });
     };
-    
+
     /*
         Calculate max AP
     */
@@ -3681,7 +3685,7 @@ The user is cured with a DC 16 Save." />
             });
         });
     };
-    
+
     /*
         Return damage roll from a given DB
         returns object eg {amount:8, dice:"d12", bonus:70}
@@ -3698,7 +3702,7 @@ The user is cured with a DC 16 Save." />
                         } else {
                             return {amount:8,dice:"d12",bonus:80};
                         }
-                    } else {   
+                    } else {
                         if (v==25) {
                             return {amount:6,dice:"d12",bonus:60};
                         } else {
@@ -3777,7 +3781,7 @@ The user is cured with a DC 16 Save." />
                             return {amount:1,dice:"d8",bonus:6};
                         } else {
                             return {amount:1,dice:"d8",bonus:8};
-                        }    
+                        }
                     }
                 } else {
                     if (v==1) {
@@ -3791,7 +3795,7 @@ The user is cured with a DC 16 Save." />
             }
         }
     };
-    
+
     /*
         return max exp given a level
     */
@@ -3900,10 +3904,10 @@ The user is cured with a DC 16 Save." />
             case 100: exp = 20555; break;
             default: exp = 0; break;
         }
-    
+
         return exp;
     }
-    
+
 </script>
 
 <rolltemplate class="sheet-rolltemplate-PTU">

@@ -265,6 +265,11 @@
                     <td><span class="sheet-field" name="attr_SPEED_total" style="width:100%">0</span></td>
                 </tr>
                 <tr>
+                    <td colspan="1">Accuracy</td>
+                    <td colspan="4"></td>
+                    <td><input type="number" value="0" name="attr_Acc_total"</td>
+                </tr>
+                <tr>
                     <td colspan="1">Damage Bonus</td>
                     <td colspan="4"></td>
                     <td><input type='number' value='0' name='attr_dmg_bonus' /></td>
@@ -676,27 +681,38 @@
             </div>
             <div class="Move-List">
                 <!-- #region Struggle-->
-                <div class="sheet-table sheet-move-item">
-                    <input type="hidden" name="attr_struggleFreq" value='At-Will' />
-                    <input type="hidden" name="attr_struggleType" class="sheet-move-type" value='Normal' />
-                    <!-- Header -->
-                    <div class="sheet-row sheet-move-header">
-                        <div style="width:40%">
-                            <span>Struggle</span>
-                        </div><div style="width:25%">
-                            <span class="sheet-move-freq">At-Will</span>
-                        </div><div style="width:10%">
-                        </div><div style="width:25%">
-                            <select name="attr_struggleCat">
-                                <option selected="selected">Physical</option>
-                                <option>Special</option>
-                                <option>Status</option>
+                <div class="Move-Item">
+                    <!-- #region Move Head-->
+                    <div class="Move-Head">
+                        <div>
+                            <input type="text" placeholder="Struggle" name="attr_mlName" disabled/>
+                        </div>
+                        <div>
+                            <select name="attr_mlFrequency" class="sheet-move-freq" disabled>
+                                <option selected="selected">At-Will</option>
+                                <option>EOT</option>
+                                <option>Scene</option>
+                                <option>Daily</option>
+                                <option>Static</option>
+                                <option>Other</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="sheet-row">
-                        <div style="width:30%" class="sheet-move-side">
+                        <div>
                             <div>
+                                <select name="attr_mlCat" value="Physical" disabled>
+                                    <option selected="selected">Physical</option>
+                                    <option>Special</option>
+                                    <option>Status</option>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                    <!-- #region Move Body-->
+                    <div class="Move-Body">
+                        <div class="Col">
+                            <div class="Input-Wrap">
                                 <select name="attr_struggleType">
                                     <option value="Untyped">-</option>
                                     <option selected>Normal</option>
@@ -719,7 +735,7 @@
                                     <option>Water</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="Input-Wrap">
                                 <select name="attr_struggleContestType">
                                     <option selected="selected">Standard</option>
                                     <option>Swift</option>
@@ -729,22 +745,16 @@
                                     <option>Shift</option>
                                 </select>
                             </div>
-                            <div>
-                                <input type="text" name="attr_struggleContestEffect" placeholder="Tags" style="text-align: center" />
+                            <div class="Input-Wrap">
+                                <input type="text" name="attr_struggleContestEffect" placeholder="Tags" />
                             </div>
-
-
-                        </div><div style="width:70%" class="sheet-move-body">
-                            <div>
-                                <span>Range: <input type="text" name="attr_struggleRange" style="width:350px" value='Melee-Ranged' /></span>
-
+                        </div>
+                        <div class="Col">
+                            <div class="Input-Wrap">
+                                <span>Range: <input type="text" name="attr_struggleRange" value='Melee-Ranged' /></span>
                                 <input type="hidden" name="attr_struggleCat" class='sheet-move-cat' value='Physical' />
-
-                                <button type="roll" name="roll_struggleShow_physical" class="sheet-move-button sheet-move-physical" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + @{ATK_total}   + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
-                                <button type="roll" name="roll_struggleShow_special" class="sheet-move-button sheet-move-special" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + @{SPATK_total} + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
-                                <button type="roll" name="roll_struggleShow_status" class="sheet-move-button sheet-move-status" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_db_roll} ]]}} {{damage= [[@{struggle_db_roll} + 0              + @{dmg_bonus}]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }} {{effect= @{struggleEffects} }}"></button>
                             </div>
-                            <div>
+                            <div class="Input-Wrap">
                                 <input type="hidden" name="attr_struggleCrit_total" value='20' />
                                 <input type="hidden" name="attr_struggleAC_total" value='6' />
                                 <span>
@@ -755,19 +765,8 @@
                                     Crit On: <input type="number" name="attr_struggleCrit" value="20" />
                                     - <input type="number" name="attr_struggleCrit_mod" value="0" />
                                 </span>
-                                <button type="roll" name="roll_struggleAC" class="sheet-move-button" title="Roll AC" value="@{whisper} &{template:PTU} {{nick= @{character_name}}} {{name= Struggle: Accuracy }} {{ac= [[@{struggleAC_total}]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + (@{Acc_total} + @{struggleAC_total})]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod} + 0]] }} {{type= @{struggleType} }} {{frequency= At-Will }} {{range= @{struggleRange}}} {{effect= @{struggleEffects}}}"></button>
-                                <!-- <span class="sheet-multistrike-container">
-                        <input class="sheet-move-multistrike" name="attr_struggle_multistrike" type="hidden" />
-                        <input class="sheet-c" name="attr_struggle_multistrike" title="Five Strike" type="radio" value="0" checked/>
-                        <input class="sheet-a" name="attr_struggle_multistrike" title="No Multistrike" type="radio" value="2" />
-                        <input class="sheet-b" name="attr_struggle_multistrike" title="Double Strike" type="radio" value="5" />
-
-                        <img class="sheet-a" src="https://i.imgur.com/xHmdPBa.png" />
-                        <img class="sheet-b" src="https://i.imgur.com/PaGMG5g.png" />
-                        <img class="sheet-c" src="https://i.imgur.com/GwdvtBR.png" />
-                    </span> -->
                             </div>
-                            <div>
+                            <div class="Input-Wrap">
                                 <input type="hidden" name="attr_struggle_db_roll" value="1d6+3" />
                                 <input type="hidden" name="attr_struggle_db_total" value="2" />
                                 <span>
@@ -777,28 +776,14 @@
                                 <span class="sheet-db-breakdown">
                                     <input type="text" name="attr_struggle_db_roll" style="width: 200px;text-align: center;" value="1d6+3" />
                                 </span>
-
-                                <!--<span>
-                        <label style='display:inline-block; width:auto'>STAB</label>
-                        <input type='checkbox' name='attr_struggleStab' value='1'/>
-                    </span>-->
-
-                                <input type="hidden" name="attr_struggleCat" class='sheet-move-cat' value='Physical' />
-
-                                <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="sheet-move-button sheet-move-physical" value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will }} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + @{ATK_total} + @{dmg_bonus} ]] }}"></button>
-                                <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="sheet-move-button sheet-move-special" value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will }} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + @{SPATK_total} + @{dmg_bonus} ]] }}"></button>
-                                <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="sheet-move-button sheet-move-status" value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will }} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + 0 + @{dmg_bonus} ]] }}"></button>
                             </div>
                         </div>
                     </div>
-                    <div class="sheet-row">
-                        <textarea name="attr_struggleEffects" style="display:inline-block;max-width:100%"></textarea>
-                    </div>
+                    <!-- #endregion -->
+
                 </div>
                 <!-- #endregion-->
-
             </div>
-        </div>
     </div>
     <!-- #endregion-->
 </div>
@@ -1463,6 +1448,12 @@
 
                 // Silent to avoid infinite callbacks
                 setAttrs(update, {silent: true});
+            } else {
+                roll="0d6 + 0";
+                if(id != ""){
+                    update[`repeating_movesKnown_${id}_mkDB_roll`] = roll;
+                }
+                setAttrs(update, {silent: true});
             }
         });
     });
@@ -1636,6 +1627,10 @@
             update["struggle_db_total"] = db + db_b + (stab * 2);
             if(db > 0){
                 roll = "" + x.amount + "" + x.dice + " + " + x.bonus ;
+                update["struggle_db_roll"] = roll;
+                setAttrs(update, {silent:true});
+            } else {
+                roll = "0d6 + 0";
                 update["struggle_db_roll"] = roll;
                 setAttrs(update, {silent:true});
             }
@@ -2268,7 +2263,11 @@
         </tr>
         {{/dmgcat}}
         {{/damage}}
-
+        {{#contest_effect}}
+        <tr>
+            <td colspan="2"><span class="tcat">Tag:</span>{{contest_effect}}</td>
+        </tr>
+        {{/contest_effect}}
 
         {{#multistrike}}
         {{#rollTotal() multistrike 2}}
@@ -2407,12 +2406,12 @@
         {{/db}}
 
 
-        {{#contest_type}}
+        {{#tag}}
         <tr>
-            <td colspan="1"><div class="sheet-label">Contest Type</div></td>
-            <td colspan="1"><div>{{contest_type}} </div></td>
+            <td colspan="1"><div class="sheet-label">Tag</div></td>
+            <td colspan="1"><div>{{contest_effect}} </div></td>
         </tr>
-        {{/contest_type}}
+        {{/tag}}
 
         {{#contest_effect}}
         <tr>
