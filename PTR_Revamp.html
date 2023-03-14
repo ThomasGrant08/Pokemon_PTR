@@ -706,84 +706,83 @@
                                 </select>
                             </div>
                         </div>
-                        </div>
                     </div>
                     <!-- #endregion-->
                     <!-- #region Move Body-->
-                    <div class="Move-Body">
-                        <div class="Col">
-                            <div class="Input-Wrap">
-                                <select name="attr_struggleType">
-                                    <option value="Untyped">-</option>
-                                    <option selected>Normal</option>
-                                    <option>Bug</option>
-                                    <option>Dark</option>
-                                    <option>Dragon</option>
-                                    <option>Electric</option>
-                                    <option>Fairy</option>
-                                    <option>Fighting</option>
-                                    <option>Fire</option>
-                                    <option>Flying</option>
-                                    <option>Ghost</option>
-                                    <option>Grass</option>
-                                    <option>Ground</option>
-                                    <option>Ice</option>
-                                    <option>Poison</option>
-                                    <option>Psychic</option>
-                                    <option>Rock</option>
-                                    <option>Steel</option>
-                                    <option>Water</option>
-                                </select>
-                            </div>
-                            <div class="Input-Wrap">
-                                <select name="attr_struggleContestType">
-                                    <option selected="selected">Standard</option>
-                                    <option>Swift</option>
-                                    <option>Full</option>
-                                    <option>Reaction</option>
-                                    <option>Free</option>
-                                    <option>Shift</option>
-                                </select>
-                            </div>
-                            <div class="Input-Wrap">
-                                <input type="text" name="attr_struggleContestEffect" placeholder="Tags" />
-                            </div>
+                <div class="Move-Body">
+                    <div class="Col">
+                        <div class="Input-Wrap">
+                            <select name="attr_struggleType">
+                                <option value="Untyped">-</option>
+                                <option selected>Normal</option>
+                                <option>Bug</option>
+                                <option>Dark</option>
+                                <option>Dragon</option>
+                                <option>Electric</option>
+                                <option>Fairy</option>
+                                <option>Fighting</option>
+                                <option>Fire</option>
+                                <option>Flying</option>
+                                <option>Ghost</option>
+                                <option>Grass</option>
+                                <option>Ground</option>
+                                <option>Ice</option>
+                                <option>Poison</option>
+                                <option>Psychic</option>
+                                <option>Rock</option>
+                                <option>Steel</option>
+                                <option>Water</option>
+                            </select>
                         </div>
-                        <div class="Col">
-                            <div class="Input-Wrap">
-                                <span>Range: <input type="text" name="attr_struggleRange" value='Melee-Ranged' /></span>
-                                <input type="hidden" name="attr_struggleCat" class='sheet-move-cat' value='Physical' />
-                            </div>
-                            <div class="Input-Wrap">
-                                <input type="hidden" name="attr_struggleCrit_total" value='20' />
-                                <input type="hidden" name="attr_struggleAC_total" value='6' />
-                                <span>
-                                    AC: <input type="number" name="attr_struggleAC" value='6' />
-                                    + <input type="number" name="attr_struggleAC_bonus" value='0' />
-                                </span>
-                                <span>
-                                    Crit On: <input type="number" name="attr_struggleCrit" value="20" />
-                                    - <input type="number" name="attr_struggleCrit_mod" value="0" />
-                                </span>
-                            </div>
-                            <div class="Input-Wrap">
-                                <input type="hidden" name="attr_struggle_db_roll" value="1d6+3" />
-                                <input type="hidden" name="attr_struggle_db_total" value="2" />
-                                <span>
-                                    DB: <input type="number" name="attr_struggle_db" value='2' />
-                                    + <input type="number" name="attr_struggle_db_bonus" value='0' />
-                                </span>
-                                <span class="sheet-db-breakdown">
-                                    <input type="text" name="attr_struggle_db_roll" style="width: 200px;text-align: center;" value="1d6+3" />
-                                </span>
-                            </div>
+                        <div class="Input-Wrap">
+                            <select name="attr_struggleContestType">
+                                <option selected="selected">Standard</option>
+                                <option>Swift</option>
+                                <option>Full</option>
+                                <option>Reaction</option>
+                                <option>Free</option>
+                                <option>Shift</option>
+                            </select>
+                        </div>
+                        <div class="Input-Wrap">
+                            <input type="text" name="attr_struggleContestEffect" placeholder="Tags" />
                         </div>
                     </div>
-                    <!-- #endregion -->
+                    <div class="Col">
+                        <div class="Input-Wrap">
+                            <span>Range: <input type="text" name="attr_struggleRange" value='Melee-Ranged' /></span>
+                            <input type="hidden" name="attr_struggleCat" class='sheet-move-cat' value='Physical' />
+                        </div>
+                        <div class="Input-Wrap">
+                            <input type="hidden" name="attr_struggleCrit_total" value='20' />
+                            <input type="hidden" name="attr_struggleAC_total" value='6' />
+                            <span>
+                                AC: <input type="number" name="attr_struggleAC" value='6' />
+                                + <input type="number" name="attr_struggleAC_bonus" value='0' />
+                            </span>
+                            <span>
+                                Crit On: <input type="number" name="attr_struggleCrit" value="20" />
+                                - <input type="number" name="attr_struggleCrit_mod" value="0" />
+                            </span>
+                        </div>
+                        <div class="Input-Wrap">
+                            <input type="hidden" name="attr_struggle_db_roll" value="1d6+3" />
+                            <input type="hidden" name="attr_struggle_db_total" value="2" />
+                            <span>
+                                DB: <input type="number" name="attr_struggle_db" value='2' />
+                                + <input type="number" name="attr_struggle_db_bonus" value='0' />
+                            </span>
+                            <span class="sheet-db-breakdown">
+                                <input type="text" name="attr_struggle_db_roll" style="width: 200px;text-align: center;" value="1d6+3" />
+                            </span>
+                        </div>
+                    </div>
 
+                    <!-- #endregion -->
                 </div>
-                <!-- #endregion-->
             </div>
+                <!-- #endregion-->
+        </div>
     </div>
     <!-- #endregion-->
 </div>
