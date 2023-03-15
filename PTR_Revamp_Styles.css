@@ -527,12 +527,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* #region Moves*/
-.Move-Item {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: grey;
-    margin: 5px;
-}
 
 .Move-Item input:disabled {
 }
@@ -546,12 +540,12 @@ input::-webkit-inner-spin-button {
 /* #region Backgrounds */
 /* #region Null*/
 .Move-Item:has([name="attr_struggleType"] > option[value="Untyped"]:checked) {
-    --secondary-Color: var(--primary-Color);
+    background-color: #d6d5c9;
 }
 /* #endregion*/
 /* #region Normal*/
 .Move-Item:has([name="attr_struggleType"] > option[value="Normal"]:checked) {
-    --primary-Color: var(--normal);
+    background-color: 
 }
 /* #endregion */
 /* #region Fire */
@@ -641,4 +635,27 @@ input::-webkit-inner-spin-button {
 /* #endregion*/
 /* #endregion*/
 
+.Move-Item {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Move-Item .Background {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-Color);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.Move-Head, .Move-Body {
+    position: relative;
+    z-index: 2;
+}
 /* #endregion*/
