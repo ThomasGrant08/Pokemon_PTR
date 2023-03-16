@@ -58,7 +58,7 @@
                                 <option value="Electric">Electric</option>
                                 <option value="Ice">Ice</option>
                                 <option value="Fighting">Fighting</option>
-                                <option value="Poison">Poision</option>
+                                <option value="Poison">Poison</option>
                                 <option value="Ground">Ground</option>
                                 <option value="Flying">Flying</option>
                                 <option value="Psychic">Psychic</option>
@@ -688,9 +688,6 @@
                     <!-- #region Move Head-->
                     <div class="Move-Head">
                         <div>
-                            <input type="text" placeholder="Struggle" name="attr_mlName" disabled />
-                        </div>
-                        <div>
                             <select name="attr_mlFrequency" class="sheet-move-freq" disabled>
                                 <option selected="selected">At-Will</option>
                                 <option>EOT</option>
@@ -701,8 +698,11 @@
                             </select>
                         </div>
                         <div>
+                            <input type="text" placeholder="Struggle" name="attr_mlName" disabled />
+                        </div>
+                        <div>
                             <div>
-                                <select name="attr_mlCat" value="Physical" disabled>
+                                <select name="attr_struggleCat" value="Physical" disabled>
                                     <option selected="selected">Physical</option>
                                     <option>Special</option>
                                     <option>Status</option>
@@ -780,7 +780,9 @@
                                 </span>
                             </div>
                         </div>
-
+                        <div class="Rolls">
+                            <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="Move-Roll Physical" value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will }} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + @{ATK_total} + @{dmg_bonus} ]] }}"></button>
+                        </div>
                         <!-- #endregion -->
                     </div>
                 </div>

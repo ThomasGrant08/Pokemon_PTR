@@ -526,6 +526,10 @@ input::-webkit-inner-spin-button {
     transition: transform 0.5s ease;
 }
 
+.Status label {
+    padding: unset;
+}
+
 /* #region Moves*/
 
 .Move-Item input:disabled {
@@ -540,12 +544,12 @@ input::-webkit-inner-spin-button {
 /* #region Backgrounds */
 /* #region Null*/
 .Move-Item:has([name="attr_struggleType"] > option[value="Untyped"]:checked) {
-    background-color: #d6d5c9;
+    --primary-Color: #d6d5c9;
 }
 /* #endregion*/
 /* #region Normal*/
 .Move-Item:has([name="attr_struggleType"] > option[value="Normal"]:checked) {
-    background-color: 
+    --primary-Color: var(--normal);
 }
 /* #endregion */
 /* #region Fire */
@@ -647,7 +651,7 @@ input::-webkit-inner-spin-button {
     width: 100%;
     height: 100%;
     background-color: var(--primary-Color);
-    opacity: 0.2;
+    opacity: 0.5;
     position: absolute;
     top: 0;
     left: 0;
@@ -657,5 +661,46 @@ input::-webkit-inner-spin-button {
 .Move-Head, .Move-Body {
     position: relative;
     z-index: 2;
+}
+
+.Move-Head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Move-Item select {
+    border-radius: 5px;
+    border: unset;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+}
+
+.Move-Body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+}
+
+.Move-Body .Col {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.Move-Body .Input-Wrap > input, .Move-Body .Input-Wrap > select {
+    width: 100%;
+    text-align: center;
+}
+
+.Move-Body .Input-Wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.Move-Item .Rolls{
+    display: grid;
+    grid-gap: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 /* #endregion*/
