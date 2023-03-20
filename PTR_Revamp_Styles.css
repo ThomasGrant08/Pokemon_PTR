@@ -703,4 +703,13 @@ input::-webkit-inner-spin-button {
     top: 5px;
     right: 5px;
 }
+
+.Move-Item .Effects {
+    grid-column: span 2;
+}
+
+.Move-Item .Effects textarea {
+    width: 100%;
+    resize: vertical;
+}
 /* #endregion*/

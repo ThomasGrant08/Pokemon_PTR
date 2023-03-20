@@ -702,10 +702,9 @@
                         </div>
                         <div>
                             <div>
-                                <select name="attr_struggleCat" value="Physical" disabled>
+                                <select name="attr_struggleCat" value="Physical">
                                     <option selected="selected">Physical</option>
                                     <option>Special</option>
-                                    <option>Status</option>
                                 </select>
                             </div>
                         </div>
@@ -806,11 +805,11 @@
                                 </select>
                             </div>
                             <div>
-                                <input type="text" placeholder="Move Name" name="attr_mlName"/>
+                                <input type="text" placeholder="Move Name" name="attr_mlName" />
                             </div>
                             <div>
                                 <div>
-                                    <select name="attr_mlCat" value="Physical">
+                                    <select name="mlCat" value="Physical">
                                         <option selected="selected">Physical</option>
                                         <option>Special</option>
                                         <option>Status</option>
@@ -866,7 +865,7 @@
                                 </div>
                                 <div class="Input-Wrap">
                                     <input type="hidden" name="attr_mlCrit_total" value='20' />
-                                    <input type="hidden" name="attr_mlAC_total" value='6' />
+                                    <input type="hidden" name="attr_mlAC_total" value='0' />
                                     <span>
                                         AC: <input type="number" name="attr_mlAC" value='6' />
                                         + <input type="number" name="attr_mlAC_bonus" value='0' />
@@ -884,15 +883,20 @@
                                         + <input type="number" name="attr_mldb_bonus" value='0' />
                                     </span>
                                     <span class="sheet-db-breakdown">
-                                        <input type="text" name="attr_struggle_db_roll" style="width: 200px;text-align: center;" value="1d6+3" />
+                                        <input type="text" name="attr_mlDB_roll" style="width: 200px;text-align: center;" value="1d6+3" />
                                     </span>
                                 </div>
                             </div>
                             <div class="Effects">
                                 <textarea name="attr_mlEffects" style="display:inline-block;max-width:100%"></textarea>
                             </div>
+                            <div class="hidden">
+                                <input type="text" name="attr_mlCat" value="Physical"/>
+                            </div>
                             <div class="Rolls">
-                                <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="Move-Roll Physical" value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will}} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + @{ATK_total} + @{dmg_bonus} ]] }} {{dmgcat= @{struggleCat}}}"></button>
+                                <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-physical" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + @{ATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
+                                <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-special" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + @{SPATK_total} + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
+                                <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-status" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + 0              + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
                             </div>
                             <!-- #endregion -->
                         </div>
