@@ -688,7 +688,7 @@
                     <!-- #region Move Head-->
                     <div class="Move-Head">
                         <div>
-                            <select name="attr_struggleFrequency" class="sheet-move-freq" disabled>
+                            <select name="attr_struggleFreq" class="sheet-move-freq" disabled>
                                 <option selected="selected">At-Will</option>
                                 <option>EOT</option>
                                 <option>Scene</option>
@@ -780,7 +780,9 @@
                             </div>
                         </div>
                         <div class="Rolls">
-                            <button type="roll" name="roll_struggleDamage" title="Roll Damage" class="Move-Roll Physical" value="@{whisper} &{template:PTU} {{nick= @{character_name} }} {{name= Struggle: Damage}} {{type= @{struggleType} }} {{frequency= At-Will}} {{db= [[@{struggle_db_total}]] }} {{damage= [[@{struggle_db_roll} + @{ATK_total} + @{dmg_bonus} ]] }} {{dmgcat= @{struggleCat}}}"></button>
+                            <button type="roll" name="roll_struggleDamage" class="Roll Physical" title="Roll Damage" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= @{struggleFreq} }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_DB_roll}]] }} {{damage= [[@{struggle_DB_roll} + @{ATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }}"></button>
+                            <button type="roll" name="roll_struggleDamage" class="Roll Special" title="Roll Damage" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= @{struggleFreq} }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_DB_roll}]] }} {{damage= [[@{struggle_DB_roll} + @{SPATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }}"></button>
+
                         </div>
                         <!-- #endregion -->
                     </div>

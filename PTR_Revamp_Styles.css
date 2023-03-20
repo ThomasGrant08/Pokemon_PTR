@@ -543,97 +543,97 @@ input::-webkit-inner-spin-button {
 }
 /* #region Backgrounds */
 /* #region Null*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Untyped"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Untyped"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Untyped"]:checked) {
     --primary-Color: #d6d5c9;
 }
 /* #endregion*/
 /* #region Normal*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Normal"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Normal"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Normal"]:checked) {
     --primary-Color: var(--normal);
 }
 /* #endregion */
 /* #region Fire */
-.Move-Item:has([name="attr_struggleType"] > option[value="Fire"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Fire"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Fire"]:checked) {
     --primary-Color: var(--fire);
 }
 /* #endregion*/
 /* #region Water*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Water"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Water"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Water"]:checked) {
     --primary-Color: var(--water);
 }
 /* #endregion*/
 /* #region Electric*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Electric"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Electric"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Electric"]:checked) {
     --primary-Color: var(--electric);
 }
 /* #endregion*/
 /* #region Grass*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Grass"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Grass"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Grass"]:checked) {
     --primary-Color: var(--grass);
 }
 /* #endregion*/
 /* #region Ice*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Ice"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Ice"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Ice"]:checked) {
     --primary-Color: var(--ice);
 }
 /* #endregion*/
 /* #region Fighting */
-.Move-Item:has([name="attr_struggleType"] > option[value="Fighting"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Fighting"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Fighting"]:checked) {
     --primary-Color: var(--fighting);
 }
 /* #endregion*/
 /* #region Poison*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Poison"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Poison"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Poison"]:checked) {
     --primary-Color: var(--poison);
 }
 /* #endregion*/
 /* #region Ground*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Ground"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Ground"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Ground"]:checked) {
     --primary-Color: var(--ground);
 }
 /* #endregion*/
 /* #region Flying*/
-.Move-Item:has([name="attr_struggleType"] > option[value="Flying"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Flying"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Flying"]:checked) {
     --primary-Color: var(--flying);
 }
 /* #endregion*/
 /* #region Psychic */
-.Move-Item:has([name="attr_struggleType"] > option[value="Psychic"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Psychic"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Psychic"]:checked) {
     --primary-Color: var(--psychic);
 }
 /* #endregion*/
 /* #region Bug */
-.Move-Item:has([name="attr_struggleType"] > option[value="Bug"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Bug"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Bug"]:checked) {
     --primary-Color: var(--bug);
 }
 /* #endregion*/
 /* #region Rock */
-.Move-Item:has([name="attr_struggleType"] > option[value="Rock"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Rock"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Rock"]:checked) {
     --primary-Color: var(--rock);
 }
 /* #endregion*/
 /* #region Ghost */
-.Move-Item:has([name="attr_struggleType"] > option[value="Ghost"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Ghost"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Ghost"]:checked) {
     --primary-Color: var(--ghost);
 }
 /* #endregion*/
 /* #region Dragon */
-.Move-Item:has([name="attr_struggleType"] > option[value="Dragon"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Dragon"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Dragon"]:checked) {
     --primary-Color: var(--dragon);
 }
 /* #endregion*/
 /* #region Dark */
-.Move-Item:has([name="attr_struggleType"] > option[value="Dark"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Dark"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Dark"]:checked) {
     --primary-Color: var(--dark);
 }
 /* #endregion*/
 /* #region Steel */
-.Move-Item:has([name="attr_struggleType"] > option[value="Steel"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Steel"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Steel"]:checked) {
     --primary-Color: var(--steel);
 }
 /* #endregion*/
 /* #region Fairy */
-.Move-Item:has([name="attr_struggleType"] > option[value="Fairy"]:checked) {
+.Move-Item:has([name="attr_struggleType"] > option[value="Fairy"]:checked), .Move-Item:has([name="attr_mlType"] > option[value="Fairy"]:checked) {
     --primary-Color: var(--fairy);
 }
 /* #endregion*/
@@ -694,6 +694,7 @@ input::-webkit-inner-spin-button {
 .Move-Body .Input-Wrap {
     display: flex;
     gap: 10px;
+    color: black;
 }
 
 .Move-Item .Rolls{
@@ -704,6 +705,16 @@ input::-webkit-inner-spin-button {
     right: 5px;
 }
 
+.Move-Head input, .Move-Head select {
+    color: black;
+    font-weight: 700;
+}
+
+.Move-Head input:disabled {
+    color: black;
+    cursor: not-allowed;
+}
+
 .Move-Item .Effects {
     grid-column: span 2;
 }
@@ -711,5 +722,6 @@ input::-webkit-inner-spin-button {
 .Move-Item .Effects textarea {
     width: 100%;
     resize: vertical;
+    margin-bottom: -5px;
 }
 /* #endregion*/
