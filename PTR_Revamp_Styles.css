@@ -721,7 +721,22 @@ input::-webkit-inner-spin-button {
 
 .Move-Item .Effects textarea {
     width: 100%;
-    resize: vertical;
+    resize: none;
     margin-bottom: -5px;
+    height: 100px;
+}
+
+.Roll.Physical, .Roll.Special, .Roll.Status {
+    display: none;
+}
+
+.Move-Item:has([name="attr_mlCat"] > option[value="Physical"]:checked) .Roll.Physical, .Move-Item:has([name="attr_struggleCat"] > option[value="Physical"]:checked) .Roll.Physical {
+    display: block;
+}
+.Move-Item:has([name="attr_mlCat"] > option[value="Special"]:checked) .Roll.Special, .Move-Item:has([name="attr_struggleCat"] > option[value="Special"]:checked) .Roll.Special {
+    display: block;
+}
+.Move-Item:has([name="attr_mlCat"] > option[value="Status"]:checked) .Roll.Status {
+    display: block;
 }
 /* #endregion*/

@@ -703,8 +703,8 @@
                         <div>
                             <div>
                                 <select name="attr_struggleCat" value="Physical">
-                                    <option selected="selected">Physical</option>
-                                    <option>Special</option>
+                                    <option value="Physical" selected="selected">Physical</option>
+                                    <option value="Special" >Special</option>
                                 </select>
                             </div>
                         </div>
@@ -780,8 +780,8 @@
                             </div>
                         </div>
                         <div class="Rolls">
-                            <button type="roll" name="roll_struggleDamage" class="Roll Physical" title="Roll Damage" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= @{struggleFreq} }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_DB_roll}]] }} {{damage= [[@{struggle_DB_roll} + @{ATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }}"></button>
-                            <button type="roll" name="roll_struggleDamage" class="Roll Special" title="Roll Damage" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= @{struggleFreq} }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_DB_roll}]] }} {{damage= [[@{struggle_DB_roll} + @{SPATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }}"></button>
+                            <button type="roll" name="roll_struggleDamage" class="Roll Physical" title="Roll Physical Move" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= @{struggleFreq} }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_DB_roll}]] }} {{damage= [[@{struggle_DB_roll} + @{ATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }}"></button>
+                            <button type="roll" name="roll_struggleDamage" class="Roll Special" title="Roll Special Move" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= Struggle }} {{type= @{struggleType} }} {{frequency= @{struggleFreq} }} {{range= @{struggleRange} }} {{dmgcat= @{struggleCat} }} {{ac= [[ @{struggleAC_total} ]] }} {{ar= [[1d20cs>[[@{struggleCrit_total} - @{crit_mod}]] + @{Acc_total} + @{struggleAC_total} ]] }} {{critsOn= [[@{struggleCrit_total} - @{crit_mod}]] }} {{db= [[@{struggle_db_total}]] }} {{db_roll= [[@{struggle_DB_roll}]] }} {{damage= [[@{struggle_DB_roll} + @{SPATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{struggleContestType} }} {{contest_effect= @{struggleContestEffect} }}"></button>
 
                         </div>
                         <!-- #endregion -->
@@ -811,10 +811,10 @@
                             </div>
                             <div>
                                 <div>
-                                    <select name="mlCat" value="Physical">
-                                        <option selected="selected">Physical</option>
-                                        <option>Special</option>
-                                        <option>Status</option>
+                                    <select name="attr_mlCat">
+                                        <option value="Physical" selected="selected">Physical</option>
+                                        <option value="Special">Special</option>
+                                        <option value="Status">Status</option>
                                     </select>
                                 </div>
                             </div>
@@ -896,9 +896,9 @@
                                 <input type="text" name="attr_mlCat" value="Physical"/>
                             </div>
                             <div class="Rolls">
-                                <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-physical" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + @{ATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
-                                <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-special" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + @{SPATK_total} + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
-                                <button type="roll" name="roll_mlShow" class="sheet-move-button sheet-move-status" title="Show All" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + 0              + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
+                                <button type="roll" name="roll_mlShow" class="Roll Physical" title="Roll Physical Move" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + @{ATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
+                                <button type="roll" name="roll_mlShow" class="Roll Special" title="Roll Special Move" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + @{SPATK_total} + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
+                                <button type="roll" name="roll_mlShow" class="Roll Status" title="Roll Status Move" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + 0              + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
                             </div>
                             <!-- #endregion -->
                         </div>
