@@ -728,6 +728,8 @@ input::-webkit-inner-spin-button {
 
 .Roll.Physical, .Roll.Special, .Roll.Status {
     display: none;
+    width: 100px;
+    height: 80px;
 }
 
 .Move-Item:has([name="attr_mlCat"] > option[value="Physical"]:checked) .Roll.Physical, .Move-Item:has([name="attr_struggleCat"] > option[value="Physical"]:checked) .Roll.Physical {
@@ -738,5 +740,14 @@ input::-webkit-inner-spin-button {
 }
 .Move-Item:has([name="attr_mlCat"] > option[value="Status"]:checked) .Roll.Status {
     display: block;
+}
+
+[name="attr_mlUses"],[name="attr_mlTotalUses"] {
+    width: 40px;
+}
+
+.Move-Item:has([name="attr_mlFrequency"] > option[value="Scene"]:checked) [name="attr_mlCat"] {
+    width: 180px;
+    text-align: center;
 }
 /* #endregion*/

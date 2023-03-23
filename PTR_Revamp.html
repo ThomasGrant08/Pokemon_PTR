@@ -562,18 +562,15 @@
                     <h4>Persistent</h4>
                 </div>
                 <div class="Grid">
-                    <label for="Burn" title="Defense -2 CS. 1 Tick per Standard Action" style="--button-active: #CC5500;">
-                        <input type='checkbox' id="Burn" value='1' name='attr_st_burn' />
+                    <label for="Burn" title="Defense -2 CS. 1 Tick per Standard Action Taken/Skipped" style="--button-active: #CC5500;">
+                        <input type='checkbox' id="Burn" value='1' name='attr_st_burn'/>
                         <span>Burned</span>
                     </label>
-                    <label for="Frozen" title="No Actions. DC 16 Save Check. Vulnerable" style="--button-active: #368BC1;">
-                        <input type='checkbox' id="Frozen" value='1' name='attr_st_froz' />
+                    <label for="Frozen" title="No Actions. DC 16 Save Check. No Evasion Bonus" style="--button-active: #368BC1;">
+                        <input type='checkbox' id="Frozen" value='1' name='attr_st_froz'/>
                         <span>Frozen</span>
                     </label>
-                    <label for="Par" title="Half Initiative. DC 11 Save or:
-- Standard OR Shift Action
-- Vulnerable
-- No AoO" style="--button-active: #ffb81c;">
+                    <label for="Par" title="Speed -4 CS. DC 5 save to act" style="--button-active: #ffb81c;">
                         <input type='checkbox' id="Par" value='1' name='attr_st_para' />
                         <span>Paralysis</span>
                     </label>
@@ -581,7 +578,7 @@
                         <input type="checkbox" id="Poison" value="1" name="attr_st_pois" />
                         <span>Poisoned</span>
                     </label>
-                    <label for="BP" title="SpDef -2 CS. HP Loss 5,10,20,40... per Standard Taken/Skipped" style="grid-column: span 2; --button-active: #340069;">
+                    <label for="BP" title="SpDef -2 CS. Increasing HP Loss 5,10,20,40... per Standard Taken/Skipped" style="grid-column: span 2; --button-active: #340069;">
                         <input type="checkbox" id="BP" value="2" name="attr_st_pois" />
                         <span>Badly Poisoned</span>
                     </label>
@@ -592,35 +589,35 @@
                     <h4>Volatile</h4>
                 </div>
                 <div class="Grid">
-                    <label for="Bad-Sleep" style="--button-active: #301934;">
+                    <label for="Bad-Sleep" style="--button-active: #301934;" title="On sleep save take 2 ticks">
                         <input type="checkbox" id="Bad-Sleep" value="1" name="attr_st_bads" />
                         <span>Bad Sleep</span>
                     </label>
-                    <label for="Confused" style="--button-active: #DBA800;">
+                    <label for="Confused" style="--button-active: #DBA800;" title="1-8: Struggle self, 9-15: Act normally, 16+ Cured">
                         <input type="checkbox" id="Confused" value="1" name="attr_st_conf" />
                         <span>Confused</span>
                     </label>
-                    <label for="Cursed" style="--button-active: #301934;">
+                    <label for="Cursed" style="--button-active: #301934;" title="2 ticks per Standard Action">
                         <input type="checkbox" id="Cursed" value="1" name="attr_st_curs" />
                         <span>Cursed</span>
                     </label>
-                    <label for="Disabled" style="--button-active: black;">
+                    <label for="Disabled" style="--button-active: black;" title="User cannot use specified move">
                         <input type="checkbox" id="Disabled" value="1" name="attr_st_disa" />
                         <span>Disabled</span>
                     </label>
-                    <label for="Rage" style="--button-active: #850101;">
+                    <label for="Rage" style="--button-active: #850101;" title="User must Attack. DC 15 save">
                         <input type="checkbox" id="Rage" value="1" name="attr_st_rage" />
                         <span>Rage</span>
                     </label>
-                    <label for="Flinched" style="--button-active: black;">
+                    <label for="Flinched" style="--button-active: black;" title="Skip turn for 1 round">
                         <input type="checkbox" id="Flinched" value="1" name="attr_st_flin" />
                         <span>Flinched</span>
                     </label>
-                    <label for="Infa" style="--button-active: #AA336A;">
+                    <label for="Infa" style="--button-active: #AA336A;" title="1-10: Cannot target caster, 11-18: Act Normally, 19+ Cured">
                         <input type="checkbox" id="Infa" value="1" name="attr_st_infa" />
                         <span>Infatuation</span>
                     </label>
-                    <label for="Sleep">
+                    <label for="Sleep" title="No evasion. No actions. DC 16 Save. Damaging attacks break sleep.">
                         <input type="checkbox" id="Sleep" value="1" name="attr_st_sleep" />
                         <span>Sleep</span>
                     </label>
@@ -631,35 +628,35 @@
                     <h4>Other</h4>
                 </div>
                 <div class="Grid">
-                    <label for="Fainted">
-                        <input type="checkbox" id="Fainted" value="1" name="attr_st_fain" />
+                    <label for="Fainted" title="Unconcious. Cured by specific effects. Cured of all Persistent and Volatile Status Conditions.">
+                        <input type="checkbox" id="Fainted" value="1" name="attr_st_fain"/>
                         <span>Fainted</span>
                     </label>
-                    <label for="Blindness">
+                    <label for="Blindness" title="Accuracy -6. Acrobatics DC 10 rough terrain.">
                         <input type="checkbox" id="Blindness" value="1" name="attr_st_blin" />
                         <span>Blindness</span>
                     </label>
-                    <label for="TBlind">
+                    <label for="TBlind" title="Accuracy -10. No Priority or Interrupts. Difficulty crossing Rough Terrain.">
                         <input type="checkbox" id="TBlind" value="1" name="attr_st_tota" />
                         <span>Total Blindness</span>
                     </label>
-                    <label for="Slow">
+                    <label for="Slow" title="Movement capabilities halved.">
                         <input type="checkbox" id="Slow" value="1" name="attr_st_slow" />
                         <span>Slowed</span>
                     </label>
                     <label for="Stuck">
-                        <input type="checkbox" id="Stuck" value="1" name="attr_st_stuc" />
+                        <input type="checkbox" id="Stuck" value="1" name="attr_st_stuc" title="No Shift Action. No Speed Evasion."/>
                         <span>Stuck</span>
                     </label>
-                    <label for="Trapped">
+                    <label for="Trapped" title="Cannot be recalled.">
                         <input type="checkbox" id="Trapped" value="1" name="attr_st_trap" />
                         <span>Trapped</span>
                     </label>
-                    <label for="Tripped">
+                    <label for="Tripped" title="Prone. 1 Shift Action to Cure">
                         <input type="checkbox" id="Tripped" value="1" name="attr_st_trip" />
                         <span>Tripped</span>
                     </label>
-                    <label for="Vuln">
+                    <label for="Vuln" title="No Bonus Evasion">
                         <input type="checkbox" id="Vuln" value="1" name="attr_st_vuln" />
                         <span>Vulnerable</span>
                     </label>
@@ -674,10 +671,10 @@
         <div class="Moves Section">
             <div class="Section-Head">
                 <h2>Moves</h2>
-                <input type="checkbox" class="hidden" id="move-toggle"/>
-                <label for="move-toggle">
-                    <img src="https://i.imgur.com/6Y3uQYI.png" width="30">
-                </label>
+                <!--<input type="checkbox" class="hidden" id="move-toggle"/>
+    <label for="move-toggle">
+        <img src="https://i.imgur.com/6Y3uQYI.png" width="30">
+    </label>-->
             </div>
             <div class="Move-List">
                 
@@ -800,23 +797,24 @@
                                 <select name="attr_mlFrequency" class="sheet-move-freq">
                                     <option selected="selected">At-Will</option>
                                     <option>EOT</option>
-                                    <option>Scene</option>
+                                    <option value="Scene">Scene</option>
                                     <option>Daily</option>
                                     <option>Static</option>
                                     <option>Other</option>
                                 </select>
+                                <input name="attr_mlUses" placeholder="Uses" type="number" />
+                                /
+                                <input name="attr_mlTotalUses" placeholder="Total" type="number" />
                             </div>
                             <div>
                                 <input type="text" placeholder="Move Name" name="attr_mlName" />
                             </div>
                             <div>
-                                <div>
-                                    <select name="attr_mlCat">
-                                        <option value="Physical" selected="selected">Physical</option>
-                                        <option value="Special">Special</option>
-                                        <option value="Status">Status</option>
-                                    </select>
-                                </div>
+                                <select name="attr_mlCat">
+                                    <option value="Physical" selected="selected">Physical</option>
+                                    <option value="Special">Special</option>
+                                    <option value="Status">Status</option>
+                                </select>
                             </div>
                         </div>
                         <!-- #endregion-->
