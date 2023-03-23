@@ -507,8 +507,12 @@ input::-webkit-inner-spin-button {
     grid-gap: 10px;
 }
 
-.Moves .Section-Head input[type="checkbox"]:checked + label > img{
+.Moves .Section-Head label > img {
     transform: rotate(180deg);
+}
+
+.Moves .Section-Head input[type="checkbox"]:checked + label > img{
+    transform: rotate(0deg);
 }
 
 .Moves .Section-Head {
@@ -664,8 +668,17 @@ input::-webkit-inner-spin-button {
 }
 
 .Move-Head {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.Move-Head div:first-of-type {
+    justify-self: start;
+}
+
+.Move-Head div:last-of-type {
+    justify-self: end;
 }
 
 .Move-Item select {
@@ -728,8 +741,8 @@ input::-webkit-inner-spin-button {
 
 .Roll.Physical, .Roll.Special, .Roll.Status {
     display: none;
-    width: 100px;
-    height: 80px;
+    /*width: 100px;
+    height: 80px;*/
 }
 
 .Move-Item:has([name="attr_mlCat"] > option[value="Physical"]:checked) .Roll.Physical, .Move-Item:has([name="attr_struggleCat"] > option[value="Physical"]:checked) .Roll.Physical {
@@ -746,8 +759,21 @@ input::-webkit-inner-spin-button {
     width: 40px;
 }
 
-.Move-Item:has([name="attr_mlFrequency"] > option[value="Scene"]:checked) [name="attr_mlCat"] {
-    width: 180px;
-    text-align: center;
+.Uses {
+    display: none;
+}
+
+.Move-Item:has([name="attr_mlFrequency"] > option[value="Scene"]:checked) .Uses {
+    display: inline-block;
+}
+
+.Moves .Move-List {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--animation-timing) ease;
+}
+
+.Moves:has(#move-toggle:checked) .Move-List{
+    max-height: 500vh;
 }
 /* #endregion*/

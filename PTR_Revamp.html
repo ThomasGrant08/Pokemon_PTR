@@ -563,11 +563,11 @@
                 </div>
                 <div class="Grid">
                     <label for="Burn" title="Defense -2 CS. 1 Tick per Standard Action Taken/Skipped" style="--button-active: #CC5500;">
-                        <input type='checkbox' id="Burn" value='1' name='attr_st_burn'/>
+                        <input type='checkbox' id="Burn" value='1' name='attr_st_burn' />
                         <span>Burned</span>
                     </label>
                     <label for="Frozen" title="No Actions. DC 16 Save Check. No Evasion Bonus" style="--button-active: #368BC1;">
-                        <input type='checkbox' id="Frozen" value='1' name='attr_st_froz'/>
+                        <input type='checkbox' id="Frozen" value='1' name='attr_st_froz' />
                         <span>Frozen</span>
                     </label>
                     <label for="Par" title="Speed -4 CS. DC 5 save to act" style="--button-active: #ffb81c;">
@@ -629,7 +629,7 @@
                 </div>
                 <div class="Grid">
                     <label for="Fainted" title="Unconcious. Cured by specific effects. Cured of all Persistent and Volatile Status Conditions.">
-                        <input type="checkbox" id="Fainted" value="1" name="attr_st_fain"/>
+                        <input type="checkbox" id="Fainted" value="1" name="attr_st_fain" />
                         <span>Fainted</span>
                     </label>
                     <label for="Blindness" title="Accuracy -6. Acrobatics DC 10 rough terrain.">
@@ -645,7 +645,7 @@
                         <span>Slowed</span>
                     </label>
                     <label for="Stuck">
-                        <input type="checkbox" id="Stuck" value="1" name="attr_st_stuc" title="No Shift Action. No Speed Evasion."/>
+                        <input type="checkbox" id="Stuck" value="1" name="attr_st_stuc" title="No Shift Action. No Speed Evasion." />
                         <span>Stuck</span>
                     </label>
                     <label for="Trapped" title="Cannot be recalled.">
@@ -668,16 +668,17 @@
     <!--#endregion-->
     <!-- #region Lower Blocks -->
     <div class="Blocks">
+        <!-- #region Moves -->
         <div class="Moves Section">
             <div class="Section-Head">
                 <h2>Moves</h2>
-                <!--<input type="checkbox" class="hidden" id="move-toggle"/>
-    <label for="move-toggle">
-        <img src="https://i.imgur.com/6Y3uQYI.png" width="30">
-    </label>-->
+                <input type="checkbox" class="hidden" id="move-toggle" checked />
+                <label for="move-toggle">
+                    <img src="https://i.imgur.com/6Y3uQYI.png" width="30">
+                </label>
             </div>
             <div class="Move-List">
-                
+
                 <!-- #region Struggle-->
                 <div class="Move-Item">
                     <div class="Background">
@@ -701,7 +702,7 @@
                             <div>
                                 <select name="attr_struggleCat" value="Physical">
                                     <option value="Physical" selected="selected">Physical</option>
-                                    <option value="Special" >Special</option>
+                                    <option value="Special">Special</option>
                                 </select>
                             </div>
                         </div>
@@ -802,9 +803,11 @@
                                     <option>Static</option>
                                     <option>Other</option>
                                 </select>
-                                <input name="attr_mlUses" placeholder="Uses" type="number" />
-                                /
-                                <input name="attr_mlTotalUses" placeholder="Total" type="number" />
+                                <div class="Uses">
+                                    <input name="attr_mlUses" placeholder="Uses" type="number" />
+                                    /
+                                    <input name="attr_mlTotalUses" placeholder="Total" type="number" />
+                                </div>
                             </div>
                             <div>
                                 <input type="text" placeholder="Move Name" name="attr_mlName" />
@@ -891,7 +894,7 @@
                                 <textarea name="attr_mlEffects" style="display:inline-block;max-width:100%"></textarea>
                             </div>
                             <div class="hidden">
-                                <input type="text" name="attr_mlCat" value="Physical"/>
+                                <input type="text" name="attr_mlCat" value="Physical" />
                             </div>
                             <div class="Rolls">
                                 <button type="roll" name="roll_mlShow" class="Roll Physical" title="Roll Physical Move" value="@{whisper} &{template:PTU} {{whisper=@{whisper}}} {{nick=@{character_name}}} {{name= @{mlName} }} {{type= @{mlType} }} {{frequency= @{mlFrequency} }} {{range= @{mlRange} }} {{dmgcat= @{mlCat} }} {{ac= [[ @{mlAC_total} ]] }} {{ar= [[1d20cs>[[@{mlCrit_total} - @{crit_mod}]] + @{Acc_total} + @{mlAC_total} ]] }} {{critsOn= [[@{mlCrit_total} - @{crit_mod}]] }} {{db= [[@{mldb_total}]] }} {{db_roll= [[@{mlDB_roll}]] }} {{damage= [[@{mlDB_roll} + @{ATK_total}   + @{dmg_bonus} ]] }} {{contest_type= @{mlContestType} }} {{contest_effect= @{mlContestEffect} }} {{effect= @{mlEffects} }}"></button>
@@ -904,6 +907,30 @@
                 </fieldset>
                 <!-- #endregion -->
             </div>
+        </div>
+        <!-- #endregion-->
+        <!-- #region Skills-->
+        <div class="Skills Section">
+            <div class="Section-Head">
+                <h2>Skills</h2>
+            </div>
+            <div class="Skills-Grid">
+                <table>
+                    <thead>
+                        <th>Skill Name</th>
+                        <th>Rank</th>
+                        <th>Other Modifiers</th>
+                        <th>Roll</th>
+                    </thead>
+                    <tr>
+                        <td>Acrobatics</td>
+                        <td><input type="number" name="attr_Acrobatics" value="1" /> d6+</td>
+                        <td><input /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- #endregion-->
     </div>
     <!-- #endregion-->
 </div>
