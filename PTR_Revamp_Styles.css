@@ -777,3 +777,10 @@ input::-webkit-inner-spin-button {
     max-height: 500vh;
 }
 /* #endregion*/
+
+/* #region Skills*/
+
+.Skills-Grid {
+    display: flex;
+}
+/* #endregion*/

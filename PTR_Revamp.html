@@ -916,16 +916,109 @@
             </div>
             <div class="Skills-Grid">
                 <table>
-                    <thead>
+                    <tr>
+                    <th>Skill Name</th>
+                    <th>Rank</th>
+                    <th>Other Modifiers</th>
+                    <th>Roll</th>
+                    </tr>
+                    <tr>
+                        <td>Acrobatics</td>
+                        <td><input type="number" name="attr_Acrobatics" value="1" /> d6+</td>
+                        <td><input type="number" name="attr_Acrobatics_bonus" value="0" /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Acrobatics}} {{SL=[[@{Acrobatics}d6+@{Acrobatics_bonus}]]}}' name='roll_AcrobaticsCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Athletics</td>
+                        <td><input type='number' name='attr_Athletics' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Athletics_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Athletics}} {{SL=[[@{Athletics}d6+@{Athletics_bonus}]]}}' name='roll_AthleticsCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Combat</td>
+                        <td><input type='number' name='attr_Combat' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Combat_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Combat}} {{SL=[[@{Combat}d6+@{Combat_bonus}]]}}' name='roll_CombatCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Intimidate</td>
+                        <td><input type='number' name='attr_Intimidate' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Intimidate_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Intimidate}} {{SL=[[@{Intimidate}d6+@{Intimidate_bonus}]]}}' name='roll_IntimidateCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Stealth</td>
+                        <td><input type='number' name='attr_Stealth' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Stealth_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Stealth}} {{SL=[[@{Stealth}d6+@{Stealth_bonus}]]}}' name='roll_StealthCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Survival</td>
+                        <td><input type='number' name='attr_Survival' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Survival_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Survival}} {{SL=[[@{Survival}d6+@{Survival_bonus}]]}}' name='roll_SurvivalCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>General Education</td>
+                        <td><input type='number' name='attr_GeneralEducation' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_GeneralEducation_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=General Education}} {{SL=[[@{GeneralEducation}d6+@{GeneralEducation_bonus}]]}}' name='roll_GeneralEducationCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Medicine Education</td>
+                        <td><input type='number' name='attr_MedicineEducation' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_MedicineEducation_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Medicine Education}} {{SL=[[@{MedicineEducation}d6+@{MedicineEducation_bonus}]]}}' name='roll_MedicineEducationCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Occult Education</td>
+                        <td><input type='number' name='attr_OccultEducation' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_OccultEducation_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Occult Education}} {{SL=[[@{OccultEducation}d6+@{OccultEducation_bonus}]]}}' name='roll_OccultEducationCheck' /></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
                         <th>Skill Name</th>
                         <th>Rank</th>
                         <th>Other Modifiers</th>
                         <th>Roll</th>
-                    </thead>
+                    </tr>
                     <tr>
-                        <td>Acrobatics</td>
-                        <td><input type="number" name="attr_Acrobatics" value="1" /> d6+</td>
-                        <td><input /></td>
+                        <td class='sheet-table-header'>Pokemon Education</td>
+                        <td><input type='number' name='attr_PokemonEducation' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_PokemonEducation_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Pokemon Education}} {{SL=[[@{PokemonEducation}d6+@{PokemonEducation_bonus}]]}}' name='roll_PokemonEducationCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Technology Education</td>
+                        <td><input type='number' name='attr_TechnologyEducation' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_TechnologyEducation_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Technology Education}} {{SL=[[@{TechnologyEducation}d6+@{TechnologyEducation_bonus}]]}}' name='roll_TechnologyEducationCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Guile</td>
+                        <td><input type='number' name='attr_Guile' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Guile_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Guile}} {{SL=[[@{Guile}d6+@{Guile_bonus}]]}}' name='roll_GuileCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Perception</td>
+                        <td><input type='number' name='attr_Perception' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Perception_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Perception}} {{SL=[[@{Perception}d6+@{Perception_bonus}]]}}' name='roll_PerceptionCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Charm</td>
+                        <td><input type='number' name='attr_Charm' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Charm_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Charm}} {{SL=[[@{Charm}d6+@{Charm_bonus}]]}}' name='roll_CharmCheck' /></td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-table-header'>Command</td>
+                        <td><input type='number' name='attr_Command' value='1' /> d6+</td>
+                        <td><input type='number' name='attr_Command_bonus' value='0' /></td>
+                        <td><button type='roll' value='@{whisper} &{template:PTU} {{nick=@{character_name}}} {{skill=Command}} {{SL=[[@{Command}d6+@{Command_bonus}]]}}' name='roll_CommandCheck' /></td>
                     </tr>
                 </table>
             </div>
