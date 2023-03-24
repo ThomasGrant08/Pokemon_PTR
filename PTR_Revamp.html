@@ -7,7 +7,7 @@
     <div class="Hero">
         <div class="Tab-Header Left">
             <div class="Radio-Wrap">
-                <input type="radio" name="attr_whisper" class="hidden" value=" " id="Public" />
+                <input type="radio" name="attr_whisper" class="hidden" value=" " id="Public" checked/>
                 <label for="Public">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                         <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
@@ -297,68 +297,6 @@
             <div class="Section-Head"><h2>Notes</h2></div>
             <textarea name="attr_notes" style="width: 100%; height: 100px; margin-bottom: -5px;">
             </textarea>
-        </div>
-
-        <div class="FeatureAbilities Section">
-            <!-- #region Features -->
-            <div class="Section-Head"><h2>Features</h2></div>
-            <fieldset class='repeating_features'>
-
-                <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
-                <div class='Shortened-Feature'>
-                    <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
-                    <input type="checkbox" class="sheet-arrow " name="attr_Feature_Hide" value="1" /><span></span>
-                    <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Feature_Name} }} {{prerequisite= @{Feature_Prereq} }} {{frequency= @{Feature_Freq} }} {{target= @{Feature_Target} }} {{trigger= @{Feature_Trigger} }} {{message= @{Feature_Info} }} "></button>
-                    <input type="text" class="sheet-ability-name" name="attr_Feature_Name" placeholder="Feature Name" style="width:100%" />
-                </div>
-                <div class="Feature">
-                    <div>
-                        <input type="text" name="attr_Feature_Prereq" placeholder="Prerequisite" style="width:100%" />
-                    </div>
-                    <div>
-                        <input type="text" name="attr_Feature_Freq" placeholder="Frequency" style="width:100%" />
-                    </div>
-                    <div>
-                        <input type="text" name="attr_Feature_Target" placeholder="Target" style="width:100%" />
-                    </div>
-                    <div>
-                        <input type="text" name="attr_Feature_Trigger" placeholder="Trigger" style="width:100%" />
-                    </div>
-                    <div>
-                        <textarea name='attr_Feature_Info'></textarea>
-                    </div>
-                </div>
-            </fieldset>
-            <!-- #endregion -->
-            <!-- #region Skills-->
-            <div class="Section-Head"><h2>Abilities</h2></div>
-            <fieldset class="repeating_abilities">
-                <input type='hidden' class='sheet-hide-swap' name="attr_Ability_Hide" value='0' />
-
-                <div class='sheet-minihead sheet-ability'>
-                    <input type='hidden' class='sheet-hide-swap' name="attr_Ability_Hide" value='0' />
-                    <input type="checkbox" class="sheet-arrow " name="attr_Ability_Hide" value="1" /><span></span>
-                    <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Ability_Name} }} {{frequency= @{Ability_Freq} }} {{target= @{Ability_Target} }} {{trigger= @{Ability_Trigger} }} {{message= @{Ability_Info} }} "></button>
-                    <input type="text" class="sheet-ability-name" name="attr_Ability_Name" placeholder="Ability Name" style="width:100%" />
-                </div>
-
-
-                <div class="sheet-a">
-                    <div>
-                        <input type="text" name="attr_Ability_Freq" placeholder="Frequency" style="width:100%" />
-                    </div>
-                    <div>
-                        <input type="text" name="attr_Ability_Target" placeholder="Target" style="width:100%" />
-                    </div>
-                    <div>
-                        <input type="text" name="attr_Ability_Trigger" placeholder="Trigger" style="width:100%" />
-                    </div>
-                    <div>
-                        <textarea name='attr_Ability_Info'></textarea>
-                    </div>
-                </div>
-            </fieldset>
-            <!-- #endregion -->
         </div>
         <!-- #endregion-->
     </div>
@@ -734,7 +672,7 @@
         <div class="Moves Section">
             <div class="Section-Head">
                 <h2>Moves</h2>
-                <input type="checkbox" class="hidden" id="move-toggle" checked />
+                <input type="checkbox" class="hidden" id="move-toggle" name="attr_mlCollapsed" value="1"/>
                 <label for="move-toggle">
                     <img src="https://i.imgur.com/6Y3uQYI.png" width="30">
                 </label>
@@ -975,14 +913,18 @@
         <div class="Skills Section">
             <div class="Section-Head">
                 <h2>Skills</h2>
+                <input type="checkbox" class="hidden" id="skill-toggle" name="attr_skillsCollapsed" value="1" />
+                <label for="skill-toggle">
+                    <img src="https://i.imgur.com/6Y3uQYI.png" width="30">
+                </label>
             </div>
             <div class="Skills-Grid">
                 <table>
                     <tr>
-                    <th>Skill Name</th>
-                    <th>Rank</th>
-                    <th>Other Modifiers</th>
-                    <th>Roll</th>
+                        <th>Skill Name</th>
+                        <th>Rank</th>
+                        <th>Other Modifiers</th>
+                        <th>Roll</th>
                     </tr>
                     <tr>
                         <td>Acrobatics</td>
@@ -1104,6 +1046,72 @@
             </div>
         </div>
         <!-- #endregion-->
+        <div class="Features_and_Abilities">
+            <div class="Features Section">
+                <!-- #region Features -->
+                <div class="Section-Head"><h2>Features</h2></div>
+                <fieldset class='repeating_features'>
+
+                    <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
+                    <div class='Shortened-Feature'>
+                        <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
+                        <input type="checkbox" class="sheet-arrow " name="attr_Feature_Hide" value="1" /><span></span>
+                        <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Feature_Name} }} {{prerequisite= @{Feature_Prereq} }} {{frequency= @{Feature_Freq} }} {{target= @{Feature_Target} }} {{trigger= @{Feature_Trigger} }} {{message= @{Feature_Info} }} "></button>
+                        <input type="text" class="sheet-ability-name" name="attr_Feature_Name" placeholder="Feature Name" style="width:100%" />
+                    </div>
+                    <div class="Feature">
+                        <div>
+                            <input type="text" name="attr_Feature_Prereq" placeholder="Prerequisite" style="width:100%" />
+                        </div>
+                        <div>
+                            <input type="text" name="attr_Feature_Freq" placeholder="Frequency" style="width:100%" />
+                        </div>
+                        <div>
+                            <input type="text" name="attr_Feature_Target" placeholder="Target" style="width:100%" />
+                        </div>
+                        <div>
+                            <input type="text" name="attr_Feature_Trigger" placeholder="Trigger" style="width:100%" />
+                        </div>
+                        <div>
+                            <textarea name='attr_Feature_Info'></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- #endregion -->
+
+            </div>
+            <div class="Abilities Section">
+                <!-- #region Abilities-->
+                <div class="Section-Head"><h2>Abilities</h2></div>
+                <fieldset class="repeating_abilities">
+                    <input type='hidden' class='sheet-hide-swap' name="attr_Ability_Hide" value='0' />
+
+                    <div class='Shortended-Ability'>
+                        <input type='hidden' class='sheet-hide-swap' name="attr_Ability_Hide" value='0' />
+                        <input type="checkbox" class="sheet-arrow " name="attr_Ability_Hide" value="1" /><span></span>
+                        <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Ability_Name} }} {{frequency= @{Ability_Freq} }} {{target= @{Ability_Target} }} {{trigger= @{Ability_Trigger} }} {{message= @{Ability_Info} }} "></button>
+                        <input type="text" class="sheet-ability-name" name="attr_Ability_Name" placeholder="Ability Name" style="width:100%" />
+                    </div>
+
+
+                    <div class="Ability">
+                        <div>
+                            <input type="text" name="attr_Ability_Freq" placeholder="Frequency" style="width:100%" />
+                        </div>
+                        <div>
+                            <input type="text" name="attr_Ability_Target" placeholder="Target" style="width:100%" />
+                        </div>
+                        <div>
+                            <input type="text" name="attr_Ability_Trigger" placeholder="Trigger" style="width:100%" />
+                        </div>
+                        <div>
+                            <textarea name='attr_Ability_Info'></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- #endregion -->
+            </div>
+        </div>
     </div>
     <!-- #endregion-->
 </div>

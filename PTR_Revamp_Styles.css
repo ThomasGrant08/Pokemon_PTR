@@ -510,26 +510,26 @@ input::-webkit-inner-spin-button {
     grid-gap: 10px;
 }
 
-.Moves .Section-Head label > img {
+.Section .Section-Head label > img {
     transform: rotate(180deg);
 }
 
-.Moves .Section-Head input[type="checkbox"]:checked + label > img{
+.Section .Section-Head input[type="checkbox"]:checked + label > img{
     transform: rotate(0deg);
 }
 
-.Moves .Section-Head {
+.Section .Section-Head {
     position: relative;
 }
 
-.Moves .Section-Head label {
+.Section .Section-Head label {
     position: absolute;
     right: 10px;
     top: 10px;
     width: fit-content;
 }
 
-.Moves .Section-Head label img {
+.Section .Section-Head label img {
     transition: transform 0.5s ease;
 }
 
@@ -773,10 +773,10 @@ input::-webkit-inner-spin-button {
 .Moves .Move-List {
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--animation-timing) ease;
+    transition: max-height 0.5s ease;
 }
 
-.Moves:has(#move-toggle:checked) .Move-List{
+.Section:has(#move-toggle:checked) .Move-List{
     max-height: 500vh;
 }
 /* #endregion*/
@@ -806,3 +806,38 @@ input::-webkit-inner-spin-button {
     text-align: center;
 }
 /* #endregion*/
+
+/* #region Features and Abilities */
+.Feature, .Ability {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    grid-gap: 5px;
+    border-radius: 5px;
+    background-color: grey; 
+}
+
+.Feature div:has(textarea), .Ability div:has(textarea) {
+    grid-column: span 2;
+}
+
+.Feature textarea, .Ability textarea {
+    resize: none;
+    height: 50px;
+}
+
+.Features_and_Abilities {
+    display: grid;
+    grid-gap: 10px; 
+    grid-template-columns: 1fr 1fr;
+}
+
+.Skills-Grid {
+    max-height: 0;
+    transition: max-height 0.5s ease;
+}
+
+.Section:has(#skill-toggle:checked) .Skills-Grid {
+    max-height: 500vh;
+}
+/* #endregion */
