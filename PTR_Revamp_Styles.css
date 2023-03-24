@@ -38,6 +38,9 @@
     box-sizing: border-box;
 }
 
+.sheetform {
+    background-color: unset !important;
+}
 /* #region Backgrounds */
 /* #region Null*/
 .charsheet:has([name="attr_type2"] > option[value="-"]:checked) {
@@ -782,5 +785,24 @@ input::-webkit-inner-spin-button {
 
 .Skills-Grid {
     display: flex;
+}
+
+.Skills-Grid input[type="number"] {
+    display: inline-block;
+}
+
+.Skills-Grid p {
+    color: transparent;
+    pointer-events: none;
+}
+
+.Skills-Grid th {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.Skills-Grid td, .Skills-Grid th {
+    padding: 5px;
+    text-align: center;
 }
 /* #endregion*/
