@@ -809,16 +809,9 @@ input::-webkit-inner-spin-button {
 
 /* #region Features and Abilities */
 .Feature, .Ability {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 5px;
     grid-gap: 5px;
     border-radius: 5px;
-    background-color: grey; 
-}
-
-.Feature div:has(textarea), .Ability div:has(textarea) {
-    grid-column: span 2;
 }
 
 .Feature textarea, .Ability textarea {
@@ -840,4 +833,67 @@ input::-webkit-inner-spin-button {
 .Section:has(#skill-toggle:checked) .Skills-Grid {
     max-height: 500vh;
 }
+
+.Feature .Feature-Body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.Feature:has(.Feature-Toggle:checked) .Feature-Body{
+    max-height: 500vh;
+}
+
+.Feature .Feature-Head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+}
+
+.Feature .Background, .Ability .Background{
+    background-color: rgba(0,0,0,0.1);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Feature, .Ability {
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+.Feature-Head, .Feature-Body, .Ability-Head, .Ability-Body {
+    position: relative;
+}
+
+input.sheet-arrow[type="checkbox"] {
+    top: 1px;
+    left: 4px;
+    width: 24px;
+    height: 23px;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s ease transform;
+}
+
+
+    input.sheet-arrow[type="checkbox"] + span::before {
+        display: inline-block;
+        left: 4px;
+        font-size: 20px;
+        vertical-align: middle;
+        color: black;
+        content: "▼";
+    }
+
+    input.sheet-arrow[type="checkbox"]:not(:checked) + span::before {
+        transform: rotate(-90deg);
+    }
+
+    input.sheet-arrow[type="checkbox"]:checked + span::before {
+        transform: rotate(0deg) !important;
+    }
 /* #endregion */

@@ -1051,29 +1051,31 @@
                 <!-- #region Features -->
                 <div class="Section-Head"><h2>Features</h2></div>
                 <fieldset class='repeating_features'>
-
-                    <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
-                    <div class='Shortened-Feature'>
-                        <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
-                        <input type="checkbox" class="sheet-arrow " name="attr_Feature_Hide" value="1" /><span></span>
-                        <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Feature_Name} }} {{prerequisite= @{Feature_Prereq} }} {{frequency= @{Feature_Freq} }} {{target= @{Feature_Target} }} {{trigger= @{Feature_Trigger} }} {{message= @{Feature_Info} }} "></button>
-                        <input type="text" class="sheet-ability-name" name="attr_Feature_Name" placeholder="Feature Name" style="width:100%" />
-                    </div>
                     <div class="Feature">
-                        <div>
-                            <input type="text" name="attr_Feature_Prereq" placeholder="Prerequisite" style="width:100%" />
+                        <div class="Background"></div>
+                        <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
+                        <div class='Feature-Head'>
+                            <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
+                            <input type="checkbox" class="Feature-Toggle sheet-arrow" name="attr_Feature_Hide" value="1" />
+                            <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Feature_Name} }} {{prerequisite= @{Feature_Prereq} }} {{frequency= @{Feature_Freq} }} {{target= @{Feature_Target} }} {{trigger= @{Feature_Trigger} }} {{message= @{Feature_Info} }} "></button>
+                            <input type="text" class="sheet-ability-name" name="attr_Feature_Name" placeholder="Feature Name" />
                         </div>
-                        <div>
-                            <input type="text" name="attr_Feature_Freq" placeholder="Frequency" style="width:100%" />
-                        </div>
-                        <div>
-                            <input type="text" name="attr_Feature_Target" placeholder="Target" style="width:100%" />
-                        </div>
-                        <div>
-                            <input type="text" name="attr_Feature_Trigger" placeholder="Trigger" style="width:100%" />
-                        </div>
-                        <div>
-                            <textarea name='attr_Feature_Info'></textarea>
+                        <div class="Feature-Body">
+                            <div>
+                                <input type="text" name="attr_Feature_Prereq" placeholder="Prerequisite" />
+                            </div>
+                            <div>
+                                <input type="text" name="attr_Feature_Freq" placeholder="Frequency" />
+                            </div>
+                            <div>
+                                <input type="text" name="attr_Feature_Target" placeholder="Target" />
+                            </div>
+                            <div>
+                                <input type="text" name="attr_Feature_Trigger" placeholder="Trigger" />
+                            </div>
+                            <div>
+                                <textarea name='attr_Feature_Info'></textarea>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
@@ -1096,13 +1098,13 @@
 
                     <div class="Ability">
                         <div>
-                            <input type="text" name="attr_Ability_Freq" placeholder="Frequency" style="width:100%" />
+                            <input type="text" name="attr_Ability_Freq" placeholder="Frequency"/>
                         </div>
                         <div>
-                            <input type="text" name="attr_Ability_Target" placeholder="Target" style="width:100%" />
+                            <input type="text" name="attr_Ability_Target" placeholder="Target"/>
                         </div>
                         <div>
-                            <input type="text" name="attr_Ability_Trigger" placeholder="Trigger" style="width:100%" />
+                            <input type="text" name="attr_Ability_Trigger" placeholder="Trigger"/>
                         </div>
                         <div>
                             <textarea name='attr_Ability_Info'></textarea>
