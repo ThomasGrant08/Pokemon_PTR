@@ -295,7 +295,7 @@
         <!-- #region Notes -->
         <div class="Notes Section">
             <div class="Section-Head"><h2>Notes</h2></div>
-            <textarea name="attr_notes" style="width: 100%; height: 100px; margin-bottom: -5px;">
+            <textarea name="attr_notes" style="width: 100%; height: 525px; margin-bottom: -5px;">
             </textarea>
         </div>
         <!-- #endregion-->
@@ -1055,10 +1055,10 @@
                         <div class="Background"></div>
                         <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
                         <div class='Feature-Head'>
-                            <input type='hidden' class='sheet-hide-swap' name="attr_Feature_Hide" value='0' />
-                            <input type="checkbox" class="Feature-Toggle sheet-arrow" name="attr_Feature_Hide" value="1" />
-                            <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Feature_Name} }} {{prerequisite= @{Feature_Prereq} }} {{frequency= @{Feature_Freq} }} {{target= @{Feature_Target} }} {{trigger= @{Feature_Trigger} }} {{message= @{Feature_Info} }} "></button>
+                            <div><input type="checkbox" class="Feature-Toggle sheet-arrow" name="attr_Feature_Hide" value="1" /><span></span></div>
+
                             <input type="text" class="sheet-ability-name" name="attr_Feature_Name" placeholder="Feature Name" />
+                            <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Feature_Name} }} {{prerequisite= @{Feature_Prereq} }} {{frequency= @{Feature_Freq} }} {{target= @{Feature_Target} }} {{trigger= @{Feature_Trigger} }} {{message= @{Feature_Info} }} "></button>
                         </div>
                         <div class="Feature-Body">
                             <div>
@@ -1073,7 +1073,7 @@
                             <div>
                                 <input type="text" name="attr_Feature_Trigger" placeholder="Trigger" />
                             </div>
-                            <div>
+                            <div style="grid-column: span 2;">
                                 <textarea name='attr_Feature_Info'></textarea>
                             </div>
                         </div>
@@ -1086,33 +1086,55 @@
                 <!-- #region Abilities-->
                 <div class="Section-Head"><h2>Abilities</h2></div>
                 <fieldset class="repeating_abilities">
-                    <input type='hidden' class='sheet-hide-swap' name="attr_Ability_Hide" value='0' />
-
-                    <div class='Shortended-Ability'>
-                        <input type='hidden' class='sheet-hide-swap' name="attr_Ability_Hide" value='0' />
-                        <input type="checkbox" class="sheet-arrow " name="attr_Ability_Hide" value="1" /><span></span>
-                        <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Ability_Name} }} {{frequency= @{Ability_Freq} }} {{target= @{Ability_Target} }} {{trigger= @{Ability_Trigger} }} {{message= @{Ability_Info} }} "></button>
-                        <input type="text" class="sheet-ability-name" name="attr_Ability_Name" placeholder="Ability Name" style="width:100%" />
-                    </div>
-
-
                     <div class="Ability">
-                        <div>
-                            <input type="text" name="attr_Ability_Freq" placeholder="Frequency"/>
+                        <div class="Background"></div>
+                        <input type='hidden' class='sheet-hide-swap' name="attr_Ability_Hide" value='0' />
+                        <div class='Ability-Head'>
+                            <div><input type="checkbox" class="Ability-Toggle sheet-arrow " name="attr_Ability_Hide" value="1" /><span></span></div>
+
+                            <input type="text" class="sheet-ability-name" name="attr_Ability_Name" placeholder="Ability Name" />
+                            <button type='roll' value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{Ability_Name} }} {{frequency= @{Ability_Freq} }} {{target= @{Ability_Target} }} {{trigger= @{Ability_Trigger} }} {{message= @{Ability_Info} }} "></button>
                         </div>
-                        <div>
-                            <input type="text" name="attr_Ability_Target" placeholder="Target"/>
-                        </div>
-                        <div>
-                            <input type="text" name="attr_Ability_Trigger" placeholder="Trigger"/>
-                        </div>
-                        <div>
-                            <textarea name='attr_Ability_Info'></textarea>
+
+
+                        <div class="Ability-Body">
+                            <div>
+                                <input type="text" name="attr_Ability_Freq" placeholder="Frequency" />
+                            </div>
+                            <div>
+                                <input type="text" name="attr_Ability_Target" placeholder="Target" />
+                            </div>
+                            <div style="grid-column: span 2;">
+                                <input type="text" name="attr_Ability_Trigger" placeholder="Trigger" />
+                            </div>
+                            <div style="grid-column: span 2;">
+                                <textarea name='attr_Ability_Info'></textarea>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
                 <!-- #endregion -->
             </div>
+        </div>
+        <div class="Inventory Section">
+            <div class="Section-Head">
+                <h2>Inventory</h2>
+            </div>
+            <fieldset class="repeating_inventory">
+                <div class="Item">
+                    <div class="Background"></div>
+                    <input type="hidden" name="attr_InventoryHide" class="sheet-hide-swap" value="0" />
+                    <div class="Item-Header">
+                        <div><input type="checkbox" class="Ability-Toggle sheet-arrow " name="attr_Item_Hide" value="1" /><span></span></div>
+                        <input type="number" name='attr_InventoryQuantity' value="1" />
+                        <input type="text" name='attr_InventoryName' placeholder="Item Name" style="width: 100%;"/>
+                        <button type='roll' title="Use Item" value="@{whisper} &{template:PTU} {{nick=@{character_name}}} {{title= @{InventoryName} }} {{message= @{InventoryDesc} }} "></button>
+                    </div>
+                    <div class="Item-Body">
+                        <textarea name="attr_InventoryDesc" placeholder="Item Description"></textarea>
+                    </div>
+                </div>
+            </fieldset>
         </div>
     </div>
     <!-- #endregion-->

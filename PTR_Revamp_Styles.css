@@ -834,22 +834,23 @@ input::-webkit-inner-spin-button {
     max-height: 500vh;
 }
 
-.Feature .Feature-Body {
+.Feature .Feature-Body, .Ability .Ability-Body, .Item .Item-Body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
 
-.Feature:has(.Feature-Toggle:checked) .Feature-Body{
+.Feature:has(.Feature-Toggle:checked) .Feature-Body, .Ability:has(.Ability-Toggle:checked) .Ability-Body, .Item:has(.Ability-Toggle:checked) .Item-Body{
     max-height: 500vh;
 }
 
-.Feature .Feature-Head {
+.Feature .Feature-Head, .Ability .Ability-Head {
     display: grid;
-    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-columns: .5fr 3fr .5fr;
+    grid-gap: 5%;
 }
 
-.Feature .Background, .Ability .Background{
+.Feature .Background, .Ability .Background, .Item .Background{
     background-color: rgba(0,0,0,0.1);
     height: 100%;
     width: 100%;
@@ -858,7 +859,7 @@ input::-webkit-inner-spin-button {
     left: 0;
 }
 
-.Feature, .Ability {
+.Feature, .Ability, .Item {
     margin: 5px;
     overflow: hidden;
     border-radius: 5px;
@@ -880,13 +881,15 @@ input.sheet-arrow[type="checkbox"] {
 }
 
 
-    input.sheet-arrow[type="checkbox"] + span::before {
+input.sheet-arrow[type="checkbox"] + span::before {
         display: inline-block;
         left: 4px;
         font-size: 20px;
         vertical-align: middle;
         color: black;
         content: "▼";
+        position: absolute;
+        pointer-events: none;
     }
 
     input.sheet-arrow[type="checkbox"]:not(:checked) + span::before {
@@ -896,4 +899,34 @@ input.sheet-arrow[type="checkbox"] {
     input.sheet-arrow[type="checkbox"]:checked + span::before {
         transform: rotate(0deg) !important;
     }
+
+.Feature-Body, .Ability-Body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.Feature input[type="text"], .Ability input[type="text"]{
+    width: 100%;
+}
+
+.Feature-Body textarea {
+    grid-column: span 2;
+}
+
+.Item-Header {
+    display: grid;
+    grid-template-columns: .2fr .5fr 5fr .2fr;
+    grid-gap: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.Item-Body {
+    position: relative;
+}
+
+.Item {
+    padding: 5px;
+}
 /* #endregion */
