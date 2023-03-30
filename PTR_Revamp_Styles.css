@@ -931,6 +931,7 @@ input.sheet-arrow[type="checkbox"] + span::before {
     padding: 5px;
 }
 /* #endregion */
+/* #region PTU Roll Tables */
 .sheet-rolltemplate-PTU .sheet-spacing,
 .sheet-rolltemplate-PTU_Move .sheet-spacing {
     white-space: pre-line;
@@ -1075,4 +1076,4 @@ input.sheet-arrow[type="checkbox"] + span::before {
     text-align: center;
     box-sizing: border-box;
 }
-/* #region */
+/* #endregion */
