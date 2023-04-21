@@ -25,6 +25,10 @@
         </div>
         <div class="Initative">
             <button type='roll' value="@{whisper} &{template:PTU}{{title= @{character_name}'s Initiative }}{{message= [[@{SPEED_total} + @{init_bonus} + ([[1d20 ]] / 100) &{tracker}]] }}" name='roll_init'>Roll Initiative</button>
+            <button type="action" name="act_reset_cs">Reset CS</button>
+        </div>
+        <div class="Reset_CS">
+            
         </div>
         <div class="Image">
             <img src="https://i.imgur.com/loTp0L0.png" alt="PTR 1.0.0" />
@@ -1281,6 +1285,14 @@
         });
     };
 
+    function resetCS() {
+        update['ATK_Stage'] = 0;
+        update['DEF_Stage'] = 0;
+        update['SPATK_Stage'] = 0;
+        update['SPDEF_Stage'] = 0;
+        update['SPEED_Stage'] = 0;
+    };
+
     function tryUpdateMove(n){
         if(n > 6){return;}
         getAttrs(getOldMoveAttrs(n), function (values) {
@@ -1689,6 +1701,10 @@
         Auto-updates Known Move shortcut
         when a change is made to the move auto update the corresponding shortcut
     */
+
+    on("clicked:reset_cs", function() {
+        resetCS();
+    }); 
     on("change:repeating_moves", function(eventinfo){
 
         var source = eventinfo.sourceAttribute.substring(39);
